@@ -44,11 +44,17 @@ As it is completely general, we believe that the framework we are introducing ca
 \end{section}
 
 \begin{section}{Methodology}
-    We used a singular value decomposition of each matrix to embed our network in a low dimensional space.\
+
+    XXX A couple of rows about RDPG XXX
+
+    XXX what are these matrix XXX
+
+    We used a Singular Value Decomposition of each matrix to embed our network in a low dimensional space.\
         \[
         A = U\Sigma V'
         \]
-    Where $\Sigma_{ii} = \sigma_i$ and $\sigma_i > sigma_{i+1}$ and each $\sigma_i$ is a non-negative square root of the matrices $AA', \space A'A$. $U$ is a matrix made from the orthonormalised eigenvectors of $AA'$ associated with $\sigma_i$, and $V$ is a matrix made from the orthonormalised eigenvectors of $A'A$ associated with $\sigma_i$. Each row $i$ of $U$ and $V$ represents the in and out position of node $i$ respectively. This can be truncated at an arbitrary number of eigenpairs to form a low dimentional approximation to $A$.
+    XXX Let's not explain SVD, at most give a ref XXX
+    This can be truncated at an arbitrary number of eigenpairs to form a low dimentional approximation to $A$.
         \[
         A \approx \hat U \hat \Sigma \hat V'
         \]\\
