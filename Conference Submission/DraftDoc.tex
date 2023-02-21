@@ -22,12 +22,12 @@ sorting=ynt
 \begin{document}
 
 \begin{section}{Introduction}
-The modelling of temporal networks is an important task in many real world applications XXXRef.
-Temporal networks can be seen as dynamical systems: XXX.
-Discovering the underlying equations governing these dynamical systems proves is challenging, because XXX.
-Here, we proposes an hybrid statistical and deep learning framework that allows to model temporal networks as continous-time dynamical system, discover a fitting set of differential equations describing it, and, exploiting that discovery, predict the time evolution of a network.
+The modelling of temporal networks is an important task in many real world applications including symptom interactions for mental health, epidemiology, and protein interactions \cite{jordan2020current,contreras2020temporal,lucas2021inferring,jin2009identifying,masuda2013predicting}.
+Temporal networks can be seen as dynamical systems: that is a system in which we have points, in our case nodes in a network, whose states, the edges connecting them, that vary dependent in time.
+Discovering the underlying equations governing these dynamical systems proves challenging, because changes in network structure are typically observed in the form of discrete jumps from one state to another, for example an edge between two nodes not being observed at the first timestep then appearing at the next.
+Here, we proposes a hybrid statistical and deep learning framework that allows us to model temporal networks as continous-time dynamical systems, discover a fitting set of differential equations describing it, and, exploiting that discovery, predict the time evolution of a network.
 
-XXX Nodes within the network influence each other and XXX so we might wish to draw on the rich mathematical literature of differential equation modelling.
+Differential equations are useful for modelling systems where the state of one variable can effect the trajectories of other variables. We observe this behaviour in temporal networks; nodes' connections within the network can influence the formation and decay of edges between other nodes. XXX so we might wish to draw on the rich mathematical literature of differential equation modelling.
 
 In the common representation of networks as binary-valued adjacency matrices, the events recorded in a temporal sequence of networks correspond to topological events, such as the appearence or the disappearance of link.
 Because of the discrete nature of events, directly modelling the temporal networks as dynamical systems would require to handle discrete jumps.
