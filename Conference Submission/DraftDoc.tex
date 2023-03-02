@@ -56,7 +56,7 @@ In this manuscript, we prove that the temporal network prediction problem can be
 The framework we are introducing is extremely flexible, and our research regarding the optimal structure of the Neural Networks used for the NNDEs is just started.
 We are confident that future research can identify more fitting Neural Network structures than the simple one adopted here.
 For this reason, we did not yet attempt to benchmark our model against other classic temporal network prediction methods.
-As it is completely general, we believe that the framework we are introducing can be usefully applied to areas of medicine, especially protein interaction networks; population dynamics for network ecology; and social network modelling. In particular, we discuss how specific domain knowledge relative to the prediction scenario can be taken into account, moving from NNDEs to Universal Differential Equations.
+As it is completely general, we believe that the framework we are introducing can be usefully applied to areas of medicine, especially protein interaction networks; population dynamics for network ecology; and social network modelling[citation]. In particular, we discuss how specific domain knowledge relative to the prediction scenario can be taken into account, moving from NNDEs to Universal Differential Equations.
 
 \end{section}
 
@@ -152,7 +152,7 @@ As it is completely general, we believe that the framework we are introducing ca
     \end{align}
     $L,\hat L, R, \hat R$ are each real valued $n\times d$ matrices, where the columns of $\hat L$ and $\hat R$ are the first $d$ eigenvectors of $AA'$ and $A'A$ respectively ordered by the size of their associated singular values. $\hat \Sigma$ is a $d\times d$ diagonal matrix whose entries are the singular values associated with each eigenvector. \\
     It is important to note that the SVD is not unique. The distances between points will be the same for every embedding, but the orientation may be different, and so, if the SVD of each time step is not alligned, learning will be effectively impossible [<- show this]. Since our approximation method is an iterative approach, to align each SVD, we can simply pick the same initial vector guess for each [probably worth getting a reference]; this will cause the outputs of the Arpack function to each be aligned with eachother XXX with some requirements of the matrix/initial vec?XXX. Altenatively we can use Procrustes alignmet[cite package] to align the matrices after they have been generated.\\
-    The approximation  given by this formula can be interpreted as a graph where the entry $(i,j)$ of the matrix are the probability that an edge exists from $i \rightarrow j$.This approach creates a Random Dot Product Graph\cite{athreya2017statistical}, a class of Latent Position Models \cite{hoff2002latent}. Once we have this embedding of points, we look to model the trajectories of each point. That is, with some input data, point location, distance to neighbours, etc, we want to model the ODE of each point. To do this we make use of the SciML ecosystem of packages in the Julia programming language \cite{SciML_C_Rak}.\\
+    The approximation  given by this formula can be interpreted as a graph where the entry $(i,j)$ of the matrix is the probability that an edge exists from $i \rightarrow j$.This approach creates a Random Dot Product Graph\cite{athreya2017statistical}, a class of Latent Position Models \cite{hoff2002latent}. Once we have this embedding of points, we look to model the trajectories of each point. That is, with some input data, point location, distance to neighbours, etc, we want to model the ODE of each point. To do this we make use of the SciML ecosystem of packages in the Julia programming language \cite{SciML_C_Rak}.\\
 
     % IN THE THESIS MAYBE
     % This can be truncated at an arbitrary number of eigenpairs to form a low dimentional approximation to $A$.
@@ -191,7 +191,7 @@ As it is completely general, we believe that the framework we are introducing ca
     Where $k$ is the number of neighbours we chose for the neural network input. Because the distance between points is discribed by the euclidean distance, we use this as our loss metric.
 
     % Symbolic Regression Explaination
-    With our trained NODE, we have a black box that approximates the system that governs the movement of Twitter users. To make this more interpretable we then look to approximate this black box into a combination of known functions using symbolic regression[citation (use the one from symreg package)]. For this process we need to define a set of functions which the algorithm will use to generate a tree of functions to find the best approximation to our NODE with. When using this method we usually are required to make two assumptions: that we have paired observations of $y(t), \frac{dy}{dt}$, and that the tree of expressions we will need is shallow. We will train the symbolic regression on the predictions of the neural network. By doing this, we can remove these assumptions\cite{kidger2022neural}.
+    With our trained NODE, we have a black box that approximates the system that governs the movement of the target node in the embedded space. To make this more interpretable we then look to approximate this black box into a combination of known functions using symbolic regression[citation (use the one from symreg package)]. For this process we need to define a set of functions which the algorithm will use to generate a tree of functions to find the best approximation to our NODE with. When using this method we usually are required to make two assumptions: that we have paired observations of $y(t), \frac{dy}{dt}$, and that the tree of expressions we will need is shallow. We will train the symbolic regression on the predictions of the neural network. By doing this, we can remove these assumptions\cite{kidger2022neural}.
 \end{section}
 
 \begin{section}{Data}
@@ -355,8 +355,7 @@ As it is completely general, we believe that the framework we are introducing ca
 \end{section}
 
 \begin{section}{Conclusion}
-    Not sure what to write for this\\
-    Using symbolic regression to approximate the neural network output seems to increase the stability of the extrapolation. This is most pronounced 
+    In this paper, we proposed a novel framework for modelling temporal networks. We then tested this framework on three types of small, synthetic network sequences. Throughout these tests the neural network performed ______, with the _____ sequence being especially notable due to ____. These results were likely because _____. In contrast, when we used symbolic regression to approximate the neural network model, we saw that _____.
 \end{section}
 
 
