@@ -1398,6 +1398,12 @@ INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 OUTPUT DraftDoc.bcf
+INPUT DraftDoc.bbl
+INPUT ./DraftDoc.bbl
+INPUT DraftDoc.bbl
+INPUT ./DraftDoc.bbl
+INPUT ./DraftDoc.bbl
+INPUT DraftDoc.bbl
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1455,13 +1461,22 @@ INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-OUTPUT DraftDoc.out
+INPUT ./DraftDoc.out
+INPUT DraftDoc.out
+INPUT ./DraftDoc.out
+INPUT DraftDoc.out
+INPUT ./DraftDoc.out
+INPUT DraftDoc.out
+INPUT ./DraftDoc.out
+INPUT DraftDoc.out
 OUTPUT DraftDoc.pdf
+INPUT ./DraftDoc.out
+INPUT ./DraftDoc.out
+OUTPUT DraftDoc.out
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1491,7 +1506,6 @@ INPUT ./SynthDataDiagrams/methodology3.tex
 INPUT SynthDataDiagrams/methodology3.tex
 INPUT ./SynthDataDiagrams/methodology3.tex
 INPUT SynthDataDiagrams/methodology3.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./SynthDataDiagrams/2community1.tex
 INPUT SynthDataDiagrams/2community1.tex
@@ -1516,3 +1530,276 @@ INPUT ./SynthDataDiagrams/2community3.tex
 INPUT SynthDataDiagrams/2community3.tex
 INPUT ./SynthDataDiagrams/2community3.tex
 INPUT SynthDataDiagrams/2community3.tex
+INPUT ./SynthDataDiagrams/longTail1.tex
+INPUT SynthDataDiagrams/longTail1.tex
+INPUT ./SynthDataDiagrams/longTail1.tex
+INPUT SynthDataDiagrams/longTail1.tex
+INPUT ./SynthDataDiagrams/longTail2.tex
+INPUT SynthDataDiagrams/longTail2.tex
+INPUT ./SynthDataDiagrams/longTail2.tex
+INPUT SynthDataDiagrams/longTail2.tex
+INPUT ./SynthDataDiagrams/longTail3.tex
+INPUT SynthDataDiagrams/longTail3.tex
+INPUT ./SynthDataDiagrams/longTail3.tex
+INPUT SynthDataDiagrams/longTail3.tex
+INPUT ./SynthDataDiagrams/3community1.tex
+INPUT SynthDataDiagrams/3community1.tex
+INPUT ./SynthDataDiagrams/3community1.tex
+INPUT SynthDataDiagrams/3community1.tex
+INPUT ./SynthDataDiagrams/3community2.tex
+INPUT SynthDataDiagrams/3community2.tex
+INPUT ./SynthDataDiagrams/3community2.tex
+INPUT SynthDataDiagrams/3community2.tex
+INPUT ./SynthDataDiagrams/3community3.tex
+INPUT SynthDataDiagrams/3community3.tex
+INPUT ./SynthDataDiagrams/3community3.tex
+INPUT SynthDataDiagrams/3community3.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png
+INPUT /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT DraftDoc.aux
+INPUT ./DraftDoc.out
+INPUT ./DraftDoc.out
+INPUT DraftDoc.run.xml
+OUTPUT DraftDoc.run.xml
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
