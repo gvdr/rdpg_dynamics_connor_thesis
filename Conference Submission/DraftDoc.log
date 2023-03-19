@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  16 MAR 2023 09:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  20 MAR 2023 10:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1037,80 +1037,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--200
  []
 
 (./SynthDataDiagrams/2community1.tex) (./SynthDataDiagrams/2community2.tex) (./SynthDataDiagrams/2community3.tex) (./SynthDataDiagrams/longTail1.tex) (./SynthDataDiagrams/longTail2.tex) (./SynthDataDiagrams/longTail3.tex) [3] (./SynthDataDiagrams/3community1.tex) (./SynthDataDiagrams/3community2.tex) (./SynthDataDiagrams/3community3.tex)
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png, id=129, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 1.png, id=129, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 1.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 1.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 1.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png, id=131, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 2.png, id=131, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 2.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 2.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 2.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png, id=132, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 3.png, id=132, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 3.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 3.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 3.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png, id=133, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 4.png, id=133, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 4.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 4.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 4.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png, id=134, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 5.png, id=134, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 5.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 5.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 5.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png, id=135, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 6.png, id=135, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 6.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 6.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 6.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png, id=136, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 7.png, id=136, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 7.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 7.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 7.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png, id=137, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 8.png, id=137, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 8.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 8.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 8.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png, id=138, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 9.png, id=138, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 9.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 9.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 9.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png, id=139, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 10.png, id=139, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 10.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 10.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 10.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png, id=140, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 11.png, id=140, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 11.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 11.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 11.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png, id=141, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 12.png, id=141, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 12.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 12.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 12.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png, id=142, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 13.png, id=142, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 13.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 13.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 13.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png, id=143, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 14.png, id=143, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 14.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 14.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 14.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png, id=144, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png  used on input line 306.
+<./Plots/Test Only/2communities/2communities 15.png, id=144, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 15.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 15.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 15.png  used on input line 306.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 306--307
@@ -1137,80 +1137,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png, id=153, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 1.png, id=153, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 1.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 1.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 1.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png, id=154, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 2.png, id=154, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 2.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 2.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 2.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png, id=155, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 3.png, id=155, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 3.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 3.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 3.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png, id=156, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 4.png, id=156, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 4.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 4.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 4.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png, id=157, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 5.png, id=157, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 5.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 5.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 5.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png, id=158, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 6.png, id=158, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 6.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 6.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 6.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png, id=159, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 7.png, id=159, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 7.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 7.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 7.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png, id=160, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 8.png, id=160, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 8.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 8.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 8.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png, id=161, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 9.png, id=161, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 9.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 9.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 9.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png, id=162, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 10.png, id=162, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 10.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 10.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 10.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png, id=163, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 11.png, id=163, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 11.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 11.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 11.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png, id=164, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 12.png, id=164, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 12.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 12.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 12.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png, id=165, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 13.png, id=165, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 13.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 13.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 13.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png, id=166, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 14.png, id=166, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 14.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 14.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 14.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png, id=167, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png  used on input line 324.
+<./Plots/Test Only/longTail/longTail 15.png, id=167, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 15.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 15.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 15.png  used on input line 324.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 324--325
@@ -1232,80 +1232,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--325
 []$ $[]$ $[]$
  []
 
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png, id=169, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png  used on input line 342.
+<./Plots/Test Only/3community/3community 1.png, id=169, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 1.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 1.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 1.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png, id=170, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png  used on input line 342.
+<./Plots/Test Only/3community/3community 2.png, id=170, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 2.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 2.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 2.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png, id=171, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png  used on input line 342.
+<./Plots/Test Only/3community/3community 3.png, id=171, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 3.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 3.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 3.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png, id=172, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png  used on input line 342.
+<./Plots/Test Only/3community/3community 4.png, id=172, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 4.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 4.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 4.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png, id=173, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png  used on input line 342.
+<./Plots/Test Only/3community/3community 5.png, id=173, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 5.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 5.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 5.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png, id=174, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png  used on input line 342.
+<./Plots/Test Only/3community/3community 6.png, id=174, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 6.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 6.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 6.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png, id=175, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png  used on input line 342.
+<./Plots/Test Only/3community/3community 7.png, id=175, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 7.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 7.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 7.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png, id=176, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png  used on input line 342.
+<./Plots/Test Only/3community/3community 8.png, id=176, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 8.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 8.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 8.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png, id=177, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png  used on input line 342.
+<./Plots/Test Only/3community/3community 9.png, id=177, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 9.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 9.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 9.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png, id=178, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png  used on input line 342.
+<./Plots/Test Only/3community/3community 10.png, id=178, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 10.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 10.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 10.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png, id=179, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png  used on input line 342.
+<./Plots/Test Only/3community/3community 11.png, id=179, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 11.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 11.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 11.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png, id=180, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png  used on input line 342.
+<./Plots/Test Only/3community/3community 12.png, id=180, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 12.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 12.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 12.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png, id=181, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png  used on input line 342.
+<./Plots/Test Only/3community/3community 13.png, id=181, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 13.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 13.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 13.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png, id=182, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png  used on input line 342.
+<./Plots/Test Only/3community/3community 14.png, id=182, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 14.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 14.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 14.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
-</home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png, id=183, 702.625pt x 501.875pt>
-File: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png Graphic file (type png)
-<use /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png>
-Package pdftex.def Info: /home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png  used on input line 342.
+<./Plots/Test Only/3community/3community 15.png, id=183, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 15.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 15.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 15.png  used on input line 342.
 (pdftex.def)             Requested size: 140.92793pt x 100.66422pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 342--343
@@ -1327,7 +1327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 342--343
 []$ $[]$ $[]$
  []
 
-[5] [6 </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 1.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 2.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 3.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 4.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 5.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 6.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 7.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 8.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 9.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 10.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 11.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 12.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 13.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 14.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/2communities/2communities 15.png>] [7 </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 1.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 2.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 3.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 4.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 5.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 6.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 7.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 8.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 9.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 10.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 11.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 12.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 13.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 14.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/longTail/longTail 15.png>] [8 </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 1.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 2.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 3.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 4.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 5.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 6.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 7.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 8.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 9.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 10.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 11.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 12.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 13.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 14.png> </home/stirling/thesis/Conference Submission/Plots/Test Only/3community/3community 15.png>]
+[5] [6 <./Plots/Test Only/2communities/2communities 1.png> <./Plots/Test Only/2communities/2communities 2.png> <./Plots/Test Only/2communities/2communities 3.png> <./Plots/Test Only/2communities/2communities 4.png> <./Plots/Test Only/2communities/2communities 5.png> <./Plots/Test Only/2communities/2communities 6.png> <./Plots/Test Only/2communities/2communities 7.png> <./Plots/Test Only/2communities/2communities 8.png> <./Plots/Test Only/2communities/2communities 9.png> <./Plots/Test Only/2communities/2communities 10.png> <./Plots/Test Only/2communities/2communities 11.png> <./Plots/Test Only/2communities/2communities 12.png> <./Plots/Test Only/2communities/2communities 13.png> <./Plots/Test Only/2communities/2communities 14.png> <./Plots/Test Only/2communities/2communities 15.png>] [7 <./Plots/Test Only/longTail/longTail 1.png> <./Plots/Test Only/longTail/longTail 2.png> <./Plots/Test Only/longTail/longTail 3.png> <./Plots/Test Only/longTail/longTail 4.png> <./Plots/Test Only/longTail/longTail 5.png> <./Plots/Test Only/longTail/longTail 6.png> <./Plots/Test Only/longTail/longTail 7.png> <./Plots/Test Only/longTail/longTail 8.png> <./Plots/Test Only/longTail/longTail 9.png> <./Plots/Test Only/longTail/longTail 10.png> <./Plots/Test Only/longTail/longTail 11.png> <./Plots/Test Only/longTail/longTail 12.png> <./Plots/Test Only/longTail/longTail 13.png> <./Plots/Test Only/longTail/longTail 14.png> <./Plots/Test Only/longTail/longTail 15.png>] [8 <./Plots/Test Only/3community/3community 1.png> <./Plots/Test Only/3community/3community 2.png> <./Plots/Test Only/3community/3community 3.png> <./Plots/Test Only/3community/3community 4.png> <./Plots/Test Only/3community/3community 5.png> <./Plots/Test Only/3community/3community 6.png> <./Plots/Test Only/3community/3community 7.png> <./Plots/Test Only/3community/3community 8.png> <./Plots/Test Only/3community/3community 9.png> <./Plots/Test Only/3community/3community 10.png> <./Plots/Test Only/3community/3community 11.png> <./Plots/Test Only/3community/3community 12.png> <./Plots/Test Only/3community/3community 13.png> <./Plots/Test Only/3community/3community 14.png> <./Plots/Test Only/3community/3community 15.png>]
 Overfull \hbox (31.34352pt too wide) in paragraph at lines 364--364
 []\OT1/cmr/m/n/10 Rackauckas, C. \OT1/cmr/m/it/10 et al. \OT1/cmr/m/n/10 Uni-ver-sal Dif-fer-en-tial Equa-tions for Sci-en-tific Ma-chine Learn-ing. \OT1/cmr/m/it/10 CoRR \OT1/cmr/bx/n/10 abs/2001.04385.
  []
@@ -1341,14 +1341,14 @@ Package logreq Info: Writing requests to 'DraftDoc.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  34898 strings out of 478238
- 687996 string characters out of 5850455
+ 676530 string characters out of 5850455
  1406318 words of memory out of 5000000
  52429 multiletter control sequences out of 15000+600000
  476092 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,21n,117p,1034b,1423s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on DraftDoc.pdf (9 pages, 861915 bytes).
+Output written on DraftDoc.pdf (9 pages, 872904 bytes).
 PDF statistics:
  337 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams
