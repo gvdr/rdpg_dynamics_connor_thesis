@@ -37,26 +37,4 @@ for i in 1:datasize
 
 end
 
-# using Plots
-
-# @userplot ModelPred
-# @recipe function f(mp::ModelPred)
-#     gr()
-#     pts, i = mp.args
-#     types = i>datasize ? ["Data" "Test Pred" "True"] : ["Data" "Train Pred" "True"]
-#     aspect_ratio --> 1
-#     label --> types
-#     legend --> :bottomleft
-#     seriestype --> :scatter
-#     bg --> :linen
-#     [pts[3:end,1],[pts[2,1]+0.01],[pts[1,1]+0.01]], [pts[3:end,2],[pts[2,2]], [pts[1,2]]]
-# end
-
-# n = length(train_data)
-# anim = @animate for i ∈ 1:datasize
-#     pts = get_embedding(t_data[i], sltn[:,i])
-#     modelpred(pts, i)
-# end
-# gif(anim, "/home/connor/Thesis/Code/Plots/Test Only/$net_name.gif", fps = 1)
-
 

@@ -1,6 +1,11 @@
 using Revise
+<<<<<<< HEAD
+global dims=(212,2) #|> Lux.gpu
+global net_name = "3community"
+=======
 global dims=(182,2) #|> Lux.gpu
 global net_name = "longTail"
+>>>>>>> master
 include("load2ComGraphFlat.jl")
 include("../structs/TemporalEmbedding.jl")
 global true_data, time_graphs = load2ComGraphFlat(true);

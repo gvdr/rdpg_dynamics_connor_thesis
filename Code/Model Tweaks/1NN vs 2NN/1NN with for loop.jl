@@ -99,9 +99,18 @@ end
 # prob_neuralode, p, st, nn = constructNN();
 # optprob = NODEproblem();
 sol = predict_neuralode(result.u)
+<<<<<<< HEAD
+t1=scatter(x=sol[1,:],y=sol[2,:])
+t2=scatter(x=targetNode(t_data,1).A[1,1,:],y=targetNode(t_data,1).A[2,1,:])
+plot([t1,t2])
 
 using DelimitedFiles
  
+=======
+
+using DelimitedFiles
+
+>>>>>>> master
 writedlm("./Code/Solutions/$net_name.csv", sol, ",")
 
 function predict_neuralode(θ)
