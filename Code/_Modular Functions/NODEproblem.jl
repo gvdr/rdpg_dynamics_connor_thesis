@@ -24,6 +24,7 @@ callback = function(θ, l)
   #t = t+1
   #M = reshape(ode_data[:,t], (dims[1],dims[2]))
   display(l)
+  temp_res = θ
   return false
 end
 

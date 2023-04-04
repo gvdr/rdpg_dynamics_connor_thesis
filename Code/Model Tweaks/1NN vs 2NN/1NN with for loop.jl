@@ -24,7 +24,10 @@ include("../../_Modular Functions/reconstructRDPG.jl")
 rng = Random.default_rng()
 nn = Lux.Chain(x -> x,
       Lux.Dense(input_data_length, 64, tanh),
-      Lux.Dense(64, output_data_length))
+      Lux.Dense(64, 8, tanh),
+      Lux.Dense(8, 8, tanh),
+      Lux.Dense(8, 8, tanh),
+      Lux.Dense(8, output_data_length))
 
 p, st = Lux.setup(rng, nn)
 
@@ -58,7 +61,7 @@ adtype = Optimization.AutoForwardDiff()
 
 optf = Optimization.OptimizationFunction((x,p)->loss_neuralode(x), adtype)
 optprob = Optimization.OptimizationProblem(optf, p)
-optprob = remake(optprob, u0=result.u)
+# optprob = remake(optprob, u0=result.u)
 res = [] # Used to store models at various training times
 #result::AbstractVector = []
 mid = convert(Int, dims[1]/2)
@@ -67,18 +70,16 @@ TNode_data = targetNode(t_data[1:datasize],1)
 
 
 #prob_neuralode = remake(prob_neuralode, u0=u0)
+temp_res = p
 result = Optimization.solve(optprob,
-                            Optim.SimulatedAnnealing(),
+                            ADAM(0.005),
                             callback = callback,
-                            maxiters = 10^4, 
-                            maxtime=5*10^2)
+                            maxiters = 10^3)
 optprob = remake(optprob, u0=result.u)
 println("ping")
 
-predict_neuralode(result.u)
-
 result = Optimization.solve(optprob,
-                            Optim.SimulatedAnnealing(),
+                            Optim.BFGS(initial_stepnorm=0.001),
                             callback = callback,
                             maxiters = 10^4, 
                             maxtime=10^4)
@@ -124,7 +125,7 @@ sol = predict_neuralode(result.u)
 # loss_neuralode(result.u)
 using DelimitedFiles
 
-writedlm("./Code/Solutions/$net_name.csv", sol, ",")
+writedlm("./Code/Solutions/$net_name big net.csv", sol, ",")
 
 function predict_neuralode(θ)
   Array(solve(prob_neuralode, Tsit5(), saveat = tsteps, p=θ))#|>Lux.gpu
@@ -140,6 +141,6 @@ sol = predict_neuralode(result.u)
 
 using DelimitedFiles
 
-writedlm("./Code/Solutions/$net_name test only.csv", sol, ",")
+writedlm("./Code/Solutions/$net_name big net test only.csv", sol, ",")
 
 
