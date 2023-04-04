@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'DraftDoc.blg'
-[54] biber:340> INFO - === Thu Mar 16, 2023, 10:26:37
-[65] Biber.pm:418> INFO - Reading 'DraftDoc.bcf'
-[113] Biber.pm:972> INFO - Found 14 citekeys in bib section 0
-[122] Biber.pm:4383> INFO - Processing section 0
-[129] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[130] bibtex.pm:1713> INFO - LaTeX decoding ...
-[156] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[260] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[260] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[260] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[260] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[274] bbl.pm:654> INFO - Writing 'DraftDoc.bbl' with encoding 'UTF-8'
-[283] bbl.pm:757> INFO - Output to DraftDoc.bbl
+[55] biber:340> INFO - === Wed Apr  5, 2023, 11:07:48
+[67] Biber.pm:418> INFO - Reading 'DraftDoc.bcf'
+[116] Biber.pm:972> INFO - Found 14 citekeys in bib section 0
+[125] Biber.pm:4383> INFO - Processing section 0
+[132] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[134] bibtex.pm:1713> INFO - LaTeX decoding ...
+[160] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[267] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[267] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[267] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[267] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[280] bbl.pm:654> INFO - Writing 'DraftDoc.bbl' with encoding 'UTF-8'
+[287] bbl.pm:757> INFO - Output to DraftDoc.bbl

@@ -17,6 +17,7 @@ sorting=ynt
 \usepackage{caption, subcaption}
 \usepackage{pgffor}
 \usepackage{mathtools}
+\usepackage{array}
 \addbibresource{bibliography.bib}
 \usepackage{hyperref,thmtools}
 
@@ -40,17 +41,17 @@ sorting=ynt
 
 \begin{section}{Introduction}
 The modelling of temporal networks is an important task in many real world applications including symptom interactions for mental health, epidemiology, and protein interactions \cite{jordan2020current,contreras2020temporal,lucas2021inferring,jin2009identifying,masuda2013predicting}.
-Temporal networks can be seen as dynamical systems: that is a system in which we have points, in our case nodes in a network, whose states, the edges connecting them, that vary dependent in time.
-Discovering the underlying equations governing these dynamical systems proves challenging, because changes in network structure are typically observed in the form of discrete jumps from one state to another, for example an edge between two nodes not being observed at the first timestep then appearing at the next.
+Temporal networks can be seen as dynamical systems: that is, a system in which we have points, in our case nodes in a network, whose states, the edges connecting them, vary dependent in time.
+Discovering the underlying equations governing these dynamical systems proves challenging, because changes in network structure are typically observed in the form of discrete jumps from one state to another, that is, an edge may exist between two nodes at one timestep then dissapear at the next. There cannot be an edge that has half decayed.
 Here, we proposes a hybrid statistical and deep learning framework that allows us to model temporal networks as continous-time dynamical systems, discover a fitting set of differential equations describing it, and, exploiting that discovery, predict the time evolution of a network.
 
-Differential equations are useful for modelling systems where the state of one variable can effect the trajectories of other variables. We observe this behaviour in temporal networks; nodes' connections within the network can influence the formation and decay of edges between other nodes, for example the phenonmenon of preferential attatchment observed in \cite{newman2001clustering,capocci2006preferential}. With this in mind we might wish to draw on the rich mathematical literature of differential equation modelling.
+Differential equations are useful for modelling systems where the state of one variable can effect the trajectories of other variables. We observe this behaviour in temporal networks; nodes' connections within the network can influence the formation and decay of edges between other nodes, for example the phenonmenon of preferential attatchment observed in \cite{newman2001clustering,capocci2006preferential}. With this observation in mind we might wish to draw on the rich mathematical literature of differential equation modelling.
 
 In the common representation of networks as binary-valued adjacency matrices, the events recorded in a temporal sequence of networks correspond to topological events, such as the appearence or the disappearance of link.
-Because of the discrete nature of events, directly modelling the temporal networks as dynamical systems would require to handle discrete jumps.
+Because of the discrete nature of events, directly modelling the temporal networks as dynamical systems would require the model to handle discrete jumps.
 The topological nature of temporal networks, and the discontinuous character of their temporal evolution, make it challenging to use differential equations techniques.
 
-Here, we overcome the discretness problem by interpreting networks as Random Dot Product Graphs; a well established statistical model for complex networks, that embeds nodes in a low-dimensional metric space\cite{athreya2017statistical}. In this way we translate the hard problem of modelling discrete events in the space of networks to the easier problem of modelling continous change in the embedding space. Then, we define and use systems of Neural Network Differential Equations (NNDE) to approximate the time evolution of the embedding space, and symbolic regression techniques to discover the functional form of the fitted NNDEs. These functional forms are interpretable (as they read as classic differential equations) and allow to predict forward in time the evolution of the temporal networks.
+Here, we overcome the discretness problem by interpreting networks as Random Dot Product Graphs, a well established statistical model for complex networks, that embeds nodes in a low-dimensional metric space\cite{athreya2017statistical}. In this way we translate the hard problem of modelling discrete events in the space of networks to the easier problem of modelling continous change in the embedding space. Then, we define and use systems of Neural Network Differential Equations (NNDE) to approximate the time evolution of the embedding space, and symbolic regression techniques to discover the functional form of the fitted NNDEs. These functional forms are interpretable (as they read as classic differential equations) and allow to predict forward in time the evolution of the temporal networks.
 
 In this manuscript, we prove that the temporal network prediction problem can be successfully re-interpreted as a dynamical system modelling problem. In particular, we apply our proposed framework to three small example temporal networks with the hope of exploring the limitations and strengths of the proposed framework.
 The framework we are introducing is extremely flexible, and our research regarding the optimal structure of the Neural Networks used for the NNDEs is just started.
@@ -61,7 +62,7 @@ As it is completely general, we believe that the framework we are introducing ca
 \end{section}
 
 \begin{section}{Methodology}
-    We are given a sequence of graphs, and our goal is to predict the next graph in the sequence. To do this we read each graph as a Random Dot Product Graph (RDPG); a visual representation of this can be seen in \autoref{framework illustration}. To obtain the RDPG, we take each network observation \autoref{method nets} and represent them in the form of an adjacency matrix \autoref{method adjacency}. We then use a truncated singular value decomposition to reduce the dimensionality of our adjacency matrices[ref]. The rows of the output of the SVD can then be viewed as vector points in a d-dimensional space[ref], where d is the number of singular values we take for our SVD. In this space nodes that are similar, ie, nodes have many common neighbours, will be mapped to similar points in the space.
+    We are given a sequence of graphs, and our goal is to predict the next graph in the sequence. To do this we read each graph as a Random Dot Product Graph (RDPG); a visual representation of this process can be seen in \autoref{framework illustration}. To obtain the RDPG, we take each network observation \autoref{method nets} and represent them in the form of an adjacency matrix \autoref{method adjacency}. We then use a truncated singular value decomposition to reduce the dimensionality of our adjacency matrices[ref]. This truncation introduces some loss, but can dramatically reduce the size of our problem [cite]. XXXX It should be noted that when we plot our models, we compare them to this embedding and do not take into account this truncation loss.XXXX The rows of the output of the SVD can then be viewed as vector points in a d-dimensional space[ref], where d is the number of singular values we take for our SVD. In this space nodes that are similar, ie, nodes have many common neighbours, will be mapped to similar points in the space.
     \begin{figure}
     \centering
     \begin{subfigure}[c]{1\textwidth}
@@ -322,13 +323,11 @@ As it is completely general, we believe that the framework we are introducing ca
                     \caption{t=\i}
                 \end{subfigure}\quad
             }
-            \caption{3 Community test series. This series shows the comparison of the neural network model, the symbolic regression model trained on the neural network model, and the true solution of the long tail system.}
+            \caption{Long Tail test series. This series shows the comparison of the neural network model, the symbolic regression model trained on the neural network model, and the true solution of the long tail system.}
             \label{longtail series}
         \end{figure}
-        In fig \autoref{longtail series} we see the true embedding of the target node jump from one arm to the other at each timestep. It is clear that neither the the symbolic regression model nor the neural network model capture this movement, but the symbolic regression model does not move away from the data as quickly as the neural network model does.
+        In fig \autoref{longtail series} we see the true embedding of the target node jump from one arm to the other at each timestep. It is clear that neither the the symbolic regression model nor the neural network model capture this movement. We also see that the symbolic regression model maintains a relatively stable position when compared to the neural network model.
 
-        In contrast to this, the symbolic regression model remains close to the true target node throughout the test data.
-        
         We see that neither the neural network model capture the movement of the target node to any real extent. One reason for this may again be an issue of symmetrical input. The distances from the k nearest neighbours to the target node do not seem to change much as the target node jumps from one arm to the other, but the neural network somehow needs to learn to jump left then right at alternating timesteps. The solutions to this would be the same as for the two community system.
     \end{subsection}
 
@@ -340,16 +339,39 @@ As it is completely general, we believe that the framework we are introducing ca
                     \caption{t=\i}
                 \end{subfigure}\quad
             }
-            \caption{Long tail test series. This series shows the comparison of the neural network model, the symbolic regression model trained on the neural network model, and the true solution of the 3 community system.}
+            \caption{3 community test series. This series shows the comparison of the neural network model, the symbolic regression model trained on the neural network model, and the true solution of the 3 community system.}
             \label{3community series}
         \end{figure}
         In fig \autoref{3community series} we again, as the edges between the community with the fewest edges are removed, we see the target node move away from it in the embedding and towards the other two clusters of points (communities).
 
-        In the neural network only model, we see the prediction follow the true target node very closely at first. We then see the node drift further and further from the true target node. In contrast, the symbolic regression model remains much closer to the true position of the target node as the test data progresses. We see the symbolic regression move slightly ahead of the true location at first, but this distance remains relatively constant thereafter.
+        % In the neural network only model, we see the prediction follow the true target node very closely at first. We then see the node drift further and further from the true target node. In contrast, the symbolic regression model remains much closer to the true position of the target node as the test data progresses. We see the symbolic regression move slightly ahead of the true location at first, but this distance remains relatively constant thereafter.
 
-        This was by far the largest improvement between the neural network and the symbolic regression. This could be because this system had the least difference between the training predictions and the true position of the target node. At the end of the test data we see the true target node move towards the origin. This is because it now only has edges to one community and so at each timestep it removes one of these. If this had continued, the target node would have no edges. Nodes with no edges are mapped to the origin. When this happened, the symbolic regression model prediction began to move further from the true node.
+        In the neural network model, we see the prediction remain at close to its initial location for the duration of the test. This seems to indicate an attractor in the model.
 
+        In contrast, we see that the symbolic regression model quickly moves ahead of the true location where it remains for the duration of the test.
+
+        % This was by far the largest improvement between the neural network and the symbolic regression. This could be because this system had the least difference between the training predictions and the true position of the target node. At the end of the test data we see the true target node move towards the origin. This is because it now only has edges to one community and so at each timestep it removes one of these. If this had continued, the target node would have no edges. Nodes with no edges are mapped to the origin. When this happened, the symbolic regression model prediction began to move further from the true node.
+
+        \subsection{Network Prediction}
+        \begin{figure}
+            \begin{center}
+                \begin{tabular}{| m{0.25\textwidth} | m{0.25\textwidth} | m{0.25\textwidth} | m{0.25\textwidth} |}
+                 \hline
+                 Sequence & Embedding Mean Loss & Neural Network Prediction Mean Loss & Symbolic Regression Prediction Mean Loss\\ 
+                 \hline
+                 \hline
+                 cell4 & cell5 & cell6 & c\\ 
+                 \hline 
+                 cell7 & cell8 & cell9 & c \\ 
+                 \hline 
+                \end{tabular}
+                \end{center}
+                \caption{my caption}
+        \end{figure}
+        \subsection{Summary}
         We see a large difference in the training predictions between the 2 and 3 community systems. In the 2 community system, even in the training period, the predictions tended to wander and be less accurate. Whereas the 3 community training predictions remained very close to the true target node. The movement of the target node in the embedding was very similar between the two systems, and so the difference seems to be that the 2 community has symmetrical inputs.
+
+        These were trained on a relatively small neural network (one hidden layer of 64 nodes), when training this small network one of the issues we encountered was that the weights would become stuck in local minima. To manage this we found that simulate annaeling was helpful. When training on a larger network (4 hidden layers (64,8,8,8)) this does not seem to be as much of a problem.
     \end{subsection}
 
 \end{section}

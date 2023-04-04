@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber DraftDoc"] 1678915597 "DraftDoc.bcf" "DraftDoc.bbl" "DraftDoc" 1680557810
-  "DraftDoc.bcf" 1680557810 108957 02f13b726bd99e9baa37a2786284575d "pdflatex"
+["biber DraftDoc"] 1680649668 "DraftDoc.bcf" "DraftDoc.bbl" "DraftDoc" 1680649749
+  "DraftDoc.bcf" 1680649749 108957 02f13b726bd99e9baa37a2786284575d "pdflatex"
   "bibliography.bib" 1677617318 17422 3c1f7e9af221ed4eb2e014d6939605d0 ""
   (generated)
   "DraftDoc.bbl"
   "DraftDoc.blg"
-["pdflatex"] 1680557807 "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" "DraftDoc.pdf" "DraftDoc" 1680557810
-  "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" 1680557807 29463 cbb419cc8758ad22cb3704787a764cbb ""
+["pdflatex"] 1680649746 "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" "DraftDoc.pdf" "DraftDoc" 1680649749
+  "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" 1680649742 31088 13563ac75c09ff399e64fd3121019e85 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1650183167 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -218,6 +218,7 @@
   "/usr/share/texmf-dist/tex/latex/thmtools/thm-patch.sty" 1650181202 6878 431a9a87e0de7d67be897e7f32de5de8 ""
   "/usr/share/texmf-dist/tex/latex/thmtools/thm-restate.sty" 1650181202 8051 eb3d5dfdb0b8abdb82a15f1cb1e31eb0 ""
   "/usr/share/texmf-dist/tex/latex/thmtools/thmtools.sty" 1650181202 1913 14ce4b4a72390661cf2159f387dd3dba ""
+  "/usr/share/texmf-dist/tex/latex/tools/array.sty" 1650183167 12694 6c23725d50ab9d1e2d3ce482c58ffcf3 ""
   "/usr/share/texmf-dist/tex/latex/tools/calc.sty" 1650183167 10214 00ce62e730d0cfe22b35e8f1c84949c7 ""
   "/usr/share/texmf-dist/tex/latex/tools/shellesc.sty" 1650183167 4118 0f286eca74ee36b7743ff20320e5479f ""
   "/usr/share/texmf-dist/tex/latex/transparent/transparent.sty" 1650181202 4155 541de118e0abc42fce3317addc90afb0 ""
@@ -232,11 +233,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1669147196 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1669147176 2927660 477c37de77dd92ab5938d3435b802b41 ""
-  "DraftDoc.aux" 1680557810 10574 7d5e78dafb9af46a48fe59aa185eca7c "pdflatex"
-  "DraftDoc.bbl" 1678915598 24370 fd5ca95b536c6f1990c27ad41ab4ac24 "biber DraftDoc"
-  "DraftDoc.out" 1680557810 963 8f91f3c4cf4ce7fe5c4c5871d4034f7d "pdflatex"
-  "DraftDoc.run.xml" 1680557810 2436 a423d500a4c48236cc7d77c48400b295 "pdflatex"
-  "DraftDoc.tex" 1680557807 29463 cbb419cc8758ad22cb3704787a764cbb ""
+  "DraftDoc.aux" 1680649749 10949 538c64cf68e2380e3362f05812adbe4b "pdflatex"
+  "DraftDoc.bbl" 1680649668 24370 fd5ca95b536c6f1990c27ad41ab4ac24 "biber DraftDoc"
+  "DraftDoc.out" 1680649749 1206 f05291e6fabcc6260d473cdd8a6d864f "pdflatex"
+  "DraftDoc.run.xml" 1680649749 2436 a423d500a4c48236cc7d77c48400b295 "pdflatex"
+  "DraftDoc.tex" 1680649742 31088 13563ac75c09ff399e64fd3121019e85 ""
   "Plots/Test Only/2communities/2communities 1.png" 1680557779 27465 3c947ca8f250e7cd32a793c65f378822 ""
   "Plots/Test Only/2communities/2communities 10.png" 1680557779 26868 e06c042cf844668e0c83f17c9de9c516 ""
   "Plots/Test Only/2communities/2communities 11.png" 1680557779 27356 90a3352dfac93a0331c857302a375a8b ""
