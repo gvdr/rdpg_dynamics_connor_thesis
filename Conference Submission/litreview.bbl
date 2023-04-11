@@ -19,77 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
-    \entry{golub1971singular}{incollection}{}
-      \name{author}{2}{}{%
-        {{hash=8b856da92ad549d323acc679ecf7f474}{%
-           family={Golub},
-           familyi={G\bibinitperiod},
-           given={Gene\bibnamedelima H},
-           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=5bb4641652deb69ab70bbd809af4391b}{%
-           family={Reinsch},
-           familyi={R\bibinitperiod},
-           given={Christian},
-           giveni={C\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{2896805e25a93d3806a7b87bc42ba1b9}
-      \strng{fullhash}{2896805e25a93d3806a7b87bc42ba1b9}
-      \strng{bibnamehash}{2896805e25a93d3806a7b87bc42ba1b9}
-      \strng{authorbibnamehash}{2896805e25a93d3806a7b87bc42ba1b9}
-      \strng{authornamehash}{2896805e25a93d3806a7b87bc42ba1b9}
-      \strng{authorfullhash}{2896805e25a93d3806a7b87bc42ba1b9}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Linear algebra}
-      \field{title}{Singular value decomposition and least squares solutions}
-      \field{year}{1971}
-      \field{pages}{134\bibrangedash 151}
-      \range{pages}{18}
-    \endentry
-    \entry{hoff2002latent}{article}{}
-      \name{author}{3}{}{%
-        {{hash=4f65d919a92f4c4afcabd6cad3be75ae}{%
-           family={Hoff},
-           familyi={H\bibinitperiod},
-           given={Peter\bibnamedelima D},
-           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=205b9f60128ee13642fa79b6f1330d63}{%
-           family={Raftery},
-           familyi={R\bibinitperiod},
-           given={Adrian\bibnamedelima E},
-           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=279407956525fc33169d45fb6000b0f3}{%
-           family={Handcock},
-           familyi={H\bibinitperiod},
-           given={Mark\bibnamedelima S},
-           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Taylor \& Francis}%
-      }
-      \strng{namehash}{c5ccdda0aa052bca79ceaab6fafe4cc8}
-      \strng{fullhash}{20ed09f861d629958792a47ee31e3a61}
-      \strng{bibnamehash}{20ed09f861d629958792a47ee31e3a61}
-      \strng{authorbibnamehash}{20ed09f861d629958792a47ee31e3a61}
-      \strng{authornamehash}{c5ccdda0aa052bca79ceaab6fafe4cc8}
-      \strng{authorfullhash}{20ed09f861d629958792a47ee31e3a61}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of the american Statistical association}
-      \field{number}{460}
-      \field{title}{Latent space approaches to social network analysis}
-      \field{volume}{97}
-      \field{year}{2002}
-      \field{pages}{1090\bibrangedash 1098}
-      \range{pages}{9}
-    \endentry
     \entry{bongard2007automated}{article}{}
       \name{author}{2}{}{%
         {{hash=0b666071b3487ff44859a1a9814badd9}{%
@@ -163,6 +92,58 @@
       \field{pages}{315\bibrangedash 321}
       \range{pages}{7}
     \endentry
+    \entry{jin2009identifying}{incollection}{}
+      \name{author}{6}{}{%
+        {{hash=15157ea07a053e2e02e8778d194a5c1d}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Ruoming},
+           giveni={R\bibinitperiod}}}%
+        {{hash=85c95e48828bba65d8c04fd4666f162f}{%
+           family={McCallen},
+           familyi={M\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0f86b9245eaa5d3496220a14e37b3abe}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Chun-Chi},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=baa983e0769e57b7f9a497fc98e9a245}{%
+           family={Xiang},
+           familyi={X\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ade38bfcea45326c91e14957d9343f72}{%
+           family={Almaas},
+           familyi={A\bibinitperiod},
+           given={Eivind},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3f7f59185002f76576cf18b3aabad6c3}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xianghong\bibnamedelima Jasmine},
+           giveni={X\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{d26a0138c24df9778e3b8d4ae315cc7b}
+      \strng{fullhash}{8b92575e177c8d2d6f8fe93f03158919}
+      \strng{bibnamehash}{d26a0138c24df9778e3b8d4ae315cc7b}
+      \strng{authorbibnamehash}{d26a0138c24df9778e3b8d4ae315cc7b}
+      \strng{authornamehash}{d26a0138c24df9778e3b8d4ae315cc7b}
+      \strng{authorfullhash}{8b92575e177c8d2d6f8fe93f03158919}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Biocomputing 2009}
+      \field{title}{Identifying dynamic network modules with temporal and spatial constraints}
+      \field{year}{2009}
+      \field{pages}{203\bibrangedash 214}
+      \range{pages}{12}
+    \endentry
     \entry{schmidt2009distilling}{article}{}
       \name{author}{2}{}{%
         {{hash=7047d212f80975d90e11f6931e965e13}{%
@@ -228,6 +209,49 @@
       \field{title}{Discrete temporal models of social networks}
       \field{year}{2010}
     \endentry
+    \entry{HOLME201297}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6fbf62dda7acce7a201e5324c44e2345}{%
+           family={Holme},
+           familyi={H\bibinitperiod},
+           given={Petter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d32b5a9bff25e830cd8827349dee6e1d}{%
+           family={Saramäki},
+           familyi={S\bibinitperiod},
+           given={Jari},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{208f422501368c0676153a43ec6f691a}
+      \strng{fullhash}{208f422501368c0676153a43ec6f691a}
+      \strng{bibnamehash}{208f422501368c0676153a43ec6f691a}
+      \strng{authorbibnamehash}{208f422501368c0676153a43ec6f691a}
+      \strng{authornamehash}{208f422501368c0676153a43ec6f691a}
+      \strng{authorfullhash}{208f422501368c0676153a43ec6f691a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A great variety of systems in nature, society and technology–from the web of sexual contacts to the Internet, from the nervous system to power grids–can be modeled as graphs of vertices coupled by edges. The network structure, describing how the graph is wired, helps us understand, predict and optimize the behavior of dynamical systems. In many cases, however, the edges are not continuously active. As an example, in networks of communication via e-mail, text messages, or phone calls, edges represent sequences of instantaneous or practically instantaneous contacts. In some cases, edges are active for non-negligible periods of time: e.g., the proximity patterns of inpatients at hospitals can be represented by a graph where an edge between two individuals is on throughout the time they are at the same ward. Like network topology, the temporal structure of edge activations can affect dynamics of systems interacting through the network, from disease contagion on the network of patients to information diffusion over an e-mail network. In this review, we present the emergent field of temporal networks, and discuss methods for analyzing topological and temporal structure and models for elucidating their relation to the behavior of dynamical systems. In the light of traditional network theory, one can see this framework as moving the information of when things happen from the dynamical system on the network, to the network itself. Since fundamental properties, such as the transitivity of edges, do not necessarily hold in temporal networks, many of these methods need to be quite different from those for static networks. The study of temporal networks is very interdisciplinary in nature. Reflecting this, even the object of study has many names—temporal graphs, evolving graphs, time-varying graphs, time-aggregated graphs, time-stamped graphs, dynamic networks, dynamic graphs, dynamical graphs, and so on. This review covers different fields where temporal graphs are considered, but does not attempt to unify related terminology—rather, we want to make papers readable across disciplines.}
+      \field{issn}{0370-1573}
+      \field{journaltitle}{Physics Reports}
+      \field{note}{Temporal Networks}
+      \field{number}{3}
+      \field{title}{Temporal networks}
+      \field{volume}{519}
+      \field{year}{2012}
+      \field{pages}{97\bibrangedash 125}
+      \range{pages}{29}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.physrep.2012.03.001
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0370157312000841
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0370157312000841
+      \endverb
+    \endentry
     \entry{zhao2012multi}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=ee3484f5737e5883e0da33c439c3ff8c}{%
@@ -282,6 +306,80 @@
       \field{pages}{171\bibrangedash 184}
       \range{pages}{14}
     \endentry
+    \entry{KARIMI20133476}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0745fec706666e1495cfde933ee9a64e}{%
+           family={Karimi},
+           familyi={K\bibinitperiod},
+           given={Fariba},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6fbf62dda7acce7a201e5324c44e2345}{%
+           family={Holme},
+           familyi={H\bibinitperiod},
+           given={Petter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{249fbcf76e605b1e1c7dad07bab86294}
+      \strng{fullhash}{249fbcf76e605b1e1c7dad07bab86294}
+      \strng{bibnamehash}{249fbcf76e605b1e1c7dad07bab86294}
+      \strng{authorbibnamehash}{249fbcf76e605b1e1c7dad07bab86294}
+      \strng{authornamehash}{249fbcf76e605b1e1c7dad07bab86294}
+      \strng{authorfullhash}{249fbcf76e605b1e1c7dad07bab86294}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Threshold models try to explain the consequences of social influence like the spread of fads and opinions. Along with models of epidemics, they constitute a major theoretical framework of social spreading processes. In threshold models on static networks, an individual changes her state if a certain fraction of her neighbors has done the same. When there are strong correlations in the temporal aspects of contact patterns, it is useful to represent the system as a temporal network. In such a system, not only contacts but also the time of the contacts are represented explicitly. In many cases, bursty temporal patterns slow down disease spreading. However, as we will see, this is not a universal truth for threshold models. In this work we propose an extension of Watts’s classic threshold model to temporal networks. We do this by assuming that an agent is influenced by contacts which lie a certain time into the past. I.e., the individuals are affected by contacts within a time window. In addition to thresholds in the fraction of contacts, we also investigate the number of contacts within the time window as a basis for influence. To elucidate the model’s behavior, we run the model on real and randomized empirical contact datasets.}
+      \field{issn}{0378-4371}
+      \field{journaltitle}{Physica A: Statistical Mechanics and its Applications}
+      \field{number}{16}
+      \field{title}{Threshold model of cascades in empirical temporal networks}
+      \field{volume}{392}
+      \field{year}{2013}
+      \field{pages}{3476\bibrangedash 3483}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.physa.2013.03.050
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378437113002835
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378437113002835
+      \endverb
+      \keyw{Complex networks,Network theory,Threshold models,Temporal networks}
+    \endentry
+    \entry{masuda2013predicting}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7df048eb2aad541fce900a6741f5d272}{%
+           family={Masuda},
+           familyi={M\bibinitperiod},
+           given={Naoki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6fbf62dda7acce7a201e5324c44e2345}{%
+           family={Holme},
+           familyi={H\bibinitperiod},
+           given={Petter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Faculty of 1000 Ltd}%
+      }
+      \strng{namehash}{a189ecbd9f95f642c58f673d7bdfd5e4}
+      \strng{fullhash}{a189ecbd9f95f642c58f673d7bdfd5e4}
+      \strng{bibnamehash}{a189ecbd9f95f642c58f673d7bdfd5e4}
+      \strng{authorbibnamehash}{a189ecbd9f95f642c58f673d7bdfd5e4}
+      \strng{authornamehash}{a189ecbd9f95f642c58f673d7bdfd5e4}
+      \strng{authorfullhash}{a189ecbd9f95f642c58f673d7bdfd5e4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{F1000prime reports}
+      \field{title}{Predicting and controlling infectious disease epidemics using temporal networks}
+      \field{volume}{5}
+      \field{year}{2013}
+    \endentry
     \entry{moinet2015burstiness}{article}{}
       \name{author}{3}{}{%
         {{hash=c1700d6f694170ec1611bdc291aa972a}{%
@@ -309,6 +407,7 @@
       \strng{authorbibnamehash}{2c682af7a8f1a6bafe1d855b5fd25f7b}
       \strng{authornamehash}{4e7ea8841371983757677fc4372fe462}
       \strng{authorfullhash}{2c682af7a8f1a6bafe1d855b5fd25f7b}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -320,6 +419,110 @@
       \field{year}{2015}
       \field{pages}{108701}
       \range{pages}{1}
+    \endentry
+    \entry{caballero2017real}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=3b9836d6278f3cf5dc21ab6e8c010ecb}{%
+           family={Caballero},
+           familyi={C\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod}}}%
+        {{hash=dee0b959a6d8e56154a0c6381ea357af}{%
+           family={Ledig},
+           familyi={L\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b9d6efcdb8c05d59bf4b6c18cba1518c}{%
+           family={Aitken},
+           familyi={A\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=054b92db4c82434176e894d7fa6055ce}{%
+           family={Acosta},
+           familyi={A\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1381c64db5234527e34e6f3b4977fe54}{%
+           family={Totz},
+           familyi={T\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f9c196f615b0bde00b8ef1e7cfaa8055}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zehan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=59260dd2ba392e626647c9ee8f8c6b35}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Wenzhe},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8902936b0d5f4db7dd4a0494dcb5d478}
+      \strng{fullhash}{35d37196ba4034ea2ea10b784d9f7e39}
+      \strng{bibnamehash}{8902936b0d5f4db7dd4a0494dcb5d478}
+      \strng{authorbibnamehash}{8902936b0d5f4db7dd4a0494dcb5d478}
+      \strng{authornamehash}{8902936b0d5f4db7dd4a0494dcb5d478}
+      \strng{authorfullhash}{35d37196ba4034ea2ea10b784d9f7e39}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE conference on computer vision and pattern recognition}
+      \field{title}{Real-time video super-resolution with spatio-temporal networks and motion compensation}
+      \field{year}{2017}
+      \field{pages}{4778\bibrangedash 4787}
+      \range{pages}{10}
+    \endentry
+    \entry{moinetEffectOfRisk2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c1700d6f694170ec1611bdc291aa972a}{%
+           family={Moinet},
+           familyi={M\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c393ec202f2fc7875421592989acbc18}{%
+           family={Pastor-Satorras},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={Romualdo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c068c2d1d3e5f1a31c85e847bede1b17}{%
+           family={Barrat},
+           familyi={B\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{4e7ea8841371983757677fc4372fe462}
+      \strng{fullhash}{d8948b5a5aea29939a9d1c1501bc3aba}
+      \strng{bibnamehash}{d8948b5a5aea29939a9d1c1501bc3aba}
+      \strng{authorbibnamehash}{d8948b5a5aea29939a9d1c1501bc3aba}
+      \strng{authornamehash}{4e7ea8841371983757677fc4372fe462}
+      \strng{authorfullhash}{d8948b5a5aea29939a9d1c1501bc3aba}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1}
+      \field{journaltitle}{Phys. Rev. E}
+      \field{month}{1}
+      \field{title}{Effect of risk perception on epidemic spreading in temporal networks}
+      \field{volume}{97}
+      \field{year}{2018}
+      \field{pages}{012313}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.97.012313
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.97.012313
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.97.012313
+      \endverb
     \endentry
     \entry{poli2019graph}{article}{}
       \name{author}{6}{}{%
@@ -367,6 +570,49 @@
       \field{journaltitle}{arXiv preprint arXiv:1911.07532}
       \field{title}{Graph neural ordinary differential equations}
       \field{year}{2019}
+    \endentry
+    \entry{contreras2020temporal}{article}{}
+      \name{author}{4}{}{%
+        {{hash=82821fae717018f968ded92c800fb619}{%
+           family={Contreras},
+           familyi={C\bibinitperiod},
+           given={Alba},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fac5ca3373d2ba1e4c59fabceb38ef81}{%
+           family={Valiente},
+           familyi={V\bibinitperiod},
+           given={Carmen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0da9e6c2aa1162227608897bb031712e}{%
+           family={Heeren},
+           familyi={H\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c30f3adf2223cfb1a396b31caa370153}{%
+           family={Bentall},
+           familyi={B\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Frontiers Media SA}%
+      }
+      \strng{namehash}{a9839049c723f7374da6e610938a3caf}
+      \strng{fullhash}{bfe80446a51663fa647db258886d1a78}
+      \strng{bibnamehash}{bfe80446a51663fa647db258886d1a78}
+      \strng{authorbibnamehash}{bfe80446a51663fa647db258886d1a78}
+      \strng{authornamehash}{a9839049c723f7374da6e610938a3caf}
+      \strng{authorfullhash}{bfe80446a51663fa647db258886d1a78}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in psychology}
+      \field{title}{A temporal network approach to paranoia: A pilot study}
+      \field{volume}{11}
+      \field{year}{2020}
+      \field{pages}{544565}
+      \range{pages}{1}
     \endentry
     \entry{NEURIPS2020_c9f2f917}{inproceedings}{}
       \name{author}{7}{}{%
@@ -504,6 +750,45 @@
       \verb{url}
       \verb https://www.medrxiv.org/content/early/2020/04/06/2020.04.03.20052084
       \endverb
+    \endentry
+    \entry{jordan2020current}{article}{}
+      \name{author}{3}{}{%
+        {{hash=837288cf60f691360b67f8395ca995f2}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={D\bibnamedelima Gage},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ab39a9751e34ddbbaa4debf32bae0f5e}{%
+           family={Winer},
+           familyi={W\bibinitperiod},
+           given={E\bibnamedelima Samuel},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=95d73dc6280f7453dd8955c203aaf3de}{%
+           family={Salem},
+           familyi={S\bibinitperiod},
+           given={Taban},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{9ecd8d373895d8adbd80aae4781d4fd9}
+      \strng{fullhash}{8ba94a081037590ea6e010beff823c0d}
+      \strng{bibnamehash}{8ba94a081037590ea6e010beff823c0d}
+      \strng{authorbibnamehash}{8ba94a081037590ea6e010beff823c0d}
+      \strng{authornamehash}{9ecd8d373895d8adbd80aae4781d4fd9}
+      \strng{authorfullhash}{8ba94a081037590ea6e010beff823c0d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of clinical psychology}
+      \field{number}{9}
+      \field{title}{The current status of temporal network analysis for clinical science: Considerations as the paradigm shifts?}
+      \field{volume}{76}
+      \field{year}{2020}
+      \field{pages}{1591\bibrangedash 1612}
+      \range{pages}{22}
     \endentry
     \entry{massaroli2020dissecting}{article}{}
       \name{author}{5}{}{%
@@ -667,6 +952,50 @@
       \field{pages}{9195\bibrangedash 9200}
       \range{pages}{6}
     \endentry
+    \entry{zhangSpatioTempFlow2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=00c840ad7096e9810dfa1c382608124b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Junbo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=61a21d8aba7853cbf9f3f099c48b174f}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=caa395b1d2703760ca178c2cfefa4276}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Junkai},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a73da1a995be2ce2fcf9b3391afb5fa9}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Dekang},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a90f922302ff3ab243ac14d96c978f22}
+      \strng{fullhash}{cc692842917af9e1e5c1c71d2f5f1477}
+      \strng{bibnamehash}{cc692842917af9e1e5c1c71d2f5f1477}
+      \strng{authorbibnamehash}{cc692842917af9e1e5c1c71d2f5f1477}
+      \strng{authornamehash}{a90f922302ff3ab243ac14d96c978f22}
+      \strng{authorfullhash}{cc692842917af9e1e5c1c71d2f5f1477}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Knowledge and Data Engineering}
+      \field{number}{3}
+      \field{title}{Flow Prediction in Spatio-Temporal Networks Based on Multitask Deep Learning}
+      \field{volume}{32}
+      \field{year}{2020}
+      \field{pages}{468\bibrangedash 478}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TKDE.2019.2891537
+      \endverb
+    \endentry
     \entry{GAO2021110079}{article}{}
       \name{author}{3}{}{%
         {{hash=1f6d8f8c54b2a4de971e93ff71ef61c6}{%
@@ -813,6 +1142,56 @@
       \field{pages}{26548\bibrangedash 26560}
       \range{pages}{13}
     \endentry
+    \entry{lucas2021inferring}{article}{}
+      \name{author}{6}{}{%
+        {{hash=4eb0b5c8bcc49c6a40798e6f8340b026}{%
+           family={Lucas},
+           familyi={L\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=07f8a71717e5c315184715a0884709f7}{%
+           family={Morris},
+           familyi={M\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2672cd2ac0954b5eb8527e7e7e29be76}{%
+           family={Townsend-Teague},
+           familyi={T\bibinithyphendelim T\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=02d25ec30318b35c4cd8f7f4c2fc5dd4}{%
+           family={Tichit},
+           familyi={T\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=06638db184d6201a8c7d1817b6c0991f}{%
+           family={Habermann},
+           familyi={H\bibinitperiod},
+           given={Bianca},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c068c2d1d3e5f1a31c85e847bede1b17}{%
+           family={Barrat},
+           familyi={B\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{517efc4cfaf0ca69024d9b7e6796459b}
+      \strng{fullhash}{390597df22a2fb5e8370cf10ab6eddab}
+      \strng{bibnamehash}{517efc4cfaf0ca69024d9b7e6796459b}
+      \strng{authorbibnamehash}{517efc4cfaf0ca69024d9b7e6796459b}
+      \strng{authornamehash}{517efc4cfaf0ca69024d9b7e6796459b}
+      \strng{authorfullhash}{390597df22a2fb5e8370cf10ab6eddab}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cell Reports Methods}
+      \field{title}{Inferring cell cycle phases from a partially temporal network of protein interactions}
+      \field{year}{2021}
+    \endentry
     \entry{mahmoudabadbozchelou2021data}{article}{}
       \name{author}{6}{}{%
         {{hash=e02c6cd1b61255c4781de0c9dcaa98f1}{%
@@ -927,11 +1306,6 @@
       \field{year}{2022}
     \endentry
   \enddatalist
-  \missing{contreras2020temporal}
-  \missing{jin2009identifying}
-  \missing{jordan2020current}
-  \missing{lucas2021inferring}
-  \missing{masuda2013predicting}
 \endrefsection
 \endinput
 

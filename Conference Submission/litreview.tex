@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+
+\usepackage[
+backend=biber,
+style=nature,
+sorting=ynt
+]{biblatex}
+\usepackage{svg}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[margin=1in]{geometry}
+
+\addbibresource{bibliography.bib}
+
+
+\begin{document}    
+\section{Literature Review}
+\subsection{Traditional Online Social Network Modelling}
+    There has been a lot of research into what governs how edges are formed in an online social network. Some examples of what affects edge formation are a nodes' "age", how much time has passed since it first made an edge; it's edge creation rate is highest shortly after joining and decreases over time. The majority of edge creation in the early stages of a network is driven by new nodes arriving in the network, however this decreases significantly as the network matures. Edges formation follows preferential attachment, but this strength decreases over time as the network expands \cite{zhao2012multi}. Research also indicates that, while preferential attachment (a node is most likely to form an edge with the highest in-degree) can be used to model edge formation in online social networks, it alone does not seem to account for the low number of hops that empirical data suggests edges usually form along. \cite{garg2009evolution} suggest that preferential attachment with node distance as a tie breaker results in a distribution of node distances close to what was seen empirically from  their data.
+    
+    A potential for improvement in this research [\cite{garg2009evolution}, \cite{zhao2012multi}] is that they did not model the decay of edges (to the best of my knowledge) and they used a friendship/follow as their edge, which, while may be meaningful in the short term, I don't think is always meaningful after a given amount of time. [find source] A person may add a friend and never speak to them again (hence we use conversations together), this has limitations where a person can't always choose who they talk to, but it might provide a more granular (definition?) snapshot of interactions between users.
+\subsection{UDEs and NODEs}
+  \subsubsection{Theory}
+     UDEs are a combination of a known, structural component of a system, and a universal approximator, often a neural network.[Find reference]
+     Given the flexibility of neural networks, the use of UDEs is natural when modelling a process that is not well understood [On Neural ODEs]
+     
+     Largely, the SciML ecosystem has been optimised for flexibility and efficiency with respect to models available 
+     and training performance. Given there does not seem to be any other ecosystem with this feature, it seemed like 
+     an obvious choice. ~~~What makes it good (Examples from \cite{SciML_C_Rak})  
+    
+    \subsubsection{Applications [Caution only glanced at these papers]}
+    Whilst there has been much interest in implementing UDEs and neural ODEs, much of this work has been focussed on phisics informed neural network PINNs \cite{karniadakis2021physics}, \cite{GAO2021110079}, \cite{krishnapriyan2021characterizing}, \cite{roehrl2020modeling}, and on improving modelling of fluids \cite{mahmoudabadbozchelou2021data} \cite{nguyen2022physics}. There has also been a considerable amount of research into converting these discrete step neural networks into continuous depth neural networks, sometimes also referred to as neural ODEs \cite{massaroli2020dissecting} \cite{poli2019graph} \cite{NEURIPS2020_c9f2f917}. Along side this, and given UDEs have gained popularity in the last few years, there have been a number of studies exploring their usefulness in modeling the effect of restrictions due to COVID-19 on the virus' spread \cite{Dandekar2020.04.03.20052084}. Although there has been a large amount of research into the usefulness of these types of models, to the best of this author's knowledge they have never been applied to the problem of predicting temporal social networks. This seems to be a natural fit for UDEs and neural ODEs, given we know relatively little about the processes that govern the evolution of online social networks, and the vast amounts of data that the providers of these services collect, data that can be used to train our neural networks.
+
+        
+        
+    
+     Start by illustrating that there is a wide range of applications (Reasonably briefly for not relevant), but little research into UDEs aplicability for modeling how temporal networks behaveb
+\subsection{Dynamical Systems}
+
+\subsection{Symbolic Regression}
+    Story is that there is a large search space of potential symbolic equations so most research has been looking to optimise this search. 
+
+    Applications are increadibly varied, as this process is useful for getting interpretable equations from data (with limitations from \cite{kidger2022neural}).
+
+    \cite{kidger2022neural} also demonstrates how to use this with NODEs and their usefulness.
+
+    Examples of implementations include discovering equations governing the movement of simple harmonic and chaotic double pendula from data \cite{schmidt2009distilling}(for the double pendulum searching took between 30-40 hours but when some knowledge of the system was added the time went to 7-8 hours), found underlying differential equations directly from time series data\cite{bongard2007automated}.  
+
+    As well numerous algorithms exist, with one of the most prominent being genetic programming XXXX research XXXX
+
+\subsection{Temporal Networks}
+    Temporal networks are present in many areas of research interest, ranging from symptom interactions for mental health, to epidemiology, protein interactions, and social networks \cite{jordan2020current,contreras2020temporal,lucas2021inferring,jin2009identifying,masuda2013predicting,moinet2015burstiness,hanneke2010discrete}. With this level of interdisciplinary interest, there appears to be two broad categories of proposed models and frameworks for modelling temporal networks. One category are preposed with minimal context, offering as general an approach as possible\cite{HOLME201297,KARIMI20133476}, and proposing more abstracted models which could be applied to almost any context. The other are models in which the context gave rise to the system by which it is modelled\cite{zhangSpatioTempFlow2020,jordan2020current,moinetEffectOfRisk2018,caballero2017real}.
+
+    challenging problem to model ()
+
+    \printbibliography
+\end{document}
