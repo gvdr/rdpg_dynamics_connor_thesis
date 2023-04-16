@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'litreview.blg'
-[54] biber:340> INFO - === Tue Apr 11, 2023, 15:14:25
-[65] Biber.pm:419> INFO - Reading 'litreview.bcf'
-[116] Biber.pm:979> INFO - Found 28 citekeys in bib section 0
-[128] Biber.pm:4419> INFO - Processing section 0
-[135] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[138] bibtex.pm:1713> INFO - LaTeX decoding ...
-[170] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[392] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[392] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[392] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[417] bbl.pm:660> INFO - Writing 'litreview.bbl' with encoding 'UTF-8'
-[435] bbl.pm:763> INFO - Output to litreview.bbl
-[436] Biber.pm:131> WARN - Duplicate entry key: 'kidger2022neural' in file 'bibliography.bib', skipping ...
-[436] Biber.pm:131> WARN - legacy month field 'Jan' in entry 'moinetEffectOfRisk2018' is not an integer - this will probably not sort properly.
-[436] Biber.pm:133> INFO - WARNINGS: 2
+[101] biber:340> INFO - === Mon Apr 17, 2023, 10:48:24
+[124] Biber.pm:419> INFO - Reading 'litreview.bcf'
+[209] Biber.pm:979> INFO - Found 33 citekeys in bib section 0
+[226] Biber.pm:4419> INFO - Processing section 0
+[242] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[246] bibtex.pm:1713> INFO - LaTeX decoding ...
+[305] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[795] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[795] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[795] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[795] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[853] bbl.pm:660> INFO - Writing 'litreview.bbl' with encoding 'UTF-8'
+[876] bbl.pm:763> INFO - Output to litreview.bbl
+[876] Biber.pm:131> WARN - Duplicate entry key: 'kidger2022neural' in file 'bibliography.bib', skipping ...
+[877] Biber.pm:131> WARN - legacy month field 'Jan' in entry 'moinetEffectOfRisk2018' is not an integer - this will probably not sort properly.
+[877] Biber.pm:133> INFO - WARNINGS: 2

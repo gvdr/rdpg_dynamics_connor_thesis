@@ -22,14 +22,6 @@ sorting=ynt
 \usepackage{hyperref,thmtools}
 \linespread{1.5}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{remark*}[theorem]{Remark}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{sublemma}{}[theorem]
-\newtheorem{conjecture}[theorem]{Conjecture}
-
 % Override ugly default link
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
@@ -310,9 +302,7 @@ As it is completely general, we believe that the framework we are introducing ca
             \label{2community series}
         \end{figure}
         
-
-        In this case we see the neural network in one timestep jumps to around (-1.75, 0.4) where it remains until the end of the training data. In contrast, the symbolic regression remains relatively close to the true target node until the last time step when the symbolic regression moves away from the target node.\\
-
+        Symb
         % It is interesting to see the symbolic regression model perform so much more poorly than the neural network model in this system. When we view the training section of the data, we see that there is a downward curve in the neural network predictions towards the end of the training data. It seems that the symbolic regression model picked this up and continued the downward trajectory throughout the test data. This downward curve may be because the problem that we are trying to solve is symmetrical. That is the same set of distances as input into the neural network, the target node needs to move away from its nearest neighbours in the first half, then move towards its nearest neighbours in the second half. Potential ways of breaking this symmetry may be to include information of the previous timestep, or to include the absolute position of the target node as input into the neural network.
     \end{subsection}
 

@@ -1,59 +1,117 @@
-\documentclass[12pt]{article}
-
+\documentclass[12pt]{amsart}
+\usepackage[utf8]{inputenc}
 \usepackage[
 backend=biber,
 style=nature,
 sorting=ynt
 ]{biblatex}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{tikz}
+\usepackage{standalone}
 \usepackage{svg}
-\usepackage{amsmath}
 \usepackage{gensymb}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage[margin=1in]{geometry}
-
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx, animate}
+\usepackage{caption, subcaption}
+\usepackage{pgffor}
+\usepackage{mathtools}
+\usepackage{array}
 \addbibresource{bibliography.bib}
+\usepackage{hyperref,thmtools}
+\linespread{1.5}
+
+% Override ugly default link
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = blue    %Colour of citations
+}
+
 
 
 \begin{document}    
-\section{Literature Review}
-\subsection{Traditional Online Social Network Modelling}
-    There has been a lot of research into what governs how edges are formed in an online social network. Some examples of what affects edge formation are a nodes' "age", how much time has passed since it first made an edge; it's edge creation rate is highest shortly after joining and decreases over time. The majority of edge creation in the early stages of a network is driven by new nodes arriving in the network, however this decreases significantly as the network matures. Edges formation follows preferential attachment, but this strength decreases over time as the network expands \cite{zhao2012multi}. Research also indicates that, while preferential attachment (a node is most likely to form an edge with the highest in-degree) can be used to model edge formation in online social networks, it alone does not seem to account for the low number of hops that empirical data suggests edges usually form along. \cite{garg2009evolution} suggest that preferential attachment with node distance as a tie breaker results in a distribution of node distances close to what was seen empirically from  their data.
+\section{Plan}
+    \subsection{Catalyst (Intro)}
+        Temporal networks pop up everywhere and would be really nice if we could model them.
+
+
+    \subsection{What methods are out there}
+        Exploration of whats there for temporal network modelling and what challenges they have faced
+
+
+
     
-    A potential for improvement in this research [\cite{garg2009evolution}, \cite{zhao2012multi}] is that they did not model the decay of edges (to the best of my knowledge) and they used a friendship/follow as their edge, which, while may be meaningful in the short term, I don't think is always meaningful after a given amount of time. [find source] A person may add a friend and never speak to them again (hence we use conversations together), this has limitations where a person can't always choose who they talk to, but it might provide a more granular (definition?) snapshot of interactions between users.
+    \subsection{Proposition for using DE (and problems that arrise from this approach)}
+
+
+
+    \subsection{UDEs (we may not have much knowledge of the system so may use UDEs)}
+        Exploration of its uses and limitations
+        (Hopefully find some stuff about them being black boxes)
+
+    \subsection{Symbolic regression (Illustrate that it has been well researched and shown positive results)}
+
+    
+
+\section{Literature Review}
+
+\subsection{Temporal Networks}
+    Temporal networks are present in many areas of research interest, ranging from symptom interactions for mental health, to epidemiology, protein interactions, and social networks \cite{jordan2020current,contreras2020temporal,lucas2021inferring,jin2009identifying,masuda2013predicting,moinet2015burstiness,hanneke2010discrete}. 
+    
+    
+    Two approaches to modelling the change in temporal networks are to keep the overall network structure static, but model the change in node state. The other approach is to model the changing structure of the network. 
+
+    For example, \cite{contreras2020temporal} use multilevel vector autoregressin to model how a the current symptoms of people with paranoia might predict their future symptoms. These models were then used to create three networks that linked symptoms to eachother. Of particular interest to this thesis was the temporal network they created, where the edges represent the extent to which the severity of a symptom at time $(t)$ predicts the severity of itself and other symptoms at time $(t+1)$. This framework keeps the overall structure of the network fixed throughout time and so is not particularly flexibile, but is extremely human interpretable and can extrapolate, which would be very useful in many applications. 
+
+    In \cite{KARIMI20133476}, the authors represent their temporal network as a series of interactions $(i,j,t)$, where $i,j$ are nodes in the network and the interaction occured at time $t$. The authors use a model to predict when a node will change from state 0 to state 1, notably, in their model the node never changes back; this is done to keep the model analytically tractable. To do this the model uses a sliding time window and if the fraction of interactions wich nodes of state 1 within that time window excedes a threshold, the node switches to state 1 as well. This model seems especially useful for understanding how ideas spread online for example, but by itself it cannot be used to predict the states of nodes in the future. To do this a model would also have to predict network structure.
+
+    \cite{hanneke2010discrete} - TERGM (an expansion of ERGM models for temporal sequences) XXXX Ask Giulio
+
+    \cite{sanna2021link} represent their network as a series of adjacency matrices. The authors look to model the structure of edges by employing time  series techniques. The authors use a spectral embedding (SVD) to transform their temporal sequence into a latent possition model, where nodes can be represented as points in a continous, low dimensional space. With this series of embeddings, the authors employ a variety of time series techniques to predict the network structure at future time steps.
+
+    
+    With this level of interdisciplinary interest, there appears to be two broad categories of proposed models and frameworks for modelling temporal networks. One category are preposed with minimal context, offering as general an approach as possible\cite{HOLME201297,KARIMI20133476}, and proposing more abstracted models which could be applied to almost any context. The other are models in which the context gave rise to the system by which it is modelled\cite{zhangSpatioTempFlow2020,jordan2020current,moinetEffectOfRisk2018,caballero2017real}.
+
+
 \subsection{UDEs and NODEs}
-  \subsubsection{Theory}
-     UDEs are a combination of a known, structural component of a system, and a universal approximator, often a neural network.[Find reference]
-     Given the flexibility of neural networks, the use of UDEs is natural when modelling a process that is not well understood [On Neural ODEs]
-     
-     Largely, the SciML ecosystem has been optimised for flexibility and efficiency with respect to models available 
-     and training performance. Given there does not seem to be any other ecosystem with this feature, it seemed like 
-     an obvious choice. ~~~What makes it good (Examples from \cite{SciML_C_Rak})  
+    In many social networks we observe the power law where the more neighbours a node has, the more likely they are to gain more edges\cite{zhao2012multi,garg2009evolution}. We also see that the the state of symptoms (occurence, severity, and distress), can influence the states of other symptoms in patients undergoing chemotherapy \cite{papachristou2019network,kalantari2022network}, and for mental health disorders \cite{contreras2020temporal}. As well as in ecological networks where the interactions of species are often represented as a network, and the populations of one species influence the population growth of another \cite{elton2001animal,volterra1927variazioni}.
+            
+    With the observation that nodes in real world temporal networks influence others, differential equations seem an appropriate choice for modelling the movement of nodes. One of the issues that the differential equation method encounters is the prevalence of discrete time steps. However, by building upon the work of \cite{sanna2021link}, we can treat the sequence as a dynamical system and then use differential equation modelling in a continuous space. With the aim of this framework to be as applicable to as many areas of research as possible, we note that there may not yet be enough knowledge in the field to perform traditional differential equation modelling. Because of this, we will use a recently developed tool a universal differential equation \cite{SciML_C_Rak}.
+
+    \subsubsection{Theory}
+        UDEs are a combination of a known, structural component of a system, and a universal approximator, often a neural network.[Find reference]
+        Given the flexibility of neural networks, the use of UDEs is natural when modelling a process that is not well understood [On Neural ODEs]
+        
+        Largely, the SciML ecosystem has been optimised for flexibility and efficiency with respect to models available 
+        and training performance. Given there does not seem to be any other ecosystem with this feature, it seemed like 
+        an obvious choice. ~~~What makes it good (Examples from \cite{SciML_C_Rak})  
     
     \subsubsection{Applications [Caution only glanced at these papers]}
-    Whilst there has been much interest in implementing UDEs and neural ODEs, much of this work has been focussed on phisics informed neural network PINNs \cite{karniadakis2021physics}, \cite{GAO2021110079}, \cite{krishnapriyan2021characterizing}, \cite{roehrl2020modeling}, and on improving modelling of fluids \cite{mahmoudabadbozchelou2021data} \cite{nguyen2022physics}. There has also been a considerable amount of research into converting these discrete step neural networks into continuous depth neural networks, sometimes also referred to as neural ODEs \cite{massaroli2020dissecting} \cite{poli2019graph} \cite{NEURIPS2020_c9f2f917}. Along side this, and given UDEs have gained popularity in the last few years, there have been a number of studies exploring their usefulness in modeling the effect of restrictions due to COVID-19 on the virus' spread \cite{Dandekar2020.04.03.20052084}. Although there has been a large amount of research into the usefulness of these types of models, to the best of this author's knowledge they have never been applied to the problem of predicting temporal social networks. This seems to be a natural fit for UDEs and neural ODEs, given we know relatively little about the processes that govern the evolution of online social networks, and the vast amounts of data that the providers of these services collect, data that can be used to train our neural networks.
+        Whilst there has been much interest in implementing UDEs and neural ODEs, much of this work has been focussed on phisics informed neural network and physics informed ordinary differential equations (PINNs and PINODEs) \cite{karniadakis2021physics}, \cite{GAO2021110079}, \cite{krishnapriyan2021characterizing}, \cite{roehrl2020modeling}, and on improving modelling of fluids \cite{mahmoudabadbozchelou2021data} \cite{nguyen2022physics}. Along side this, and given UDEs have gained popularity in the last few years, there have been a number of studies exploring their usefulness in modeling the effect of restrictions due to COVID-19 on the virus' spread \cite{Dandekar2020.04.03.20052084}. Although there has been a large amount of research into the usefulness of these types of models, to the best of this author's knowledge they have never been applied to the problem of predicting temporal social networks. This seems to be a natural fit for UDEs and neural ODEs, given we know relatively little about the processes that govern the evolution of online social networks, and the vast amounts of data that the providers of these services collect, data that can be used to train our neural networks.
 
         
         
     
      Start by illustrating that there is a wide range of applications (Reasonably briefly for not relevant), but little research into UDEs aplicability for modeling how temporal networks behaveb
-\subsection{Dynamical Systems}
 
 \subsection{Symbolic Regression}
     Story is that there is a large search space of potential symbolic equations so most research has been looking to optimise this search. 
 
-    Applications are increadibly varied, as this process is useful for getting interpretable equations from data (with limitations from \cite{kidger2022neural}).
+    The problem that symbolic regression aims to solve is to generate interpretable and "meaningful" equations from observed data. For example, both \cite{schmidt2009distilling,bongard2007automated} test their methods' capacity for obtaining a symbolic equation wich physical symulation data, various pendula specifically. A "meaningful" equation in this case would be one that adhears to the laws of physics. To ensure this is the case, both use numerically calculeted partial derivatives, a method that is common throughout the research.
 
-    \cite{kidger2022neural} also demonstrates how to use this with NODEs and their usefulness.
+    This is relevant to all fields, and so its applications are increadibly varied. Various methods of symbolic regression have been use in manufacturing systems, chemical systems, and tumor research \cite{can2011comparison,keith2021combining,yoshihara2013inferring}. As well research into improvements is still on going.
 
-    Examples of implementations include discovering equations governing the movement of simple harmonic and chaotic double pendula from data \cite{schmidt2009distilling}(for the double pendulum searching took between 30-40 hours but when some knowledge of the system was added the time went to 7-8 hours), found underlying differential equations directly from time series data\cite{bongard2007automated}.  
+    \cite{kidger2022neural} also demonstrates that, with NODEs, two of the assumptions necessary for symbolic regression can be overcome. Those are the necessity for paired observations and derivatives. We are modelling a differential equation, and so will have access to the derivatives at any point they are defined at. As well as the assumption that the function can be expressed as a shallow tree of symbolic operations. XXX Unclear as to why this is satisfied XXX 
+
+    Examples of methods include discovering equations governing the movement of simple harmonic and chaotic double pendula from data\cite{schmidt2009distilling} (for the double pendulum searching took between 30-40 hours but when some knowledge of the system was added the time went to 7-8 hours). In this paper the authors present an evolutionary algorithm to generate multiple candidate functions that approximate the partial derivatives of each variable that are calculated directly from the data. A limitation of this is the fact that to have accurate derivatives, the data must be sampled very frequently. This seems integral to the accuracy of the found equation. Another approach to symbolic regression can be found in \cite{bongard2007automated}. This paper proposes a method to find a symbolic equation that approximates a learned numerical equation rather than directly from data. The candidate equation is then tested against the numerical equation in such a way that the difference between the two. Especially when using a neural network model as the numerical equation, it seems these process may not be useful if the initial conditions are outside of the scope of the training data.   
+
 
     As well numerous algorithms exist, with one of the most prominent being genetic programming XXXX research XXXX
 
-\subsection{Temporal Networks}
-    Temporal networks are present in many areas of research interest, ranging from symptom interactions for mental health, to epidemiology, protein interactions, and social networks \cite{jordan2020current,contreras2020temporal,lucas2021inferring,jin2009identifying,masuda2013predicting,moinet2015burstiness,hanneke2010discrete}. With this level of interdisciplinary interest, there appears to be two broad categories of proposed models and frameworks for modelling temporal networks. One category are preposed with minimal context, offering as general an approach as possible\cite{HOLME201297,KARIMI20133476}, and proposing more abstracted models which could be applied to almost any context. The other are models in which the context gave rise to the system by which it is modelled\cite{zhangSpatioTempFlow2020,jordan2020current,moinetEffectOfRisk2018,caballero2017real}.
-
-    challenging problem to model ()
+ 
 
     \printbibliography
 \end{document}
