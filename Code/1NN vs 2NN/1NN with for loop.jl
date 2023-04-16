@@ -12,11 +12,13 @@ using DifferentialEquations, Lux, SciMLSensitivity, ComponentArrays
 # Things that are important:
 # embedding dim, initial vec for SVD, amount of data
 
-include("../../_Modular Functions/helperFunctions.jl")
-include("../../_Modular Functions/loadGlobalConstants.jl")
-include("../../_Modular Functions/constructNN.jl")
-include("../../_Modular Functions/NODEproblem.jl")
-include("../../_Modular Functions/reconstructRDPG.jl")
+include("../_Modular Functions/helperFunctions.jl")
+include("../_Modular Functions/loadGlobalConstants.jl")
+include("../_Modular Functions/constructNN.jl")
+include("../_Modular Functions/NODEproblem.jl")
+include("../_Modular Functions/reconstructRDPG.jl")
+
+global_consts("longTail", (182,2))
 
 #u1::Array{Float32, 1} = Array{Float32, 1}(undef, output_data_length)
 
@@ -24,10 +26,7 @@ include("../../_Modular Functions/reconstructRDPG.jl")
 rng = Random.default_rng()
 nn = Lux.Chain(x -> x,
       Lux.Dense(input_data_length, 64, tanh),
-      Lux.Dense(64, 8, tanh),
-      Lux.Dense(8, 8, tanh),
-      Lux.Dense(8, 8, tanh),
-      Lux.Dense(8, output_data_length))
+      Lux.Dense(64, output_data_length))
 
 p, st = Lux.setup(rng, nn)
 
@@ -64,7 +63,7 @@ mid = convert(Int, dims[1]/2)
 TNode_data = targetNode(t_data[1:datasize],1)
 
 result = Optimization.solve(optprob,
-                            ADAM(0.005),
+                            ADAM(0.01),
                             callback = callback,
                             maxiters = 500)
 optprob = remake(optprob, u0=result.u)
@@ -99,7 +98,7 @@ sol = predict_neuralode(result.u)
 # loss_neuralode(result.u)
 using DelimitedFiles
 
-writedlm("./Code/Solutions/$net_name big net.csv", sol, ",")
+writedlm("./Code/Solutions/$net_name.csv", sol, ",")
 
 function predict_neuralode(θ)
   Array(solve(prob_neuralode, Tsit5(), saveat = tsteps, p=θ))#|>Lux.gpu
@@ -115,6 +114,6 @@ sol = predict_neuralode(result.u)
 
 using DelimitedFiles
 
-writedlm("./Code/Solutions/$net_name big net test only.csv", sol, ",")
+writedlm("./Code/Solutions/$net_name test only.csv", sol, ",")
 
 

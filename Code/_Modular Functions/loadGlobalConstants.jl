@@ -1,27 +1,28 @@
 using Revise
-
-global dims=(212,2) #|> Lux.gpu
-global net_name = "3community"
-
 include("load2ComGraphFlat.jl")
 include("../structs/TemporalEmbedding.jl")
-global true_data, time_graphs = load2ComGraphFlat(true);
-Base.IndexStyle(true_data)=IndexLinear()
 
-t_data = TemporalNetworkEmbedding(true_data,dims[1],dims[2])
+function global_consts(n, d)
+    global dims=d #|> Lux.gpu
+    global net_name = n
 
 
-global datasize = 25
-global train_data = withoutNode(t_data[1:datasize],1) #|> Lux.gpu
-global test_data = withoutNode(t_data[1+datasize:end],1)
-global tspan = (1.0, Float64(datasize))#|> Lux.gpu
-global tsteps = range(tspan[1], tspan[2], length = datasize)#|> Lux.gpu
-global k = 15
+    global true_data, time_graphs = load2ComGraphFlat(true);
 
-global input_data_length = k*dims[2]
-global output_data_length = dims[2]
-global u0 = vec(targetNode(t_data,1)[1])#|> Lux.gpu
+    global t_data = TemporalNetworkEmbedding(true_data,dims[1],dims[2])
 
+
+    global datasize = 25
+    global train_data = withoutNode(t_data[1:datasize],1) #|> Lux.gpu
+    global test_data = withoutNode(t_data[1+datasize:end],1)
+    global tspan = (1.0, Float64(datasize))#|> Lux.gpu
+    global tsteps = range(tspan[1], tspan[2], length = datasize)#|> Lux.gpu
+    global k = 15
+
+    global input_data_length = k*dims[2]
+    global output_data_length = dims[2]
+    global u0 = vec(targetNode(t_data,1)[1])#|> Lux.gpu
+end
 
 #targetNode(t_data,1)[1]
 # TNode_data = targetNode(t_data,1)

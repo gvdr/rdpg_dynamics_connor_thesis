@@ -3,7 +3,7 @@ using ColorSchemes
 include("../_Modular Functions/loadGlobalConstants.jl")
 
 include("../_Modular Functions/pca.jl")
-include("../Symbolic Regression/symreg.jl")
+include("symreg.jl")
 
 
 
@@ -33,7 +33,7 @@ for i in 1:length(t_data)-datasize
     
     traces3 = PlotlyJS.scatter(x=pts[2:mid,1], y=pts[1:mid,2], mode="markers", name="Data")
     display(PlotlyJS.plot([traces0,traces1,traces2, traces3]))
-    savefig(PlotlyJS.plot([traces0, traces1, traces2, traces3]), "./Code/Plots/Test Only/$net_name/$net_name $i.png")
+    savefig(PlotlyJS.plot([traces0, traces1, traces2, traces3]), "./Code/Plots/Test Only/$net_name/$net_name $i small net.png")
 
 end
 
