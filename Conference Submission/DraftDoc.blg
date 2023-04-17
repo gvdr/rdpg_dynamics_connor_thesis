@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'DraftDoc.blg'
+[51] biber:340> INFO - === Mon Apr 17, 2023, 12:03:29
+[60] Biber.pm:419> INFO - Reading 'DraftDoc.bcf'
+[107] Biber.pm:979> INFO - Found 14 citekeys in bib section 0
+[115] Biber.pm:4419> INFO - Processing section 0
+[125] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[127] bibtex.pm:1713> INFO - LaTeX decoding ...
+[164] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[271] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[271] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[271] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[271] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[286] bbl.pm:660> INFO - Writing 'DraftDoc.bbl' with encoding 'UTF-8'
+[293] bbl.pm:763> INFO - Output to DraftDoc.bbl
+[293] Biber.pm:131> WARN - Duplicate entry key: 'kidger2022neural' in file 'bibliography.bib', skipping ...
+[293] Biber.pm:133> INFO - WARNINGS: 1

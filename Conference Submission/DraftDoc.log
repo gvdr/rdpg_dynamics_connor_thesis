@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  17 APR 2023 10:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  17 APR 2023 12:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/stirling/Documents/thesis/Conference Submission/litreview.tex"
-(/home/stirling/Documents/thesis/Conference Submission/litreview.tex
+**"/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex"
+(/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2020/05/29 v2.20.6
@@ -928,32 +928,32 @@ Package: thm-amsthm 2023/02/17 v0.75
 Package hyperref Info: Option `colorlinks' set `true' on input line 31.
 \@quotelevel=\count471
 \@quotereset=\count472
- (./litreview.aux)
-\openout1 = `litreview.aux'.
+ (./DraftDoc.aux)
+\openout1 = `DraftDoc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -965,13 +965,13 @@ File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `litreview.bcf'.
+\openout3 = `DraftDoc.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'litreview.bbl' found.
- (./litreview.bbl)
-Package biblatex Info: Reference section=0 on input line 35.
-Package biblatex Info: Reference segment=0 on input line 35.
+Package biblatex Info: ... file 'DraftDoc.bbl' found.
+ (./DraftDoc.bbl)
+Package biblatex Info: Reference section=0 on input line 33.
+Package biblatex Info: Reference segment=0 on input line 33.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count473
@@ -991,14 +991,14 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \celsius on input line 35.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 35.
+LaTeX Info: Redefining \celsius on input line 33.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 33.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 35.
-Package gensymb Info: Using \Omega for \ohm on input line 35.
+LaTeX Info: Redefining \ohm on input line 33.
+Package gensymb Info: Using \Omega for \ohm on input line 33.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1036,46 +1036,341 @@ Package gensymb Warning: Not defining \micro.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 35.
-(./litreview.out) (./litreview.out)
+Package hyperref Info: Link coloring ON on input line 33.
+(./DraftDoc.out) (./DraftDoc.out)
 \@outlinefile=\write5
-\openout5 = `litreview.out'.
+\openout5 = `DraftDoc.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2] [3] [4] [5] [6] [7]
-Overfull \hbox (3.61662pt too wide) in paragraph at lines 117--117
-[]\OT1/cmr/m/n/12 Gao, H., Sun, L. & Wang, J.[]X. Phy-GeoNet: Physics-informed geometry-adaptive
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./SynthDataDiagrams/methodology1.tex) (./SynthDataDiagrams/methodology2.tex) (./SynthDataDiagrams/methodology3.tex)
+Overfull \hbox (24.99437pt too wide) in paragraph at lines 91--128
+[][] 
  []
 
 
-Overfull \hbox (38.1168pt too wide) in paragraph at lines 117--117
-\OT1/cmr/m/n/12 9991. [][]$\OT1/cmtt/m/n/12 https : / / www . sciencedirect . com / science / article / pii / S0021999120308536$[][]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
  []
 
-[8] [9] (./litreview.aux)
-Package rerunfilecheck Info: File `litreview.out' has not changed.
-(rerunfilecheck)             Checksum: 3C7B70BC9F9B8EC4970B3786897C5C29;2767.
-Package logreq Info: Writing requests to 'litreview.run.xml'.
-\openout1 = `litreview.run.xml'.
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
+
+ []
+
+
+Underfull \vbox (badness 4060) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 1314) has occurred while \output is active []
+
+ [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+[6] (./SynthDataDiagrams/2community1.tex)
+Overfull \hbox (1.28017pt too wide) in paragraph at lines 203--204
+ [][] 
+ []
+
+(./SynthDataDiagrams/2community2.tex)
+Overfull \hbox (1.28017pt too wide) in paragraph at lines 211--212
+ [][] 
+ []
+
+(./SynthDataDiagrams/2community3.tex)
+Overfull \hbox (1.28017pt too wide) in paragraph at lines 219--220
+ [][] 
+ []
+
+(./SynthDataDiagrams/longTail1.tex) (./SynthDataDiagrams/longTail2.tex) (./SynthDataDiagrams/longTail3.tex) (./SynthDataDiagrams/3community1.tex) (./SynthDataDiagrams/3community2.tex) (./SynthDataDiagrams/3community3.tex) [7]
+Underfull \vbox (badness 2253) has occurred while \output is active []
+
+ [8]
+<./Plots/Test Only/2communities/2communities 1 small net.png, id=165, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 1 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 1 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 1 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 2 small net.png, id=167, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 2 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 2 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 2 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 3 small net.png, id=168, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 3 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 3 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 3 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 4 small net.png, id=169, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 4 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 4 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 4 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 5 small net.png, id=170, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 5 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 5 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 5 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 6 small net.png, id=171, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 6 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 6 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 6 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 7 small net.png, id=172, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 7 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 7 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 7 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 8 small net.png, id=173, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 8 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 8 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 8 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 9 small net.png, id=174, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 9 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 9 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 9 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 10 small net.png, id=175, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 10 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 10 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 10 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 11 small net.png, id=176, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 11 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 11 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 11 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 12 small net.png, id=177, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 12 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 12 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 12 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 13 small net.png, id=178, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 13 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 13 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 13 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 14 small net.png, id=179, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 14 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 14 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 14 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/2communities/2communities 15 small net.png, id=180, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 15 small net.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 15 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 15 small net.png  used on input line 300.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+
+
+LaTeX Warning: Float too large for page by 131.72778pt on input line 303.
+
+<./Plots/Test Only/longTail/longTail 1.png, id=181, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 1.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 1.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 1.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 2.png, id=182, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 2.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 2.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 2.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 3.png, id=183, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 3.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 3.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 3.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 4.png, id=184, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 4.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 4.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 4.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 5.png, id=185, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 5.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 5.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 5.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 6.png, id=186, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 6.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 6.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 6.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 7.png, id=187, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 7.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 7.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 7.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 8.png, id=188, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 8.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 8.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 8.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 9.png, id=189, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 9.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 9.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 9.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 10.png, id=190, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 10.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 10.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 10.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 11.png, id=191, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 11.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 11.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 11.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 12.png, id=192, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 12.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 12.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 12.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 13.png, id=193, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 13.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 13.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 13.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 14.png, id=194, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 14.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 14.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 14.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/longTail/longTail 15.png, id=195, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/longTail/longTail 15.png Graphic file (type png)
+<use ./Plots/Test Only/longTail/longTail 15.png>
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 15.png  used on input line 316.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+
+LaTeX Warning: Float too large for page by 131.72778pt on input line 319.
+
+[9] [10 <./Plots/Test Only/2communities/2communities 1 small net.png> <./Plots/Test Only/2communities/2communities 2 small net.png> <./Plots/Test Only/2communities/2communities 3 small net.png> <./Plots/Test Only/2communities/2communities 4 small net.png> <./Plots/Test Only/2communities/2communities 5 small net.png> <./Plots/Test Only/2communities/2communities 6 small net.png> <./Plots/Test Only/2communities/2communities 7 small net.png> <./Plots/Test Only/2communities/2communities 8 small net.png> <./Plots/Test Only/2communities/2communities 9 small net.png> <./Plots/Test Only/2communities/2communities 10 small net.png> <./Plots/Test Only/2communities/2communities 11 small net.png> <./Plots/Test Only/2communities/2communities 12 small net.png> <./Plots/Test Only/2communities/2communities 13 small net.png> <./Plots/Test Only/2communities/2communities 14 small net.png> <./Plots/Test Only/2communities/2communities 15 small net.png>] [11 <./Plots/Test Only/longTail/longTail 1.png> <./Plots/Test Only/longTail/longTail 2.png> <./Plots/Test Only/longTail/longTail 3.png> <./Plots/Test Only/longTail/longTail 4.png> <./Plots/Test Only/longTail/longTail 5.png> <./Plots/Test Only/longTail/longTail 6.png> <./Plots/Test Only/longTail/longTail 7.png> <./Plots/Test Only/longTail/longTail 8.png> <./Plots/Test Only/longTail/longTail 9.png> <./Plots/Test Only/longTail/longTail 10.png> <./Plots/Test Only/longTail/longTail 11.png> <./Plots/Test Only/longTail/longTail 12.png> <./Plots/Test Only/longTail/longTail 13.png> <./Plots/Test Only/longTail/longTail 14.png> <./Plots/Test Only/longTail/longTail 15.png>]
+<./Plots/Test Only/3community/3community 1 small net.png, id=246, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 1 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 1 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 1 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 2 small net.png, id=247, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 2 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 2 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 2 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 3 small net.png, id=248, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 3 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 3 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 3 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 4 small net.png, id=249, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 4 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 4 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 4 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 5 small net.png, id=250, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 5 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 5 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 5 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 6 small net.png, id=251, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 6 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 6 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 6 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 7 small net.png, id=252, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 7 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 7 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 7 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 8 small net.png, id=253, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 8 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 8 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 8 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 9 small net.png, id=254, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 9 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 9 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 9 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 10 small net.png, id=255, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 10 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 10 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 10 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 11 small net.png, id=256, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 11 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 11 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 11 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 12 small net.png, id=257, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 12 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 12 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 12 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 13 small net.png, id=258, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 13 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 13 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 13 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 14 small net.png, id=259, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 14 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 14 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 14 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+<./Plots/Test Only/3community/3community 15 small net.png, id=260, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 15 small net.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 15 small net.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 15 small net.png  used on input line 332.
+(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
+
+
+LaTeX Warning: Float too large for page by 131.72778pt on input line 335.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+[]|\OT1/cmr/m/n/12 Embedding Mean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+\OT1/cmr/m/n/12 Pre-dic-tion Mean
+ []
+
+
+Overfull \hbox (41.99992pt too wide) in paragraph at lines 349--361
+ [] 
+ []
+
+[12] [13 <./Plots/Test Only/3community/3community 1 small net.png> <./Plots/Test Only/3community/3community 2 small net.png> <./Plots/Test Only/3community/3community 3 small net.png> <./Plots/Test Only/3community/3community 4 small net.png> <./Plots/Test Only/3community/3community 5 small net.png> <./Plots/Test Only/3community/3community 6 small net.png> <./Plots/Test Only/3community/3community 7 small net.png> <./Plots/Test Only/3community/3community 8 small net.png> <./Plots/Test Only/3community/3community 9 small net.png> <./Plots/Test Only/3community/3community 10 small net.png> <./Plots/Test Only/3community/3community 11 small net.png> <./Plots/Test Only/3community/3community 12 small net.png> <./Plots/Test Only/3community/3community 13 small net.png> <./Plots/Test Only/3community/3community 14 small net.png> <./Plots/Test Only/3community/3community 15 small net.png>]
+Overfull \hbox (5.53531pt too wide) in paragraph at lines 373--375
+\OT1/cmr/m/n/12 Through-out these tests the neu-ral net-work per-formed XXXXXXX, with the XXXXXX
+ []
+
+[14] [15] (./DraftDoc.aux)
+Package rerunfilecheck Info: File `DraftDoc.out' has not changed.
+(rerunfilecheck)             Checksum: 3C64F73394D61CBC21A951AEFD92B56A;1393.
+Package logreq Info: Writing requests to 'DraftDoc.run.xml'.
+\openout1 = `DraftDoc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35005 strings out of 476025
- 671031 string characters out of 5796532
- 1860388 words of memory out of 5000000
- 54666 multiletter control sequences out of 15000+600000
- 520054 words of font info for 63 fonts, out of 8000000 for 9000
+ 35562 strings out of 476025
+ 690795 string characters out of 5796532
+ 1900388 words of memory out of 5000000
+ 55136 multiletter control sequences out of 15000+600000
+ 521903 words of font info for 70 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,7n,117p,3910b,1524s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on litreview.pdf (9 pages, 127202 bytes).
+ 102i,21n,117p,1149b,1524s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on DraftDoc.pdf (15 pages, 883676 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 386 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 318 words of extra memory for PDF output out of 10000 (max. 10000000)
 
