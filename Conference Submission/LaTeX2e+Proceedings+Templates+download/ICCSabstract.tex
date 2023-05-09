@@ -1,0 +1,76 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+% 
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%
+\usepackage[english]{babel}
+
+\begin{document}
+%
+\title{Modelling Temporal Networks With Scientific Machine Learning}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Connor Smith\inst{1}\orcidID{0009-0006-6669-8159} \and
+Miguel Moyers-Gonzalez\inst{1}\orcidID{0000-0003-4817-1506} \and
+Giulio Dalla Riva\inst{1}\orcidID{0000-0002-3454-0633}}
+%
+\authorrunning{Smith et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+% 
+\institute{University of Canterbury, Christchurch, New Zealand
+\email{giulio.dallariva@canterbury.ac.nz}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+    In this manuscript, we propose a hybrid statistical and deep learning framework that allows us to model temporal networks as a continuous-time dynamical systems, discover a fitting set of differential equations describing it, and, exploiting that discovery, predict the time evolution of a network.
+    
+    The modelling of temporal networks is an important task in many real world applications including symptom interactions for mental health, epidemiology, and protein interactions \cite{jordan2020current,contreras2020temporal,lucas2021inferring,jin2009identifying,masuda2013predicting}.
+    Temporal networks can be seen as dynamical systems: that is a system in which we have points, in our case nodes in a network, whose states, the edges connecting them, that vary dependent in time.
+    Discovering the underlying equations governing these dynamical systems proves challenging, because changes in network structure are typically observed in the form of discrete jumps from one state to another, for example the appearance or the disappearance of an edge.
+
+    Differential equations are useful for modelling systems where the state of one variable can effect the trajectories of other variables. We observe this behavior in temporal networks; nodes' connections within the network can influence the formation and decay of edges between other nodes, for example the phenomenon of preferential attachment observed in \cite{newman2001clustering,capocci2006preferential}. With this in mind we might wish to draw on the rich mathematical literature of differential equation modelling. However, the discreteness problem makes it challenging to use differential equations techniques.
+    
+    We overcome the discreteness problem by interpreting networks as Random Dot Product Graphs; a well established statistical model for complex networks, that embeds nodes in a low-dimensional metric space by using a truncated singular value decomposition\cite{athreya2017statistical}. In this way we translate the hard problem of modelling discrete events in the space of networks to the easier problem of modelling continuous change in the embedding space. Then, we define and use systems of Neural Network Differential Equations (NNDE)\cite{SciML_C_Rak} to approximate the time evolution of the embedding space, and symbolic regression techniques to discover the functional form of the fitted NNDEs. These functional forms are interpretable (as they read as classic differential equations) and allow us to predict forward in time the evolution of the temporal networks.
+    
+    The proposed framework is to take the temporal network prediction problem and re-interpreted it as a dynamical system modelling problem by taking the singular value decomposition of a sequence of adjacency matrices and training a NNDE to model an approximation to the underlying differential equation. We then go on to create a symbolic equation of this approximation. 
+    
+    We apply our proposed framework to three small example temporal networks with the hope of exploring the limitations and strengths of the proposed framework. 
+    The framework we are introducing is extremely flexible, and our research regarding the optimal structure of the Neural Networks used for the NNDEs is just started.
+    We are confident that future research can identify more fitting Neural Network structures than the simple one adopted here.
+    For this reason, we did not yet attempt to benchmark our model against other classic temporal network prediction methods.
+    As it is completely general, we believe that the framework we are introducing can be usefully applied to areas of medicine, especially protein interaction networks; population dynamics for network ecology; and social network modelling. In particular, we discuss how specific domain knowledge relative to the prediction scenario can be taken into account, moving from NNDEs to Universal Differential Equations.
+\keywords{Network Modelling \and Temporal Network \and Scientific Machine Learning \and Symbolic Regression.}
+\end{abstract}
+%
+%
+%
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+
+\bibliographystyle{splncs04}
+\bibliography{bibliography}
+
+\end{document}

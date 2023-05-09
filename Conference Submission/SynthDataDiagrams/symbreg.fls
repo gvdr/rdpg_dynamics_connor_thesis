@@ -1,8 +1,8 @@
 PWD /home/stirling/Documents/thesis/Conference Submission/SynthDataDiagrams
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/stirling/Documents/thesis/Conference Submission/SynthDataDiagrams/methodology2.tex
-OUTPUT methodology2.log
+INPUT /home/stirling/Documents/thesis/Conference Submission/SynthDataDiagrams/symbreg.tex
+OUTPUT symbreg.log
 INPUT /usr/share/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/share/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/share/texmf-dist/tex/latex/standalone/standalone.cls
@@ -215,7 +215,6 @@ INPUT /usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
@@ -293,7 +292,7 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 INPUT /usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 INPUT /usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
@@ -322,12 +321,15 @@ INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
@@ -339,6 +341,7 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
+INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
@@ -432,7 +435,6 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
@@ -475,10 +477,10 @@ INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./methodology2.aux
-INPUT methodology2.aux
-INPUT methodology2.aux
-OUTPUT methodology2.aux
+INPUT ./symbreg.aux
+INPUT symbreg.aux
+INPUT symbreg.aux
+OUTPUT symbreg.aux
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -499,6 +501,25 @@ INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-OUTPUT methodology2.pdf
-INPUT methodology2.aux
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT symbreg.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT symbreg.aux
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

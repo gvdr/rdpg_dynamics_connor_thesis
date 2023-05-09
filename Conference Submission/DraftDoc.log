@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  19 APR 2023 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  10 MAY 2023 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -352,21 +352,9 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
  (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
-
-/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty:16186: Package keyval Error: 8sorting undefined.
-
-See the keyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16186 \blx@processoptions
-                           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
-(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+ (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-02-22 L3 programming layer (loader) 
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
@@ -815,7 +803,8 @@ Package: pdfbase 2022/08/04 v0.55 driver independent access to low-level PDF fea
 \g_pbs_oc_int=\count446
 ) (/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2022-04-07 v2.34 Module abspage for zref (HO)
- (/usr/share/texmf-dist/tex/latex/zref/zref-base.sty
+
+(/usr/share/texmf-dist/tex/latex/zref/zref-base.sty
 Package: zref-base 2022-04-07 v2.34 Module base for zref (HO)
 Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
@@ -963,12 +952,11 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `DraftDoc.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'DraftDoc.bbl' not found.
-
-No file DraftDoc.bbl.
+Package biblatex Info: ... file 'DraftDoc.bbl' found.
+ (./DraftDoc.bbl)
 Package biblatex Info: Reference section=0 on input line 34.
 Package biblatex Info: Reference segment=0 on input line 34.
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count469
 \scratchdimen=\dimen309
@@ -1033,636 +1021,330 @@ Package gensymb Warning: Not defining \micro.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 34.
+(./DraftDoc.out) (./DraftDoc.out)
 \@outlinefile=\write5
 \openout5 = `DraftDoc.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-LaTeX Warning: Citation 'jordan2020current' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'contreras2020temporal' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'lucas2021inferring' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'jin2009identifying' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'masuda2013predicting' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'newman2001clustering' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Citation 'capocci2006preferential' on page 1 undefined on input line 50.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation 'athreya2017statistical' on page 2 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'SciML_C_Rak' on page 2 undefined on input line 56.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `framework illustration' on page 3 undefined on input line 68.
-
-
-LaTeX Warning: Reference `method nets' on page 3 undefined on input line 68.
-
-
-LaTeX Warning: Reference `method adjacency' on page 3 undefined on input line 68.
-
-(./SynthDataDiagrams/methodology1.tex) (./SynthDataDiagrams/methodology2.tex) (./SynthDataDiagrams/methodology3.tex)
-Overfull \hbox (24.99437pt too wide) in paragraph at lines 101--138
+ [2] (./SynthDataDiagrams/methodology1.tex) (./SynthDataDiagrams/methodology2.tex) (./SynthDataDiagrams/methodology3.tex)
+Overfull \hbox (24.99437pt too wide) in paragraph at lines 95--132
 [][] 
  []
 
-
-LaTeX Warning: Reference `method nets' on page 3 undefined on input line 138.
-
-
-LaTeX Warning: Reference `method nets' on page 3 undefined on input line 138.
-
-
-LaTeX Warning: Citation 'golub1971singular' on page 3 undefined on input line 150.
-
-
-LaTeX Warning: Citation 'lehoucq1996deflation' on page 3 undefined on input line 150.
-
-[3]
-
-LaTeX Warning: Citation 'athreya2017statistical' on page 4 undefined on input line 159.
-
-
-LaTeX Warning: Citation 'hoff2002latent' on page 4 undefined on input line 159.
-
-
-LaTeX Warning: Citation 'SciML_C_Rak' on page 4 undefined on input line 159.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
-
+[3] [4] [5]
+Overfull \hbox (16.55965pt too wide) in paragraph at lines 194--195
+[]\OT1/cmr/m/n/12 Here we train a neu-ral net-work to ap-prox-i-mate the func-tion $\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; t\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 NN\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; t; ^^R\OT1/cmr/m/n/12 )$.
  []
 
-[4] [5]
+[6] (./SynthDataDiagrams/symbreg.tex)
+Underfull \vbox (badness 1902) has occurred while \output is active []
 
-LaTeX Warning: Citation 'kidger2022neural' on page 6 undefined on input line 198.
-
-
-LaTeX Warning: Reference `2community train series' on page 6 undefined on input line 202.
-
-
-LaTeX Warning: Reference `longTail train series' on page 6 undefined on input line 202.
-
-
-LaTeX Warning: Reference `3community train series' on page 6 undefined on input line 202.
-
-
-LaTeX Warning: Reference `2community train series, a' on page 6 undefined on input line 204.
-
-
-LaTeX Warning: Reference `2community train series, b' on page 6 undefined on input line 204.
-
-
-LaTeX Warning: Reference `2community train series, c' on page 6 undefined on input line 204.
-
-[6]
-
-LaTeX Warning: Citation 'Emma2023' on page 7 undefined on input line 206.
-
-(./SynthDataDiagrams/2community1.tex)
-Overfull \hbox (1.28017pt too wide) in paragraph at lines 212--213
+ [7] [8] (./SynthDataDiagrams/2community1.tex)
+Overfull \hbox (1.28017pt too wide) in paragraph at lines 258--259
  [][] 
  []
 
 (./SynthDataDiagrams/2community2.tex)
-Overfull \hbox (1.28017pt too wide) in paragraph at lines 220--221
+Overfull \hbox (1.28017pt too wide) in paragraph at lines 266--267
  [][] 
  []
 
 (./SynthDataDiagrams/2community3.tex)
-Overfull \hbox (1.28017pt too wide) in paragraph at lines 228--229
+Overfull \hbox (1.28017pt too wide) in paragraph at lines 274--275
  [][] 
  []
 
-
-LaTeX Warning: Reference `longTail train series' on page 7 undefined on input line 236.
-
-
-LaTeX Warning: Reference `longTail train series, a' on page 7 undefined on input line 236.
-
-
-LaTeX Warning: Reference `longTail train series, b' on page 7 undefined on input line 236.
-
-
-LaTeX Warning: Reference `longTail train series, c' on page 7 undefined on input line 236.
-
-(./SynthDataDiagrams/longTail1.tex) (./SynthDataDiagrams/longTail2.tex) (./SynthDataDiagrams/longTail3.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-
-LaTeX Warning: Reference `3community train series' on page 8 undefined on input line 266.
-
-
-LaTeX Warning: Reference `3community train series, a' on page 8 undefined on input line 266.
-
-
-LaTeX Warning: Reference `3community train series, b' on page 8 undefined on input line 266.
-
-
-LaTeX Warning: Reference `3community train series, c' on page 8 undefined on input line 266.
-
-(./SynthDataDiagrams/3community1.tex) (./SynthDataDiagrams/3community2.tex) (./SynthDataDiagrams/3community3.tex) [8]
-
-LaTeX Warning: Reference `2community series' on page 9 undefined on input line 301.
-
-
-LaTeX Warning: Reference `longtail series' on page 9 undefined on input line 301.
-
-
-LaTeX Warning: Reference `3community series' on page 9 undefined on input line 301.
-
-<./Plots/Test Only/2communities/2communities 1 small net.png, id=79, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 1 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 1 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 1 small net.png  used on input line 309.
+(./SynthDataDiagrams/longTail1.tex) (./SynthDataDiagrams/longTail2.tex) (./SynthDataDiagrams/longTail3.tex) [9] (./SynthDataDiagrams/3community1.tex) (./SynthDataDiagrams/3community2.tex) (./SynthDataDiagrams/3community3.tex) [10] [11]
+<./Plots/Test Only/2communities/2communities 1.png, id=224, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 1.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 1.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 1.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 2 small net.png, id=81, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 2 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 2 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 2 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 2.png, id=226, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 2.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 2.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 2.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 3 small net.png, id=82, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 3 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 3 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 3 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 3.png, id=227, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 3.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 3.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 3.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 4 small net.png, id=83, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 4 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 4 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 4 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 4.png, id=228, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 4.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 4.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 4.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 5 small net.png, id=84, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 5 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 5 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 5 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 5.png, id=229, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 5.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 5.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 5.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 6 small net.png, id=85, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 6 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 6 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 6 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 6.png, id=230, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 6.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 6.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 6.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 7 small net.png, id=86, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 7 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 7 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 7 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 7.png, id=231, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 7.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 7.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 7.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 8 small net.png, id=87, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 8 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 8 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 8 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 8.png, id=232, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 8.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 8.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 8.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 9 small net.png, id=88, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 9 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 9 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 9 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 9.png, id=233, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 9.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 9.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 9.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 10 small net.png, id=89, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 10 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 10 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 10 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 10.png, id=234, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 10.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 10.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 10.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 11 small net.png, id=90, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 11 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 11 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 11 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 11.png, id=235, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 11.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 11.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 11.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 12 small net.png, id=91, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 12 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 12 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 12 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 12.png, id=236, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 12.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 12.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 12.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 13 small net.png, id=92, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 13 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 13 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 13 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 13.png, id=237, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 13.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 13.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 13.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 14 small net.png, id=93, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 14 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 14 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 14 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 14.png, id=238, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 14.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 14.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 14.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 15 small net.png, id=94, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 15 small net.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 15 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 15 small net.png  used on input line 309.
+<./Plots/Test Only/2communities/2communities 15.png, id=239, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/2communities/2communities 15.png Graphic file (type png)
+<use ./Plots/Test Only/2communities/2communities 15.png>
+Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 15.png  used on input line 362.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
 
-LaTeX Warning: Float too large for page by 131.72778pt on input line 312.
 
-[9] [10 <./Plots/Test Only/2communities/2communities 1 small net.png> <./Plots/Test Only/2communities/2communities 2 small net.png> <./Plots/Test Only/2communities/2communities 3 small net.png> <./Plots/Test Only/2communities/2communities 4 small net.png> <./Plots/Test Only/2communities/2communities 5 small net.png> <./Plots/Test Only/2communities/2communities 6 small net.png> <./Plots/Test Only/2communities/2communities 7 small net.png> <./Plots/Test Only/2communities/2communities 8 small net.png> <./Plots/Test Only/2communities/2communities 9 small net.png> <./Plots/Test Only/2communities/2communities 10 small net.png> <./Plots/Test Only/2communities/2communities 11 small net.png> <./Plots/Test Only/2communities/2communities 12 small net.png> <./Plots/Test Only/2communities/2communities 13 small net.png> <./Plots/Test Only/2communities/2communities 14 small net.png> <./Plots/Test Only/2communities/2communities 15 small net.png>]
+LaTeX Warning: Float too large for page by 131.72778pt on input line 365.
 
-LaTeX Warning: Reference `2community series large neural network' on page 11 undefined on input line 319.
+[12] [13 <./Plots/Test Only/2communities/2communities 1.png> <./Plots/Test Only/2communities/2communities 2.png> <./Plots/Test Only/2communities/2communities 3.png> <./Plots/Test Only/2communities/2communities 4.png> <./Plots/Test Only/2communities/2communities 5.png> <./Plots/Test Only/2communities/2communities 6.png> <./Plots/Test Only/2communities/2communities 7.png> <./Plots/Test Only/2communities/2communities 8.png> <./Plots/Test Only/2communities/2communities 9.png> <./Plots/Test Only/2communities/2communities 10.png> <./Plots/Test Only/2communities/2communities 11.png> <./Plots/Test Only/2communities/2communities 12.png> <./Plots/Test Only/2communities/2communities 13.png> <./Plots/Test Only/2communities/2communities 14.png> <./Plots/Test Only/2communities/2communities 15.png>]
 
-<./Plots/Test Only/longTail/longTail 1.png, id=122, 702.625pt x 501.875pt>
+LaTeX Warning: Reference `2community series large neural network' on page 14 undefined on input line 372.
+
+<./Plots/Test Only/longTail/longTail 1.png, id=267, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 1.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 1.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 1.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 1.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 2.png, id=123, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 2.png, id=268, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 2.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 2.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 2.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 2.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 3.png, id=124, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 3.png, id=269, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 3.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 3.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 3.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 3.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 4.png, id=125, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 4.png, id=270, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 4.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 4.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 4.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 4.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 5.png, id=126, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 5.png, id=271, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 5.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 5.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 5.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 5.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 6.png, id=127, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 6.png, id=272, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 6.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 6.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 6.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 6.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 7.png, id=128, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 7.png, id=273, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 7.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 7.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 7.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 7.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 8.png, id=129, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 8.png, id=274, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 8.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 8.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 8.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 8.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 9.png, id=130, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 9.png, id=275, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 9.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 9.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 9.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 9.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 10.png, id=131, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 10.png, id=276, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 10.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 10.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 10.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 10.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 11.png, id=132, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 11.png, id=277, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 11.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 11.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 11.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 11.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 12.png, id=133, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 12.png, id=278, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 12.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 12.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 12.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 12.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 13.png, id=134, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 13.png, id=279, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 13.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 13.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 13.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 13.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 14.png, id=135, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 14.png, id=280, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 14.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 14.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 14.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 14.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/longTail/longTail 15.png, id=136, 702.625pt x 501.875pt>
+<./Plots/Test Only/longTail/longTail 15.png, id=281, 702.625pt x 501.875pt>
 File: ./Plots/Test Only/longTail/longTail 15.png Graphic file (type png)
 <use ./Plots/Test Only/longTail/longTail 15.png>
-Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 15.png  used on input line 331.
+Package pdftex.def Info: ./Plots/Test Only/longTail/longTail 15.png  used on input line 384.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
 
-LaTeX Warning: Float too large for page by 131.72778pt on input line 334.
+LaTeX Warning: Float too large for page by 131.72778pt on input line 387.
 
-
-LaTeX Warning: Reference `longtail series' on page 11 undefined on input line 335.
-
-
-Underfull \vbox (badness 4739) has occurred while \output is active []
-
- [11] [12 <./Plots/Test Only/longTail/longTail 1.png> <./Plots/Test Only/longTail/longTail 2.png> <./Plots/Test Only/longTail/longTail 3.png> <./Plots/Test Only/longTail/longTail 4.png> <./Plots/Test Only/longTail/longTail 5.png> <./Plots/Test Only/longTail/longTail 6.png> <./Plots/Test Only/longTail/longTail 7.png> <./Plots/Test Only/longTail/longTail 8.png> <./Plots/Test Only/longTail/longTail 9.png> <./Plots/Test Only/longTail/longTail 10.png> <./Plots/Test Only/longTail/longTail 11.png> <./Plots/Test Only/longTail/longTail 12.png> <./Plots/Test Only/longTail/longTail 13.png> <./Plots/Test Only/longTail/longTail 14.png> <./Plots/Test Only/longTail/longTail 15.png>]
-<./Plots/Test Only/3community/3community 1 small net.png, id=165, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 1 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 1 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 1 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 1.png, id=283, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 1.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 1.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 1.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 2 small net.png, id=166, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 2 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 2 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 2 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 2.png, id=284, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 2.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 2.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 2.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 3 small net.png, id=167, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 3 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 3 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 3 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 3.png, id=285, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 3.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 3.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 3.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 4 small net.png, id=168, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 4 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 4 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 4 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 4.png, id=286, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 4.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 4.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 4.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 5 small net.png, id=169, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 5 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 5 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 5 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 5.png, id=287, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 5.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 5.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 5.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 6 small net.png, id=170, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 6 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 6 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 6 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 6.png, id=288, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 6.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 6.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 6.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 7 small net.png, id=171, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 7 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 7 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 7 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 7.png, id=289, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 7.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 7.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 7.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 8 small net.png, id=172, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 8 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 8 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 8 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 8.png, id=290, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 8.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 8.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 8.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 9 small net.png, id=173, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 9 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 9 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 9 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 9.png, id=291, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 9.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 9.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 9.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 10 small net.png, id=174, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 10 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 10 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 10 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 10.png, id=292, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 10.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 10.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 10.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 11 small net.png, id=175, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 11 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 11 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 11 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 11.png, id=293, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 11.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 11.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 11.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 12 small net.png, id=176, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 12 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 12 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 12 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 12.png, id=294, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 12.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 12.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 12.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 13 small net.png, id=177, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 13 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 13 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 13 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 13.png, id=295, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 13.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 13.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 13.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 14 small net.png, id=178, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 14 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 14 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 14 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 14.png, id=296, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 14.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 14.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 14.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 15 small net.png, id=179, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 15 small net.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 15 small net.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 15 small net.png  used on input line 347.
+<./Plots/Test Only/3community/3community 15.png, id=297, 702.625pt x 501.875pt>
+File: ./Plots/Test Only/3community/3community 15.png Graphic file (type png)
+<use ./Plots/Test Only/3community/3community 15.png>
+Package pdftex.def Info: ./Plots/Test Only/3community/3community 15.png  used on input line 400.
 (pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
 
-
-LaTeX Warning: Float too large for page by 131.72778pt on input line 350.
-
-
-LaTeX Warning: Reference `3community series' on page 13 undefined on input line 351.
+LaTeX Warning: Float too large for page by 131.72778pt on input line 403.
 
 
-LaTeX Warning: Reference `3community series large neural network' on page 13 undefined on input line 355.
+LaTeX Warning: Reference `3community series large neural network' on page 14 undefined on input line 408.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
-[]|\OT1/cmr/m/n/12 Embedding Mean
- []
+Underfull \vbox (badness 1603) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
-\OT1/cmr/m/n/12 Pre-dic-tion Mean
- []
-
-
-Overfull \hbox (41.99992pt too wide) in paragraph at lines 367--379
+ [14] [15 <./Plots/Test Only/longTail/longTail 1.png> <./Plots/Test Only/longTail/longTail 2.png> <./Plots/Test Only/longTail/longTail 3.png> <./Plots/Test Only/longTail/longTail 4.png> <./Plots/Test Only/longTail/longTail 5.png> <./Plots/Test Only/longTail/longTail 6.png> <./Plots/Test Only/longTail/longTail 7.png> <./Plots/Test Only/longTail/longTail 8.png> <./Plots/Test Only/longTail/longTail 9.png> <./Plots/Test Only/longTail/longTail 10.png> <./Plots/Test Only/longTail/longTail 11.png> <./Plots/Test Only/longTail/longTail 12.png> <./Plots/Test Only/longTail/longTail 13.png> <./Plots/Test Only/longTail/longTail 14.png> <./Plots/Test Only/longTail/longTail 15.png>] [16 <./Plots/Test Only/3community/3community 1.png> <./Plots/Test Only/3community/3community 2.png> <./Plots/Test Only/3community/3community 3.png> <./Plots/Test Only/3community/3community 4.png> <./Plots/Test Only/3community/3community 5.png> <./Plots/Test Only/3community/3community 6.png> <./Plots/Test Only/3community/3community 7.png> <./Plots/Test Only/3community/3community 8.png> <./Plots/Test Only/3community/3community 9.png> <./Plots/Test Only/3community/3community 10.png> <./Plots/Test Only/3community/3community 11.png> <./Plots/Test Only/3community/3community 12.png> <./Plots/Test Only/3community/3community 13.png> <./Plots/Test Only/3community/3community 14.png> <./Plots/Test Only/3community/3community 15.png>]
+Overfull \hbox (41.99992pt too wide) in paragraph at lines 420--432
  [] 
  []
 
-[13] [14 <./Plots/Test Only/3community/3community 1 small net.png> <./Plots/Test Only/3community/3community 2 small net.png> <./Plots/Test Only/3community/3community 3 small net.png> <./Plots/Test Only/3community/3community 4 small net.png> <./Plots/Test Only/3community/3community 5 small net.png> <./Plots/Test Only/3community/3community 6 small net.png> <./Plots/Test Only/3community/3community 7 small net.png> <./Plots/Test Only/3community/3community 8 small net.png> <./Plots/Test Only/3community/3community 9 small net.png> <./Plots/Test Only/3community/3community 10 small net.png> <./Plots/Test Only/3community/3community 11 small net.png> <./Plots/Test Only/3community/3community 12 small net.png> <./Plots/Test Only/3community/3community 13 small net.png> <./Plots/Test Only/3community/3community 14 small net.png> <./Plots/Test Only/3community/3community 15 small net.png>]
-Overfull \hbox (5.53531pt too wide) in paragraph at lines 391--393
-\OT1/cmr/m/n/12 Through-out these tests the neu-ral net-work per-formed XXXXXXX, with the XXXXXX
+[17] [18] [19]
+Overfull \hbox (10.48915pt too wide) in paragraph at lines 450--450
+\OT1/cmr/m/n/12 Dif-fer-en-tial Equa-tions for Sci-en-tific Ma-chine Learn-ing''. In: \OT1/cmr/m/it/12 CoRR \OT1/cmr/m/n/12 abs/2001.04385
  []
 
 
-LaTeX Warning: Empty bibliography on input line 396.
+Overfull \hbox (37.04373pt too wide) in paragraph at lines 450--450
+[]\OT1/cmr/m/n/12 Patrick Kidger. ``On neu-ral dif-fer-en-tial equa-tions''. In: \OT1/cmr/m/it/12 arXiv preprint arXiv:2202.02435
+ []
 
-<./Plots/Test Only/2communities/2communities 1.png, id=210, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 1.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 1.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 1.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 2.png, id=211, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 2.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 2.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 2.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 3.png, id=212, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 3.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 3.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 3.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 4.png, id=213, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 4.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 4.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 4.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 5.png, id=214, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 5.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 5.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 5.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 6.png, id=215, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 6.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 6.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 6.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 7.png, id=216, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 7.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 7.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 7.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 8.png, id=217, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 8.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 8.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 8.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 9.png, id=218, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 9.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 9.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 9.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 10.png, id=219, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 10.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 10.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 10.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 11.png, id=220, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 11.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 11.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 11.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 12.png, id=221, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 12.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 12.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 12.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 13.png, id=222, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 13.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 13.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 13.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 14.png, id=223, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 14.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 14.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 14.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/2communities/2communities 15.png, id=224, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/2communities/2communities 15.png Graphic file (type png)
-<use ./Plots/Test Only/2communities/2communities 15.png>
-Package pdftex.def Info: ./Plots/Test Only/2communities/2communities 15.png  used on input line 404.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-
-LaTeX Warning: Float too large for page by 131.72778pt on input line 407.
-
-<./Plots/Test Only/3community/3community 1.png, id=225, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 1.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 1.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 1.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 2.png, id=226, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 2.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 2.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 2.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 3.png, id=227, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 3.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 3.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 3.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 4.png, id=228, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 4.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 4.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 4.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 5.png, id=229, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 5.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 5.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 5.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 6.png, id=230, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 6.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 6.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 6.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 7.png, id=231, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 7.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 7.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 7.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 8.png, id=232, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 8.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 8.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 8.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 9.png, id=233, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 9.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 9.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 9.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 10.png, id=234, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 10.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 10.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 10.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 11.png, id=235, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 11.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 11.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 11.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 12.png, id=236, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 12.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 12.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 12.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 13.png, id=237, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 13.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 13.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 13.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 14.png, id=238, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 14.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 14.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 14.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-<./Plots/Test Only/3community/3community 15.png, id=239, 702.625pt x 501.875pt>
-File: ./Plots/Test Only/3community/3community 15.png Graphic file (type png)
-<use ./Plots/Test Only/3community/3community 15.png>
-Package pdftex.def Info: ./Plots/Test Only/3community/3community 15.png  used on input line 415.
-(pdftex.def)             Requested size: 129.00269pt x 92.14088pt.
-
-LaTeX Warning: Float too large for page by 131.72778pt on input line 418.
-
-[15] [16 <./Plots/Test Only/2communities/2communities 1.png> <./Plots/Test Only/2communities/2communities 2.png> <./Plots/Test Only/2communities/2communities 3.png> <./Plots/Test Only/2communities/2communities 4.png> <./Plots/Test Only/2communities/2communities 5.png> <./Plots/Test Only/2communities/2communities 6.png> <./Plots/Test Only/2communities/2communities 7.png> <./Plots/Test Only/2communities/2communities 8.png> <./Plots/Test Only/2communities/2communities 9.png> <./Plots/Test Only/2communities/2communities 10.png> <./Plots/Test Only/2communities/2communities 11.png> <./Plots/Test Only/2communities/2communities 12.png> <./Plots/Test Only/2communities/2communities 13.png> <./Plots/Test Only/2communities/2communities 14.png> <./Plots/Test Only/2communities/2communities 15.png>] [17 <./Plots/Test Only/3community/3community 1.png> <./Plots/Test Only/3community/3community 2.png> <./Plots/Test Only/3community/3community 3.png> <./Plots/Test Only/3community/3community 4.png> <./Plots/Test Only/3community/3community 5.png> <./Plots/Test Only/3community/3community 6.png> <./Plots/Test Only/3community/3community 7.png> <./Plots/Test Only/3community/3community 8.png> <./Plots/Test Only/3community/3community 9.png> <./Plots/Test Only/3community/3community 10.png> <./Plots/Test Only/3community/3community 11.png> <./Plots/Test Only/3community/3community 12.png> <./Plots/Test Only/3community/3community 13.png> <./Plots/Test Only/3community/3community 14.png> <./Plots/Test Only/3community/3community 15.png>]
-
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (1 not 17).
-               Rerun to correct this.
-
-(./DraftDoc.aux)
+[20] (./DraftDoc.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `DraftDoc.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `DraftDoc.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3984648D61EC6B465B977F21E300B5E5;1539.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                DraftDoc
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `DraftDoc.out' has not changed.
+(rerunfilecheck)             Checksum: 2BA68D84100B79EA154B707D0885B494;3140.
 Package logreq Info: Writing requests to 'DraftDoc.run.xml'.
 \openout1 = `DraftDoc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35598 strings out of 476025
- 695755 string characters out of 5796532
- 1895388 words of memory out of 5000000
- 55168 multiletter control sequences out of 15000+600000
- 521695 words of font info for 69 fonts, out of 8000000 for 9000
+ 35563 strings out of 476025
+ 688526 string characters out of 5796532
+ 1893388 words of memory out of 5000000
+ 55128 multiletter control sequences out of 15000+600000
+ 521903 words of font info for 70 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,21n,117p,1152b,1460s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on DraftDoc.pdf (17 pages, 1301618 bytes).
+ 102i,20n,117p,1130b,1519s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on DraftDoc.pdf (20 pages, 894132 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 388 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 460 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 382 words of extra memory for PDF output out of 10000 (max. 10000000)
 
