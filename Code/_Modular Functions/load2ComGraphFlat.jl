@@ -69,7 +69,7 @@ end
 
 function loadRegAligned()
     println("Regular Alignment")
-    path = "./Thesis/Code/Graph Series/$net_name"
+    path = "./Code/Graph Series/$net_name"
     names = readdir(path)
 
     n, d = dims
@@ -84,7 +84,7 @@ function loadRegAligned()
 
     for i in 1:length(names)
         L, R = do_the_rdpg(time_graphs[i], convert(Int, d))
-        true_data[:,i] = [L; R]'
+        true_data[:,:,i] = [L; R]'
 
     end
     return true_data, time_graphs

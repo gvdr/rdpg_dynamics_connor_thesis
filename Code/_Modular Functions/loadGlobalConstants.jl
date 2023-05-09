@@ -16,12 +16,13 @@ function global_consts(n, d)
     global train_data = withoutNode(t_data[1:datasize],1) #|> Lux.gpu
     global test_data = withoutNode(t_data[1+datasize:end],1)
     global tspan = (1.0, Float64(datasize))#|> Lux.gpu
-    global tsteps = range(tspan[1], tspan[2], length = datasize)#|> Lux.gpu
+    global tsteps = range(tspan[1], tspan[2], length = datasize)#|> Lux.gpu 
     global k = 15
 
     global input_data_length = k*dims[2]
     global output_data_length = dims[2]
     global u0 = vec(targetNode(t_data,1)[1])#|> Lux.gpu
+    return nothing
 end
 
 #targetNode(t_data,1)[1]

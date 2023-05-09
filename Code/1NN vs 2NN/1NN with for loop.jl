@@ -26,7 +26,9 @@ global_consts("longTail", (182,2))
 rng = Random.default_rng()
 nn = Lux.Chain(x -> x,
       Lux.Dense(input_data_length, 64, tanh),
-      Lux.Dense(64, output_data_length))
+      Lux.Dense(64, 8, tanh),
+      Lux.Dense(8, 8, tanh),
+      Lux.Dense(8, output_data_length))
 
 p, st = Lux.setup(rng, nn)
 
@@ -65,14 +67,14 @@ TNode_data = targetNode(t_data[1:datasize],1)
 result = Optimization.solve(optprob,
                             ADAM(0.01),
                             callback = callback,
-                            maxiters = 500)
+                            maxiters = 10)
 optprob = remake(optprob, u0=result.u)
 println("ping")
 
 result = Optimization.solve(optprob,
-                            Optim.BFGS(initial_stepnorm=0.001),
+                            Optim.BFGS(initial_stepnorm=0.01),
                             callback = callback,
-                            maxiters = 500)
+                            maxiters = 5)
 optprob = remake(optprob, u0=result.u)
 println("ping")
 loss_neuralode(temp_res)
@@ -98,7 +100,7 @@ sol = predict_neuralode(result.u)
 # loss_neuralode(result.u)
 using DelimitedFiles
 
-writedlm("./Code/Solutions/$net_name.csv", sol, ",")
+writedlm("./Code/Solutions/$net_name big net.csv", sol, ",")
 
 function predict_neuralode(θ)
   Array(solve(prob_neuralode, Tsit5(), saveat = tsteps, p=θ))#|>Lux.gpu
@@ -114,6 +116,6 @@ sol = predict_neuralode(result.u)
 
 using DelimitedFiles
 
-writedlm("./Code/Solutions/$net_name test only.csv", sol, ",")
+writedlm("./Code/Solutions/$net_name big net test only.csv", sol, ",")
 
 

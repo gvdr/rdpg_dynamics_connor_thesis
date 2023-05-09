@@ -3,7 +3,11 @@ using ColorSchemes
 include("../_Modular Functions/loadGlobalConstants.jl")
 
 include("../_Modular Functions/pca.jl")
+global_consts("longTail", (182,2))
+
 include("symreg.jl")
+
+
 
 
 
@@ -38,3 +42,33 @@ for i in 1:length(t_data)-datasize
 end
 
 
+
+
+function net_pred_loss(pt, tstep)
+    # p ∈ s, n, t
+    # pR' = a
+    # round(a)
+    true_struct = time_graphs[tstep][1,2:end]
+
+    R = t_data[tstep][:,mid+2:end]
+
+    
+    pred = round.(pt'*R)
+    # 
+    return sum(abs, pred.-true_struct'),pred
+end
+
+tstep = datasize+15
+sltn_sym = sltn_sym_reg[:,tstep-datasize]
+sltn_nn = sltn[:,tstep-datasize]
+sltn_true = t_data[datasize+1][:,1]
+
+tests = [sltn_sym, sltn_nn, sltn_true]
+p  = net_pred_loss.(tests,tstep)
+
+L = t_data[tstep][:,1:mid]
+R = t_data[tstep][:,mid+1:end]
+
+L'*R
+
+printall(p[1][2])

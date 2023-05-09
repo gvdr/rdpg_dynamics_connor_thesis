@@ -9,15 +9,15 @@ grad_sltn = sltn[:,2:end].-sltn[:,1:end-1]
 
 test_range = eachindex(1.0:0.01:Float64(datasize))
 
-trace = scatter(x=sltn[1,:],y=sltn[2,:], mode="markers", name="sltn from start")
-trace2 =  scatter(x=[t_data[i][1,1] for i in 1:datasize],y=[t_data[i][2,1] for i in 1:datasize], mode="markers", name="train")
-trace3 =  scatter(x=[t_data[i+datasize][1,1] for i in 1:length(t_data)-datasize],y=[t_data[i+datasize][2,1] for i in 1:length(t_data)-datasize], mode="markers", name="test")
-trace4 =  scatter(x=sltnt[1,1:end],y=sltnt[2,1:end], mode="markers", name="sltn from test")
+# trace = scatter(x=sltn[1,:],y=sltn[2,:], mode="markers", name="sltn from start")
+# trace2 =  scatter(x=[t_data[i][1,1] for i in 1:datasize],y=[t_data[i][2,1] for i in 1:datasize], mode="markers", name="train")
+# trace3 =  scatter(x=[t_data[i+datasize][1,1] for i in 1:length(t_data)-datasize],y=[t_data[i+datasize][2,1] for i in 1:length(t_data)-datasize], mode="markers", name="test")
+# trace4 =  scatter(x=sltnt[1,1:end],y=sltnt[2,1:end], mode="markers", name="sltn from test")
 
-plot([trace, trace2, trace3, trace4])
+# plot([trace, trace2, trace3, trace4])
 
 train_data = withoutNode(t_data,1)
-train_data[1]
+length(train_data)
 
 function dists(u,t)
     M = train_data[t]
@@ -53,15 +53,17 @@ dominatings = [
 ]
 
 eqns = [
-    dominatings[i][end-2].tree
+    dominatings[i][1].tree
     for i in 1:dims[2]
 ]
 
 sltn1 = vcat([dominatings[i][end].tree for i in 1:dims[2]]...)
 
+length(dominatings[1])
 
 
 function next_step(u0, t, eq)
+    
     d = dists(u0, t+datasize)[:,:]
     u0+eq(d)
 end
