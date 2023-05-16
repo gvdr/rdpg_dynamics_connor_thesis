@@ -53,7 +53,7 @@ dominatings = [
 ]
 dominatings[1]
 eqns = [
-    dominatings[i][end].tree
+    dominatings[i][1].tree
     for i in 1:dims[2]
 ]
 

@@ -3,7 +3,7 @@ using ColorSchemes
 include("../_Modular Functions/loadGlobalConstants.jl")
 
 include("../_Modular Functions/pca.jl")
-global_consts("3community", (212,2))
+global_consts("longTail", (182,2))
 
 include("symreg.jl")
 
@@ -37,35 +37,40 @@ for i in 1:length(t_data)-datasize
     traces2 = PlotlyJS.scatter(x=[pts[1,1]], y=[pts[1,2]], mode="markers", name="Target Node", marker_size=12)
     
     traces3 = PlotlyJS.scatter(x=pts[2:mid,1], y=pts[1:mid,2], mode="markers", name="Data")
-    display(PlotlyJS.plot([traces0,traces1,traces2, traces3]))
-    savefig(PlotlyJS.plot([traces0, traces1, traces2, traces3]), "./Code/Plots/Test Only/$net_name/$net_name $i small net.png")
+
+    layout = Layout(xaxis=attr(showgrid=false),yaxis=attr(showgrid=false))
+
+    display(PlotlyJS.plot([traces0,traces1,traces2, traces3],layout))
+    savefig(PlotlyJS.plot([traces0, traces1, traces2, traces3],layout), "./Code/Plots/Test Only/$net_name/$net_name $i small net.png")
 
 end
 
 
 
 
-function net_pred_loss(pt, tstep)
+function net_pred_loss(p, pt, tsteps)
     # p ∈ s, n, t
     # pR' = a
     # round(a)
     true_struct = time_graphs[tstep][1,2:end]
 
-    R = t_data[tstep][:,mid+2:end]
+    Rs = [t_data[t][:,mid+2:end] for t in tsteps]
 
     
-    pred = pt'*R
-    # 
-    return sum(abs, pred.-true_struct'),pred,true_struct
+    pred = (p-pt)'.* Rs
+    pred = vcat(pred...)
+    println(typeof(pred))
+    return sum(abs2, pred)/length(tsteps),pred,true_struct
 end
 
-tstep = datasize+5
+tsteprange = datasize+5:datasize+8
 sltn_sym = sltn_sym_reg[:,tstep-datasize]
 sltn_nn = sltn[:,tstep-datasize]
 sltn_true = t_data[datasize+1][:,1]
 
-tests = [sltn_true, sltn_nn, sltn_sym]
-p  = net_pred_loss.(tests,tstep)
+pt=sltn_true
+p = [sltn_nn, sltn_sym]
+l  = net_pred_loss.(p,[pt,pt],[tsteprange])
 
 L = t_data[tstep][:,1:mid]
 R = t_data[tstep][:,mid+1:end]
