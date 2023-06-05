@@ -1493,6 +1493,8 @@ INPUT ./DraftDoc.out
 OUTPUT DraftDoc.out
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -1511,235 +1513,142 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT ../Code/Plots/Test Only/2communities/2communities 1 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 1 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 1 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 1 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 1 small net.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
+INPUT ./SynthDataDiagrams/methodology1.tex
+INPUT SynthDataDiagrams/methodology1.tex
+INPUT ./SynthDataDiagrams/methodology1.tex
+INPUT SynthDataDiagrams/methodology1.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT ./SynthDataDiagrams/methodology2.tex
+INPUT SynthDataDiagrams/methodology2.tex
+INPUT ./SynthDataDiagrams/methodology2.tex
+INPUT SynthDataDiagrams/methodology2.tex
+INPUT ./SynthDataDiagrams/methodology3.tex
+INPUT SynthDataDiagrams/methodology3.tex
+INPUT ./SynthDataDiagrams/methodology3.tex
+INPUT SynthDataDiagrams/methodology3.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
-INPUT ../Code/Plots/Test Only/2communities/2communities 2 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 2 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 2 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 2 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 2 small net.png
+INPUT ./SynthDataDiagrams/symbreg.tex
+INPUT SynthDataDiagrams/symbreg.tex
+INPUT ./SynthDataDiagrams/symbreg.tex
+INPUT SynthDataDiagrams/symbreg.tex
+INPUT ./SynthDataDiagrams/2community1.tex
+INPUT SynthDataDiagrams/2community1.tex
+INPUT ./SynthDataDiagrams/2community1.tex
+INPUT SynthDataDiagrams/2community1.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ./SynthDataDiagrams/2community2.tex
+INPUT SynthDataDiagrams/2community2.tex
+INPUT ./SynthDataDiagrams/2community2.tex
+INPUT SynthDataDiagrams/2community2.tex
+INPUT ./SynthDataDiagrams/2community3.tex
+INPUT SynthDataDiagrams/2community3.tex
+INPUT ./SynthDataDiagrams/2community3.tex
+INPUT SynthDataDiagrams/2community3.tex
+INPUT ./SynthDataDiagrams/longTail1.tex
+INPUT SynthDataDiagrams/longTail1.tex
+INPUT ./SynthDataDiagrams/longTail1.tex
+INPUT SynthDataDiagrams/longTail1.tex
+INPUT ./SynthDataDiagrams/longTail2.tex
+INPUT SynthDataDiagrams/longTail2.tex
+INPUT ./SynthDataDiagrams/longTail2.tex
+INPUT SynthDataDiagrams/longTail2.tex
+INPUT ./SynthDataDiagrams/longTail3.tex
+INPUT SynthDataDiagrams/longTail3.tex
+INPUT ./SynthDataDiagrams/longTail3.tex
+INPUT SynthDataDiagrams/longTail3.tex
+INPUT ./SynthDataDiagrams/3community1.tex
+INPUT SynthDataDiagrams/3community1.tex
+INPUT ./SynthDataDiagrams/3community1.tex
+INPUT SynthDataDiagrams/3community1.tex
+INPUT ./SynthDataDiagrams/3community2.tex
+INPUT SynthDataDiagrams/3community2.tex
+INPUT ./SynthDataDiagrams/3community2.tex
+INPUT SynthDataDiagrams/3community2.tex
+INPUT ./SynthDataDiagrams/3community3.tex
+INPUT SynthDataDiagrams/3community3.tex
+INPUT ./SynthDataDiagrams/3community3.tex
+INPUT SynthDataDiagrams/3community3.tex
 INPUT ../Code/Plots/Test Only/2communities/2communities 3 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 3 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 3 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 3 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 3 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 4 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 4 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 4 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 4 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 4 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 5 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 5 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 5 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 5 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 5 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 6 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 6 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 6 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 6 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 6 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 7 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 7 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 7 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 7 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 7 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 8 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 8 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 8 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 8 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 8 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 9 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 9 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 9 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 9 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 9 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 10 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 10 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 10 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 10 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 10 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 11 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 11 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 11 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 11 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 11 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 12 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 12 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 12 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 12 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 12 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 13 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 13 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 13 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 13 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 13 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 14 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 14 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 14 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 14 small net.png
-INPUT ../Code/Plots/Test Only/2communities/2communities 14 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 15 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 15 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 15 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 15 small net.png
 INPUT ../Code/Plots/Test Only/2communities/2communities 15 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 1 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 1 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 1 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 1 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 1 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 2 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 2 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 2 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 2 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 2 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 3 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 3 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 3 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 3 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 3 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 4 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 4 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 4 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 4 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 4 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 5 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 5 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 5 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 5 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 5 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 6 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 6 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 6 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 6 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 6 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 7 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 7 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 7 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 7 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 7 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 8 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 8 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 8 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 8 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 8 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 9 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 9 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 9 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 9 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 9 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 10 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 10 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 10 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 10 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 10 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 11 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 11 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 11 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 11 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 11 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 12 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 12 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 12 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 12 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 12 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 13 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 13 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 13 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 13 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 13 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 14 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 14 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 14 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 14 small net.png
-INPUT ../Code/Plots/Test Only/longTail/longTail 14 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 15 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 15 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 15 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 15 small net.png
 INPUT ../Code/Plots/Test Only/longTail/longTail 15 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 1 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 1 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 1 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 1 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 1 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 2 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 2 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 2 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 2 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 2 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 3 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 3 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 3 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 3 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 3 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 4 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 4 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 4 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 4 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 4 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 5 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 5 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 5 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 5 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 5 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 6 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 6 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 6 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 6 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 6 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 7 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 7 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 7 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 7 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 7 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 8 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 8 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 8 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 8 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 8 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 9 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 9 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 9 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 9 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 9 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 10 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 10 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 10 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 10 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 10 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 11 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 11 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 11 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 11 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 11 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 12 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 12 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 12 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 12 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 12 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 13 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 13 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 13 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 13 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 13 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 14 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 14 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 14 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 14 small net.png
-INPUT ../Code/Plots/Test Only/3community/3community 14 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 15 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 15 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 15 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 15 small net.png
 INPUT ../Code/Plots/Test Only/3community/3community 15 small net.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT DraftDoc.aux
 INPUT ./DraftDoc.out
 INPUT ./DraftDoc.out
@@ -1747,6 +1656,8 @@ INPUT DraftDoc.run.xml
 OUTPUT DraftDoc.run.xml
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
@@ -1755,4 +1666,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
