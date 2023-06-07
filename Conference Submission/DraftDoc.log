@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  7 JUN 2023 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  7 JUN 2023 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -912,26 +912,7 @@ Package: thm-amsthm 2023/02/17 v0.75
 Package hyperref Info: Option `colorlinks' set `true' on input line 32.
 \@quotelevel=\count467
 \@quotereset=\count468
- (./DraftDoc.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `sub@' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `sub@' multiply defined.
-
-
-LaTeX Warning: Label `method nets' multiply defined.
-
-
-LaTeX Warning: Label `sub@method nets' multiply defined.
-
-)
+ (./DraftDoc.aux)
 \openout1 = `DraftDoc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -1046,218 +1027,26 @@ Package hyperref Info: Link coloring ON on input line 34.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2] [3] [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5] [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7] [8]
-Overfull \hbox (2.91406pt too wide) in paragraph at lines 229--231
-\OT1/cmr/m/n/12 learn-ing with UDEs. The ecosys-tem is called Sci-en-tific Ma-chine Learn-ing (SciML)[[][]28[][]].
- []
-
-
-Underfull \vbox (badness 4739) has occurred while \output is active []
-
- [9] [10] [11] [12] (./SynthDataDiagrams/methodology1.tex) (./SynthDataDiagrams/methodology2.tex) (./SynthDataDiagrams/methodology3.tex)
-Overfull \hbox (13.00343pt too wide) in paragraph at lines 303--327
-[][] 
- []
-
-
-Overfull \hbox (24.99437pt too wide) in paragraph at lines 333--370
-[][] 
- []
-
-<../Code/Plots/examples/plot 1.png, id=284, 702.625pt x 501.875pt>
-File: ../Code/Plots/examples/plot 1.png Graphic file (type png)
-<use ../Code/Plots/examples/plot 1.png>
-Package pdftex.def Info: ../Code/Plots/examples/plot 1.png  used on input line 423.
-(pdftex.def)             Requested size: 133.30037pt x 95.21173pt.
-<../Code/Plots/examples/plot 2.png, id=286, 702.625pt x 501.875pt>
-File: ../Code/Plots/examples/plot 2.png Graphic file (type png)
-<use ../Code/Plots/examples/plot 2.png>
-Package pdftex.def Info: ../Code/Plots/examples/plot 2.png  used on input line 433.
-(pdftex.def)             Requested size: 133.30037pt x 95.21173pt.
-<../Code/Plots/examples/plot 3.png, id=287, 702.625pt x 501.875pt>
-File: ../Code/Plots/examples/plot 3.png Graphic file (type png)
-<use ../Code/Plots/examples/plot 3.png>
-Package pdftex.def Info: ../Code/Plots/examples/plot 3.png  used on input line 444.
-(pdftex.def)             Requested size: 133.30037pt x 95.21173pt.
-
-Overfull \hbox (25.89648pt too wide) in paragraph at lines 419--450
-[][] 
- []
-
-
-LaTeX Warning: Float too large for page by 52.44742pt on input line 457.
-
-[13] [14 <../Code/Plots/examples/plot 1.png> <../Code/Plots/examples/plot 2.png> <../Code/Plots/examples/plot 3.png>]
-Underfull \vbox (badness 4739) has occurred while \output is active []
-
- [15]
-Overfull \hbox (16.55965pt too wide) in paragraph at lines 526--527
-[]\OT1/cmr/m/n/12 Here we train a neu-ral net-work to ap-prox-i-mate the func-tion $\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; t\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 NN\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; t; ^^R\OT1/cmr/m/n/12 )$.
- []
-
-[16] (./SynthDataDiagrams/symbreg.tex)
-Underfull \vbox (badness 1603) has occurred while \output is active []
-
- [17] [18] (./SynthDataDiagrams/2community1.tex)
-Overfull \hbox (1.28017pt too wide) in paragraph at lines 568--569
- [][] 
- []
-
-(./SynthDataDiagrams/2community2.tex)
-Overfull \hbox (1.28017pt too wide) in paragraph at lines 576--577
- [][] 
- []
-
-(./SynthDataDiagrams/2community3.tex)
-Overfull \hbox (1.28017pt too wide) in paragraph at lines 584--585
- [][] 
- []
-
-[19] (./SynthDataDiagrams/longTail1.tex) (./SynthDataDiagrams/longTail2.tex) (./SynthDataDiagrams/longTail3.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20] (./SynthDataDiagrams/3community1.tex) (./SynthDataDiagrams/3community2.tex) (./SynthDataDiagrams/3community3.tex) [21] [22] [23] [24]
-<../Code/Plots/Test Only/2communities/2communities 3 small net.png, id=424, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/2communities/2communities 3 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/2communities/2communities 3 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/2communities/2communities 3 small net.png  used on input line 723.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/2communities/2communities 6 small net.png, id=425, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/2communities/2communities 6 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/2communities/2communities 6 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/2communities/2communities 6 small net.png  used on input line 723.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/2communities/2communities 9 small net.png, id=426, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/2communities/2communities 9 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/2communities/2communities 9 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/2communities/2communities 9 small net.png  used on input line 723.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/2communities/2communities 12 small net.png, id=427, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/2communities/2communities 12 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/2communities/2communities 12 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/2communities/2communities 12 small net.png  used on input line 723.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/2communities/2communities 15 small net.png, id=428, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/2communities/2communities 15 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/2communities/2communities 15 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/2communities/2communities 15 small net.png  used on input line 723.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/longTail/longTail 3 small net.png, id=430, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/longTail/longTail 3 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/longTail/longTail 3 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/longTail/longTail 3 small net.png  used on input line 741.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/longTail/longTail 6 small net.png, id=431, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/longTail/longTail 6 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/longTail/longTail 6 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/longTail/longTail 6 small net.png  used on input line 741.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/longTail/longTail 9 small net.png, id=432, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/longTail/longTail 9 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/longTail/longTail 9 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/longTail/longTail 9 small net.png  used on input line 741.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/longTail/longTail 12 small net.png, id=433, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/longTail/longTail 12 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/longTail/longTail 12 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/longTail/longTail 12 small net.png  used on input line 741.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/longTail/longTail 15 small net.png, id=434, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/longTail/longTail 15 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/longTail/longTail 15 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/longTail/longTail 15 small net.png  used on input line 741.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
- [25] [26 <../Code/Plots/Test Only/2communities/2communities 3 small net.png> <../Code/Plots/Test Only/2communities/2communities 6 small net.png> <../Code/Plots/Test Only/2communities/2communities 9 small net.png> <../Code/Plots/Test Only/2communities/2communities 12 small net.png> <../Code/Plots/Test Only/2communities/2communities 15 small net.png>] [27 <../Code/Plots/Test Only/longTail/longTail 3 small net.png> <../Code/Plots/Test Only/longTail/longTail 6 small net.png> <../Code/Plots/Test Only/longTail/longTail 9 small net.png> <../Code/Plots/Test Only/longTail/longTail 12 small net.png> <../Code/Plots/Test Only/longTail/longTail 15 small net.png>]
-<../Code/Plots/Test Only/3community/3community 3 small net.png, id=467, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/3community/3community 3 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/3community/3community 3 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/3community/3community 3 small net.png  used on input line 764.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/3community/3community 6 small net.png, id=468, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/3community/3community 6 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/3community/3community 6 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/3community/3community 6 small net.png  used on input line 764.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/3community/3community 9 small net.png, id=469, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/3community/3community 9 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/3community/3community 9 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/3community/3community 9 small net.png  used on input line 764.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/3community/3community 12 small net.png, id=470, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/3community/3community 12 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/3community/3community 12 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/3community/3community 12 small net.png  used on input line 764.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
-<../Code/Plots/Test Only/3community/3community 15 small net.png, id=471, 702.625pt x 501.875pt>
-File: ../Code/Plots/Test Only/3community/3community 15 small net.png Graphic file (type png)
-<use ../Code/Plots/Test Only/3community/3community 15 small net.png>
-Package pdftex.def Info: ../Code/Plots/Test Only/3community/3community 15 small net.png  used on input line 764.
-(pdftex.def)             Requested size: 171.99922pt x 122.85706pt.
- [28] [29 <../Code/Plots/Test Only/3community/3community 3 small net.png> <../Code/Plots/Test Only/3community/3community 6 small net.png> <../Code/Plots/Test Only/3community/3community 9 small net.png> <../Code/Plots/Test Only/3community/3community 12 small net.png> <../Code/Plots/Test Only/3community/3community 15 small net.png>] [30] [31] [32]
-Overfull \hbox (23.97913pt too wide) in paragraph at lines 831--831
-[]\OT1/cmr/m/n/12 Birkan Can and Cathal Heavey. ``Com-par-i-son of ex-per-i-men-tal de-signs for simulation-
- []
-
-[33]
-Overfull \hbox (10.48915pt too wide) in paragraph at lines 831--831
-\OT1/cmr/m/n/12 Dif-fer-en-tial Equa-tions for Sci-en-tific Ma-chine Learn-ing''. In: \OT1/cmr/m/it/12 CoRR \OT1/cmr/m/n/12 abs/2001.04385
- []
-
-[34]
-Overfull \hbox (16.24223pt too wide) in paragraph at lines 831--831
-\OT1/cmr/m/n/12 geometry-adaptive con-vo-lu-tional neu-ral net-works for solv-ing pa-ram-e-ter-ized steady-
- []
-
-
-Overfull \hbox (5.33627pt too wide) in paragraph at lines 831--831
-[]\OT1/cmr/m/n/12 Mohammadamin Mah-moud-abad-bozch-e-lou, Marco Cag-gioni, Setareh Shah-savari,
- []
-
-[35]
-Overfull \hbox (4.33072pt too wide) in paragraph at lines 831--831
-\OT1/cmr/m/n/12 Heard. ``Link pre-dic-tion in dy-namic net-works us-ing ran-dom dot prod-uct graphs''.
- []
-
-
-Overfull \hbox (37.04373pt too wide) in paragraph at lines 831--831
-[]\OT1/cmr/m/n/12 Patrick Kidger. ``On neu-ral dif-fer-en-tial equa-tions''. In: \OT1/cmr/m/it/12 arXiv preprint arXiv:2202.02435
- []
-
-[36] (./DraftDoc.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./DraftDoc.aux)
 Package rerunfilecheck Info: File `DraftDoc.out' has not changed.
-(rerunfilecheck)             Checksum: 6B1B086345F760A1289FDA13CE1C6ED4;4479.
+(rerunfilecheck)             Checksum: 70BF7092C81C11970FDC04ACFA2BACA5;888.
 Package logreq Info: Writing requests to 'DraftDoc.run.xml'.
 \openout1 = `DraftDoc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35570 strings out of 476025
- 687197 string characters out of 5796532
- 1901388 words of memory out of 5000000
- 55092 multiletter control sequences out of 15000+600000
- 521903 words of font info for 70 fonts, out of 8000000 for 9000
+ 34769 strings out of 476025
+ 662726 string characters out of 5796532
+ 1860388 words of memory out of 5000000
+ 54484 multiletter control sequences out of 15000+600000
+ 520054 words of font info for 63 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,20n,117p,3909b,1525s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on DraftDoc.pdf (36 pages, 499177 bytes).
+ 102i,6n,117p,1172b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on DraftDoc.pdf (2 pages, 81763 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 539 compressed objects within 6 object streams
- 141 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
