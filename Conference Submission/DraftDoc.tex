@@ -34,40 +34,36 @@ sorting=ynt
 \begin{document}
 
 \begin{section}{Introduction}
-    Temporal networks are networks whose nodes and edges change in time. In this thesis we look to model temporal networks. That is, describe the temporal network using mathematical language. 
+    Temporal networks are networks whose nodes and edges change in time. In this thesis we look to model temporal networks. That is, describe the changing temporal network using mathematical language. 
     % Why temp nets are important
     The modelling of temporal networks is an important task in many real world applications including symptom interactions for mental health \cite{jordan2020current,contreras2020temporal}, epidemiology \cite{masuda2013predicting}, and protein interactions \cite{lucas2021inferring,jin2009identifying}.
 
     % Temp nets are dynam systs
-    Temporal networks can be seen as a system in which points, in our case nodes in a network, whose states, the edges connecting them, that vary dependent in time, a dynamical system. 
+    Temporal networks can be seen as a system in which points, in our case nodes in a network, whose states, the edges connecting them, vary dependent in time, a dynamical system. 
 
     % Hard to find dynam systs because of discrete events 
-    Discovering the underlying equations governing these dynamical systems proves challenging. That is because changes in network structure are typically observed in the form of discrete jumps from one state to another, for example an edge between two nodes not being observed at the first time step then being observed at the next.
+    Discovering the underlying equations governing these dynamical systems proves challenging. That is because changes in network structure are typically observed in the form of discrete jumps from one state to another; for example an edge between two nodes not being observed at the first time step then being observed at the next.
 
     % We are proposing a solution
-    In this thesis, we propose a hybrid statistical and deep learning framework. That is a framework in which a neural network is used to model probabilistic values of the temporal network. This framework allows us to model temporal networks as continuous-time dynamical systems, discover a fitting set of differential equations describing it, and, exploiting that discovery, predict the time evolution of a network.
+    In this thesis, we propose a hybrid statistical and deep learning framework. That is a framework in which a neural network is used to model probabilistic values of the temporal network. This framework allows us to model temporal networks as continuous-time dynamical systems, discover a fitting set of differential equations describing it, and, exploiting that discovery, predict the time evolution of a temporal network.
 
     % DEs are useful for modelling interacting states
-    Differential equations are useful for modelling systems where the state of one variable can effect the trajectories of other variables. 
-
-    % Temp nets have interacting states 
-    We observe this behavior in temporal networks; nodes' connections within the network can influence the observation of edges between other nodes, for example the phenomenon observed in \cite{newman2001clustering,capocci2006preferential}, where a node is more likely to gain the connections the more connections it has (preferential attachment). With this in mind we might wish to draw on the rich mathematical literature of differential equation modelling.
+    Differential equations are useful for modelling systems where the state of one variable can effect the trajectories of other variables. We observe this behavior in temporal networks; nodes' connections within the network can influence the observation of edges between other nodes, for example the phenomenon observed in \cite{newman2001clustering,capocci2006preferential}, where a node is more likely to gain the connections the more connections it has (preferential attachment). With this in mind we might wish to draw on the rich mathematical literature of differential equation modelling.
 
     % Temp net events are discrete
-    In the common representation of networks as binary-valued adjacency matrices, matrices where the observation, or lack thereof, of an edge is represented as a 1 or 0 respectively, the events recorded in a temporal sequence of networks correspond to the appearance or the disappearance of link.
+    In the common representation of networks as binary-valued adjacency matrices, matrices where the observation or lack thereof, of an edge is represented as a 1 or 0 respectively, the events recorded in a temporal sequence of networks correspond to the appearance or the disappearance of link.
    
     % Difficult to model discrete events
-    Because of the discrete nature of events, directly modelling the temporal networks as dynamical systems would require us to handle discrete jumps.
-    The topological nature of temporal networks, and the discontinuous character of their temporal evolution, make it challenging to use differential equations techniques.
+    Because of the discrete nature of events, directly modelling the temporal networks as dynamical systems would require us to handle discrete jumps. The discontinuous character of their temporal evolution, make it challenging to use differential equations techniques.
 
     % We propose a solution
-    Here, we overcome the discreteness problem by interpreting networks as a well established statistical model for complex networks, that embeds nodes in a continuous, low-dimensional metric space by using a truncated singular value decomposition (Random Dot Product Graphs\cite{athreya2017statistical}). In this way we translate the hard problem of modelling discrete events in the space of networks to the easier problem of modelling continuous change in the embedding space. 
+    Here, we overcome the discreteness problem by interpreting temporal networks as a well established statistical model for complex networks, which embeds nodes in a continuous, low-dimensional metric space by using a truncated singular value decomposition (Random Dot Product Graphs\cite{athreya2017statistical}). In this way we translate the hard problem of modelling discrete events in the space of networks to the easier problem of modelling continuous change in the embedding space. 
     
     % Our solution is interpretable because we use symb reg
-    We then define and use systems of Neural Network Differential Equations (NNDE)\cite{SciML_C_Rak} to approximate the time evolution of the embedding space, and symbolic regression techniques to discover the functional form of the fitted NNDEs. These functional forms are interpretable (as they read as classic differential equations) and allow us to predict forward in time the evolution of the temporal networks.
+    We then define and use Neural Network Differential Equations (NNDE)\cite{SciML_C_Rak} to approximate the time evolution of the embedding space, and symbolic regression techniques to discover the functional form of the fitted NNDEs. These functional forms are interpretable (as they read as classic differential equations) and allow us to predict forward in time the evolution of the temporal networks.
 
     % We propose a solution
-    In this manuscript, we show that the temporal network prediction problem can be successfully re-interpreted as a dynamical system modelling problem by taking the singular value decomposition of a sequence of adjacency matrices and training a NNDE to model an approximation to the underlying differential equation. We then go on to create a symbolic equation of this approximation. 
+    In this manuscript, we show that the temporal network prediction problem can be successfully re-interpreted as a dynamical system modelling problem by taking the singular value decomposition of a sequence of adjacency matrices and training a NNDE to model an approximation to the underlying differential equation. We then go on to create a functional equation of this approximation. 
 
     % We will do some small tests on the proposed framework
     We apply our proposed framework to three small example temporal networks with the hope of exploring the limitations and strengths of the proposed framework. 
@@ -78,13 +74,14 @@ sorting=ynt
     For this reason, we did not yet attempt to benchmark our model against other classic temporal network prediction methods.
 
     % The framework can be applied to lots of fields
-    As it is completely general, we believe that the framework we are introducing can be usefully applied to areas of medicine, especially protein interaction networks; population dynamics for network ecology; and social network modelling. In particular, we discuss how specific domain knowledge relative to the prediction scenario can be taken into account, moving from NNDEs to Universal Differential Equations.
+    As it is completely general, we believe that the framework we are introducing can be usefully applied to areas of medicine, especially protein interaction networks; population dynamics for network ecology; and social network modelling. In particular, we discuss how specific domain knowledge relative to the prediction scenario can be taken into account, moving from NNDEs to Universal Differential Equations (UDEs).
 \end{section}
 
 \begin{section}{Literature Review}
 
     \subsection{Temporal Networks}
         % Use of temp nets
+        \subsubsection{Definitions}
         Temporal networks are used to describe a series of interactions across time.
         A temporal network $G$ is defined as:  
         \begin{align}
@@ -94,7 +91,7 @@ sorting=ynt
         An example of this can be found in \autoref{method nets}.
         
         %representations of temp nets as adj lists
-        This can be represented in many ways, for example as a series of interactions. The series of interactions is generally represented as a list of tuples containing the node that interacted and the time that the interaction took place. 
+        This can be represented in many ways, for example as a series of interactions. The series of interactions is generally represented as a list of tuples containing the nodes which interacted and the time that the interaction took place. 
         \begin{align}
             G=\{(i, j, t)|\space i,j\in {_t} N, (i\leftrightarrow j)\in {_t}E \}
         \end{align}
@@ -113,7 +110,7 @@ sorting=ynt
         \end{align}
         The row $_t A_{i\cdot}$ describes the outgoing edges of the node $i$, while the column $_t A_{\cdot j}$ describes the incoming edges of the node $j$.
 
-        % Uses of temp nets
+        \subsubsection{Applications}
         Temporal networks are present in many areas of research interest, ranging from symptom interactions in mental health\cite{jordan2020current,contreras2020temporal}, to epidemiology\cite{masuda2013predicting}, protein interactions\cite{lucas2021inferring,jin2009identifying}, and social networks\cite{moinet2015burstiness,hanneke2010discrete}.     
         
         % Overview of modelling attempts
@@ -125,15 +122,14 @@ sorting=ynt
         \end{align}
         Where $m_i$ is some metadata about the node $_t x$.
 
-        An example of modelling the change in a node state could be the severity of a symptom at a given time, as in \Citeauthor{contreras2020temporal}\cite{contreras2020temporal}. Where the node $_t x$ represents the symptom and $m_1$ would represent the severity of that symptom. 
-        
-        Other effort focus on modelling the changing structure of the network as in \Citeauthor{sanna2021link}\cite{sanna2021link}, which looks to model $_t G$ as a whole.
+        An example of modelling the change in a node state could be the severity of a symptom at a given time, as in \Citeauthor{contreras2020temporal}\cite{contreras2020temporal}. Where the node $_t x$ represents a given symptom and $m_1$ would represent the severity of that symptom. 
+
 
         % Intro contreras as attempt to model changes in nodes
-        \Citeauthor{contreras2020temporal}\cite{contreras2020temporal} model the change in node state over time while the structure of the network remains constant. \Citeauthor{contreras2020temporal} look at the severity of symptoms over time, i.e. the state of the nodes, as a temporal network where the network structure remains constant. 
+        \Citeauthor{contreras2020temporal}\cite{contreras2020temporal} model the change in node state over time while the structure of the network remains constant. The authors look at the severity of symptoms over time, i.e. the state of the nodes, where the nodes exist in a statically structured temporal network. 
         
         % Contreras methods
-        They use multilevel vector autoregression, a method that finds correlations between the current state of a variable and the states of variables at previous time steps \cite{singer2003applied}, to model how the current symptoms of people with paranoia might predict their future symptoms. These models were then used to create three networks that linked symptoms. 
+        \Citeauthor{contreras2020temporal} use multilevel vector autoregression, a method that finds correlations between the current state of a variable and the states of variables at previous time steps \cite{singer2003applied}, to model how the current symptoms of people with paranoia might predict their future symptoms. These models were then used to create three networks that linked symptoms. 
         
         % Focal point of the paper is their temporal network
         Of particular interest to this thesis is the temporal network created by having a fully connected network of all symptoms including self-loops, where a symptom connects to itself; this self loop comes about from a symptom being correlated with itself from one time step to the next. The edge weights represent the extent to which the severity of each symptom at time $(t)$ predicts the severity of itself and other symptoms at time $(t+1)$. 
@@ -142,25 +138,26 @@ sorting=ynt
         This framework keeps the overall structure of the network fixed throughout time and so is not particularly flexible, but is extremely human interpretable and can be used to extrapolate and predict into the future. 
 
         % intro to paper as attempt to model node state
-        In \cite{KARIMI20133476}, the \Citeauthor{KARIMI20133476} look to model the change in node state while the network structure changes. 
+        In \cite{KARIMI20133476}\cite{KARIMI20133476}, the \Citeauthor{KARIMI20133476} look to model the change in node state while the network structure changes. 
         
         % How network is represented
         \Citeauthor{KARIMI20133476} represent their temporal network as a series of interactions (a list of tuples in the form $(i,j,t)$, where $i,j$ are the nodes interacting and $t$ is the time the at which the interaction occurred). 
         
         % what state the paper attempts to model
-        The authors use a model to predict when a node will change from state 0 to state 1, in practice this could represent whether a user of a social network believes a rumour, or an ecological patch being colonised. 
+        The authors use a model to predict when a node will change from state 0 to state 1, in practice this could represent whether a user of a social network believes a rumour, or whether an ecological patch has been colonised. 
         
         % Model limitation
-        Notably, in their model the node never changes back; this is done to keep the model analytically tractable, but does limit its usefulness in some contexts. In this model an organism could not become locally extinct in an ecological patch for example. 
+        Notably, in this model, the node never changes back; this is done to keep the model analytically tractable, but does limit its usefulness in some contexts. In this model an organism could not become locally extinct in an ecological patch for example. 
         
         % Methods to model node state
         To model the change in a nodes' state, the model uses a sliding time window and if the fraction of interactions with nodes of state 1 within that time window exceeds a given threshold, the node switches to state 1 as well. 
 
         % Limitation of model
-        In this work I aim to present a model for predicting the state of a node in the future. Instead, \Citeauthor{KARIMI20133476} aim to present a tool for understanding the spread of ideas, viruses, etc. within a network.
+        In this work we aim to present a model for predicting the state of a node in the future. Instead, \Citeauthor{KARIMI20133476} aim to present a tool for understanding the spread of ideas, viruses, etc. within a network.
 
-        % Intro to pasino et al as modelling structure of temp net
-        \Citeauthor{sanna2021link}\cite{sanna2021link} model the change in the structure of a temporal network. 
+
+
+        Other efforts focus on modelling the changing structure of the network as in \Citeauthor{sanna2021link}\cite{sanna2021link}, which looks to model $_t G$ as a whole.
         
         % temp net representation
         In this case the \Citeauthor{sanna2021link} represent the temporal network as a series of adjacency matrices, each matrix representing an observation of the changing network. 
@@ -169,40 +166,40 @@ sorting=ynt
         The authors look to model the structure of edges by using a spectral embedding (SVD). A spectral embedding uses the eigenvectors of a network's adjacency matrix to find vectors that represent the nodes of the network. The spectral embedding transforms their temporal sequence into a sequence of observations of a latent space. 
         
         % What is a latent space
-        A latent space is a continuous space in which similar nodes (nodes with many of the same neighbours) are positioned near each other. In this space nodes are represented as points in a continuous, low dimensional space. Another feature of this latent space, is that the dot product of any two points in the space gives us the probability that the nodes related to those points are connected. 
+        A latent space is a continuous space in which similar nodes (nodes with many of the same neighbours) are positioned near each other. In this space nodes are represented as points in a continuous, low dimensional space. Another feature of this latent space, is that the dot product of any two points in the space gives us the probability that the nodes related to those points are connected, a Random Dot Product Graph (RDPG)\cite{athreya2017statistical}. 
         
         % methods for time series
         With this series of embeddings, the authors employ a variety of time series techniques to predict the network structure at future time steps.
 
     \subsection{UDEs and NNDEs}
         % Justification for DEs being useful
-        In some temporal networks the state of a node might influence the evolution of its neighbours. For example, in social networks we often observe the power law distribution of edges, where the more neighbours a node has, the more likely they are to gain more neighbours\cite{zhao2012multi,garg2009evolution}. We also see that the state of symptoms (occurrence, severity, and distress), can influence the states of other symptoms in patients undergoing chemotherapy \cite{papachristou2019network,kalantari2022network}, and for mental health disorders \cite{contreras2020temporal}. As well as in ecological networks where the interactions of species are often represented as a network, and the populations of one species may influence the population growth of another \cite{elton2001animal,volterra1927variazioni}; that is, the state (in this case the population) of a species (node), may influence the movement of another species.
+        In some temporal networks the state of a node might influence the evolution of its neighbours. For example, in social networks we often observe that the more neighbours a node has, the more likely they are to gain more neighbours, a power law distribution of edges\cite{zhao2012multi,garg2009evolution}. We also see that the state of symptoms (occurrence, severity, and distress), can influence the states of other symptoms in patients undergoing chemotherapy \cite{papachristou2019network,kalantari2022network}, and for mental health disorders \cite{contreras2020temporal}. As well as in ecological networks where the interactions of species are often represented as a network, and the populations of one species may influence the population growth of another \cite{elton2001animal,volterra1927variazioni}; that is, the state (in this case the population) of a species (node), may influence the movement of another species.
         
         % DEs have lots of research
-        With the observation that nodes in real world temporal networks may influence others, differential equations or difference equations seem appropriate for modelling the evolution of nodes as there is a rich body of literature exploring these methods use in modelling interacting variables. 
+        With the observation that nodes in real world temporal networks may influence others, differential equations or difference equations seem appropriate for modelling the evolution of nodes; there is a rich body of literature exploring these methods use in modelling interacting variables. 
         
         % The data we have is discrete, which is a problem for DEs
-        One of the issues that the differential equation method encounters is the prevalence of discrete jumps of edges forming and decaying. Because of this we may consider exploring the possibility of using difference equations.  
+        One of the issues that the differential equation method encounters is the prevalence of discrete jumps of edges being observed and then not being observed. Because of this, we may consider exploring the possibility of using difference equations.  
     
         % time is continuous so good to have our model be cont too
-        We note that the progression of the network is generally continuous even if the events happen as discrete jumps. Because of this, we may wish to preserve the continuous temporal progression in our model.
+        We note that the progression of the network is generally continuous even if the events happen as discrete jumps. We may wish to preserve this continuous temporal progression in our model.
         
 
         %This approach may overcome the problem of discrete observations, by defining a progression function that will only predict discrete formation or decay of edges\cite{hanneke2010discrete}. However, this imposes a significant limitation on the temporal granularity with which we can predict the state of the network. We would be limited to the granularity our data is collected at. This may be a problem if for example we had a series of weekly or monthly observations of networks we would not be able to predict interactions at each day. We can overcome both this limitation and the discrete jump limitation by using random dot product graphs. Interpolation may be possible in this case, but we would have no way of knowing if the interpolation had any basis in the real world.
         
         % passino has discrete data but uses a method to view it as cont
-        Looking at the work of Passino et al.\cite{sanna2021link}, the authors use random dot produce graphs\cite{athreya2017statistical} to approximate a temporal network as a matrix of probabilities of an edge existing between two nodes. In contrast to edges, these probabilities can evolve continuously, and so we can use differential equations to generate probabilistic networks at any temporal resolution we require. That is, we will be able to model the changes in the probabilities of edges continuous and from this, generate a network at any time step.
+        Looking at the work of \Citeauthor{sanna2021link}\cite{sanna2021link}, the authors use RDPGs to approximate a temporal network as a matrix of probabilities of an edge existing between two nodes. In contrast to edges, these probabilities can evolve continuously, and so we can use differential equations to generate probabilistic networks at any temporal resolution we require. That is, we will be able to model the changes in the probabilities of edges continuously and from this, generate a network at any time step.
 
         %  we can use the same method we can view data as dynam sys and use DEs
-        Using the method in Passino et al.\cite{sanna2021link}, we can treat the sequence of embeddings as a dynamical system and then use differential equation modelling in a continuous space. That is, once we have found a latent space for each network. We know that each point in this space refers to a specific node in the network, and so, as the network changes, so too does the position of each of the points in the latent space. We then look to model this movement using differential equations. 
+        Using the method in \Citeauthor{sanna2021link}\cite{sanna2021link}, we can treat the sequence of embeddings as a dynamical system and then use differential equation modelling in a continuous space. Once we have found a latent space for each network, we know that each point in this space refers to a specific node in the network, and so, as the network changes, so too does the position of each of the points in the latent space. We then look to model this movement using differential equations. 
         
         % Can use a new NN structure to make this framework very general
-        Our aim for this framework to be as general as possible and note that there may not yet be enough domain knowledge to perform traditional differential equation modelling to the desired accuracy. For example in network ecology models can be useful, but not perfect XXX cite XXX. Hence, we might wish to build on these models rather than trying to create something entirely new. This can be achieved by using this partial domain knowledge using it to create a universal differential equation (UDE) \cite{SciML_C_Rak}.
+        Our aim for this framework to be as general as possible and note that there may not yet be enough domain knowledge to perform traditional differential equation modelling to the desired accuracy. For example in network ecology models can be useful, but not perfect. Hence, we might wish to build on these models rather than trying to create something entirely new. This can be achieved by using this partial domain knowledge using it to create a UDE\cite{SciML_C_Rak}.
 
         \subsubsection{Theory}
 
             % Overview of why UDEs are useful
-            Developed by \Citeauthor{SciML_C_Rak}\cite{SciML_C_Rak}, Universal Iifferential Equation (UDEs) are a novel neural network architecture that aims to take the best of both traditional neural differential equation modelling and of flexible machine learning approaches to modelling. 
+            Developed by \Citeauthor{SciML_C_Rak}\cite{SciML_C_Rak}, UDEs are a novel neural network architecture that aims to take the best of both traditional neural differential equation modelling and of flexible machine learning approaches to modelling. 
 
             If we consider a comparison to an Ordinary Differential Equation (ODE), the ODE is written as:
             \begin{align}
@@ -218,24 +215,26 @@ sorting=ynt
             \end{align}
             Where $\theta$ is a vector of the parameters of the NN.
             % Structure of UDE
-            UDEs combine domain knowledge in the form of a differential equation, with a neural network. This hybrid machine learning model is then trained on the observed data.
+            UDEs combine domain knowledge in the form of a differential equation, with a NN. This hybrid machine learning model is then trained on the observed data.
             
             % Overview of why UDEs are useful
-            Combining the two allows for most of the movement in the data to be captured by the differential equation, which contains the domain knowledge. In this way the neural network will only need to learn a theoretically simpler equation, given that a part of the system has already been captured. 
+            Combining the two allows for most of the movement in the data to be captured by the differential equation, which contains the domain knowledge. In this way, the NN will only need to learn a theoretically simpler equation, given that a part of the system has already been captured. 
             
             % Why this structure is useful
-            This then allows the neural network to be smaller, require fewer data, and be trained much faster than traditional neural network models. Given the flexibility of neural networks, the use of UDEs is natural when modelling a process that is not entirely understood\cite{kidger2022neural}.
+            This then allows the NN to be smaller, require fewer data, and be trained much faster than traditional NN models. Given the flexibility of NNs, the use of UDEs is natural when modelling a process that is not entirely understood\cite{kidger2022neural}.
+
+            Note that we can construct a special case of a UDE, an NNDE when $\hat f(t,y(t))=0$. This structure can be used when do not have any domain knowledge we wish to give the model.
             
             % Software used for coding
-            There is an ecosystem of packages specifically designed for performing machine learning with UDEs. The ecosystem is called SciML or scientific machine learning\cite{SciML_C_Rak}. Largely, the SciML ecosystem has been optimised for flexibility and efficiency with respect to models available and training performance. Given there does not seem to be any other ecosystem with this feature, it seemed like 
+            There is an ecosystem of packages specifically designed for performing machine learning with UDEs. The ecosystem is called Scientific Machine Learning (SciML)\cite{SciML_C_Rak}. Largely, the SciML ecosystem has been optimised for flexibility and efficiency with respect to models available and training performance. Given there does not seem to be any other ecosystem with this feature, it seemed like 
             an obvious choice.
         
         \subsubsection{Applications}
-            Whilst there has been much interest in implementing UDEs and neural ODEs, much of this work has been focussed on physics informed neural network and physics informed ordinary differential equations (PINNs and PINODEs) \cite{karniadakis2021physics,GAO2021110079,krishnapriyan2021characterizing,roehrl2020modeling}, and on improving modelling of fluids \cite{mahmoudabadbozchelou2021data,nguyen2022physics}. Alongside this, and given UDEs have gained popularity in the last few years, there have been a number of studies exploring their usefulness in modeling the effect of restrictions due to COVID-19 on the virus' spread \cite{Dandekar2020.04.03.20052084}. Although there has been a large amount of research into the usefulness of these types of models, to the best of this author's knowledge they have never been applied to the problem of predicting temporal networks. This seems to be a natural fit for UDEs and neural ODEs, given we may know relatively little about the processes that govern the evolution of temporal networks, and any information we do have can be incorporated into the model.
+            Whilst there has been much interest in implementing UDEs and NNDEs, much of this work has been focussed on physics informed neural network and physics informed neural ordinary differential equations (PINNs and PINODEs) \cite{karniadakis2021physics,GAO2021110079,krishnapriyan2021characterizing,roehrl2020modeling}, and on improving modelling of fluids \cite{mahmoudabadbozchelou2021data,nguyen2022physics}. Alongside this, UDEs have gained popularity in the last few years, and there have been a number of studies exploring their usefulness in modeling the effect of restrictions due to COVID-19 on the virus' spread \cite{Dandekar2020.04.03.20052084}. Although there has been a large amount of research into the usefulness of these types of models, to the best of this author's knowledge they have never been applied to the problem of predicting temporal networks. This seems to be a natural fit for UDEs and NNDEs, given we may know relatively little about the processes that govern the evolution of temporal networks, and any information we do have can be incorporated into the model.
 
     \subsection{Symbolic Regression}
         % What is symbolic regression
-        Symbolic regression is a type of analysis that looks to find a relationship between input variables that describe the output variables. For symbolic regression, we define a set of equations that may be used to find this relationship. The algorithm then generates combinations of these equations to find an expression that matches the output variables. Because we define the set of potential equations, the resulting expression is interpretable by humans, as opposed to a NN for example. 
+        Symbolic regression is a type of analysis that looks to take input variables and find a relationship between them that describes the output variables. For symbolic regression, we construct a set of mathematical operations that may be used to find this relationship. The algorithm then generates combinations of these equations to find an expression that matches the output variables. Because we construct the set of potential operations, the resulting expression is interpretable by humans (a functional equation), as opposed to a NN for example (a numeric equation). 
 
         % Why is symbolic regression useful
         Having interpretable models that capture underlying relations is relevant to all fields of study, and so the applications of symbolic regression are incredibly varied. 
@@ -244,10 +243,22 @@ sorting=ynt
         Various methods of symbolic regression have been use in manufacturing systems, chemical systems, and tumor research\cite{can2011comparison,keith2021combining,yoshihara2013inferring}. As well research into improvements is still on going.
 
         % How is this done
-        This can be achieved in many ways and remains active area of research. One of the most popular algorithms is genetic programming\cite{schmidt2009distilling}. 
+        Finding a suitable functional expression can be achieved in many ways and remains active area of research. One of the most popular algorithms is genetic programming\cite{schmidt2009distilling}. 
         
         % How genetic programming works
-        Genetic programming involves constructing a search tree using a genetic algorithm to yield a potential equation, which may match the data as well as numerically calculated partial derivatives of each of the input variables. 
+        Genetic programming involves constructing a search tree using an evolutionary algorithm to yield candidate equations. An evolutionary algorithm is an iterative process. It begins by randomly generating a set of candidate equations with operations from the given set of operations:
+        \begin{align}
+            Q_1=\{f_1,\dots,f_n\}
+        \end{align}
+        Each candidate function $f_i$ is tested and given a fitness score based on how well it performed. The higher a candidates' fitness, the more likely it is to be selected for the next iteration.
+
+        Suppose $f_1,f_2$ were selected for the next iteration. The evolutionary algorithm would then randomly generate new functions based on $f_1,f_2$ again with the given set of operations.
+        \begin{align}
+            Q_2=\{f_{1,1},\dots,f_{1,n}, f_{2,1},\dots,f_{2,n}\}
+        \end{align}
+        This process is repeated until a suitable functional equation is found. 
+
+        For the genetic programming algorithm, the fitness of a candidate function is determined by how closely it matches the data as well as numerically calculated partial derivatives of each of the input variables. 
         
         % Why are the derivatives important
         Comparing with these derivatives is useful as it helps to ensure that the produced function equations have some grounding in the real world process that generated the data. The search tree is then pruned by comparing the partial derivatives of the candidate equation, with partial derivatives calculated from data. This process is then iterated many times to generate a suitable equation.
@@ -256,25 +267,25 @@ sorting=ynt
         The problem that symbolic regression aims to solve is to generate interpretable and ``meaningful'' equations from observed data. 
         
         % Examples of use of genetic programming
-        For example, both \Citeauthor{schmidt2009distilling,bongard2007automated} test their methods' capacity for obtaining a symbolic equation with physical simulation data, various pendula specifically. A ``meaningful'' equation in this case would be one that adheres to the laws of physics.
+        For example, both \Citeauthor{schmidt2009distilling,bongard2007automated} test their methods' capacity for obtaining a functional equation with physical simulation data, various pendula specifically. A ``meaningful'' equation in this case may be an equation that conserves momentum.
 
         % Expalaination of schmidt
-        Examples of genetic programming include discovering equations governing the movement of simple harmonic and chaotic double pendula from data\cite{schmidt2009distilling}. In this paper the authors present an evolutionary algorithm to generate multiple candidate functions that approximate the partial derivatives of each variable that are calculated directly from the data. 
+        Examples of genetic programming include discovering equations governing the movement of simple harmonic and chaotic double pendula from data\cite{schmidt2009distilling}. In \Citeauthor{schmidt2009distilling}, the authors present an evolutionary algorithm to generate multiple candidate functions that approximate the partial derivatives of each variable that are calculated directly from the data. 
         
         % Intro to bongard
-        Another approach to symbolic regression can be found in \cite{bongard2007automated}. This paper proposes a method to find a symbolic equation that approximates a learned numerical equation rather than directly from data. 
+        Another approach to symbolic regression can be found in \Citeauthor{bongard2007automated}\cite{bongard2007automated}. The authors propose a method to find a functional equation that approximates a learned numerical equation rather than directly from data. 
         
         % How does this process work
-        The candidate equation is then tested against the numerical equation in such a way that the difference between the two predictions are maximised. The algorithm will generate new initial conditions to find behaviour exhibited by the numerical equation, for example a fixed point, that is not exhibited by the functional equation. When a difference is found, the functional equation is adjusted to also exhibit the behaviour of the numerical equation. 
+        The algorithm generates a set of candidate equations. The candidate equations are then tested against the numerical equation in such a way that the difference between the candidate and numerical predictions are maximised. The algorithm will generate new initial conditions to find behaviour exhibited by the numerical equation, for example a fixed point, that is not exhibited by the functional equation. When a difference is found, the functional equations are adjusted to also exhibit the behaviour of the numerical equation. 
         
         % Limitations of this process
-        Especially when using a neural network model as the numerical equation, it seems these process may not be useful if the initial conditions are outside the scope of the training data.
+        We will be using a UDE with relatively small data sets. The models will be trained on a small range of input values, and so we would not have confidence that any behaviour exhibited outside the range of these input values would reflect the underlying system. As such, this method may not yield us useful results.
         
         % Benefits of combining UDEs and symbolic regression
-        In very recent work, Kidger\cite{kidger2022neural}, demonstrates that, with UDEs, two of the assumptions necessary for symbolic regression can be overcome. Those are the necessity for paired observations and derivatives, as well as the assumption that the function can be expressed as a shallow tree of symbolic operations. We are modelling a differential equation, and so will have access to the derivatives of our numerical model at any point, as neural networks are easily differentiable. 
+        In very recent work, Kidger\cite{kidger2022neural} demonstrates that, with UDEs, two of the assumptions necessary for symbolic regression can be overcome. Those are the requirement for paired observations and derivatives, as well as the assumption that the function can be expressed as a shallow tree of symbolic operations. We are modelling a differential equation, and so will have access to the derivatives of our numerical model at any point, as neural networks are easily differentiable. 
 
         % Usefulness of symbolic regression for nnde
-        In \Citeauthor{SciML_C_Rak}\cite{SciML_C_Rak}, the authors demonstrate that using symbolic regression, as opposed to just an NNDE, can improve the accuracy of extrapolating. One aspect of this improvement is having accurate numerical derivative to compare to. To ensure this, it is important that the data is sampled very frequently. This seems integral to the accuracy of the found equation. 
+        In \Citeauthor{SciML_C_Rak}\cite{SciML_C_Rak}, the authors demonstrate that by using symbolic regression to find a functional equation of our model, as opposed to just a UDE, we can improve the accuracy of extrapolating.
 \end{section}
 
 \begin{section}{Methodology}
@@ -283,21 +294,21 @@ sorting=ynt
         We are given a sequence of graphs, and our goal is to predict the next graph in the sequence. 
         
         % How we achieve this goal
-        To achieve this, we reinterpret each graph as a sequence of points in a latent space; that is, a space in which similar vertices (ones with many of the same neighbours) are mapped to a similar point in space.
-        We then Train a Neural Network Differential Equation (NNDE) to approximate the rate of change of the points in this latent space. With this numerical equation we can then use symbolic regression techniques to find a functional equation that matches the numerical equation. Using this process we discover an interpretable function that governs the evolution of a differential equation.
+        To achieve this, we reinterpret our temporal network as a sequence of points in a latent space; that is, a space in which similar vertices (ones with many of the same neighbours) are mapped to a similar point in space.
+        We then train a Neural Network Differential Equation (NNDE) to approximate the rate of change of the points in this latent space. With this numerical equation we can then use symbolic regression techniques to find a functional equation that matches the numerical equation. Using this process we discover an interpretable function that governs the evolution of a temporal network.
 
         \begin{figure}
             \centering
             \begin{subfigure}[c]{1\textwidth}
                 \begin{tabular}{llll}
-                \begin{subfigure}[c]{0.25\textwidth}
+                \begin{subfigure}[c]{0.3\textwidth}
                     \centering
                     \resizebox{.6\width}{!}{\input{SynthDataDiagrams/methodology1.tex}}
                     \label{method net, a}
                 \end{subfigure}
                 &
                 \centering
-                \begin{subfigure}[c]{0.25\textwidth}
+                \begin{subfigure}[c]{0.3\textwidth}
                     \centering
                     \resizebox{.6\width}{!}{\input{SynthDataDiagrams/methodology2.tex}}
                     \label{method net, b}
@@ -306,7 +317,7 @@ sorting=ynt
                 $\cdots$
                 &
                 \centering
-                \begin{subfigure}[c]{0.25\textwidth}
+                \begin{subfigure}[c]{0.3\textwidth}
                     \centering
                     \resizebox{.6\width}{!}{\input{SynthDataDiagrams/methodology3.tex}}
                     \label{method net, c}
@@ -317,6 +328,7 @@ sorting=ynt
                 \label{method nets}
                 
             \end{subfigure}
+
             \begin{subfigure}[c]{1\textwidth}
                 \begin{tabular}{llll}
                     $\begin{bmatrix}
@@ -359,10 +371,87 @@ sorting=ynt
                 \label{method adjacency}
             \end{subfigure}
     
-            \begin{tabular}{llll}
+            \begin{subfigure}[c]{1\textwidth}
+                \begin{tabular}{llll}
+                    $\begin{bmatrix}
+                        -0.82  & 0.01\\
+                        -0.64  & 0.36\\
+                        -0.95 & -0.76\\
+                        -0.64 &  0.36\\
+                        -0.48 &  0.82\\
+                        -0.17 & -0.40\\
+                        -0.20 & -0.52\\
+                        -0.07 &  0.25\\
+                    \end{bmatrix}$
+                
+                &
+                
+                    $\begin{bmatrix}
+                        -0.82  &  0.10\\
+                        -0.82  &  0.10\\
+                        -0.90 & -0.58\\
+                        -0.82  &  0.10\\
+                        -0.42 &  0.81\\
+                        -0.13  & -0.64\\
+                        -0.13  & -0.64\\
+                        -0.12 &  0.57\\
+                    \end{bmatrix}$
+                
+                &
+                $\cdots$
+                &
+                
+                    $\begin{bmatrix}
+                        -0.85 &  -0.10\\
+                        -0.85 &  -0.10\\
+                        -0.85 &  -0.10\\
+                        -0.85 &  -0.10\\
+                         0.08 &  -0.69\\
+                         0.11 &  -0.88\\
+                         0.11 &  -0.88\\
+                         0.08 &  -0.69\\
+                    \end{bmatrix}$
+                \end{tabular}
 
-            \end{tabular}
-    
+            \end{subfigure}
+            
+            \begin{subfigure}[c]{1\textwidth}
+                \begin{tabular}{llll}
+                \begin{subfigure}[c]{0.31\textwidth}
+                    \centering
+                    \begin{subfigure}[p]{1\textwidth}
+                        \includegraphics[width=\linewidth]{../Code/Plots/examples/plot 1.png}
+                        \label{}
+                    \end{subfigure}
+
+                \end{subfigure}
+                &
+                \centering
+                \begin{subfigure}[c]{0.31\textwidth}
+                    \centering
+                    \begin{subfigure}[p]{1\textwidth}
+                        \includegraphics[width=\linewidth]{../Code/Plots/examples/plot 2.png}
+                        \label{}
+                    \end{subfigure}
+                \end{subfigure}
+                &
+                $\cdots$
+                &
+                \centering
+                \begin{subfigure}[c]{0.31\textwidth}
+                    \centering
+                    \begin{subfigure}[p]{1\textwidth}
+                        \includegraphics[width=\linewidth]{../Code/Plots/examples/plot 3.png}
+                        \label{}
+                    \end{subfigure}
+                \end{subfigure}
+                
+                \end{tabular}
+                \caption{Example sequence of networks.}
+                \label{method nets}
+                
+            \end{subfigure}
+
             \caption{Visual illustration of the proposed framework.}
             \label{framework illustration}
         \end{figure} 
@@ -376,7 +465,7 @@ sorting=ynt
             We define the matrix $A$ to be a real $m \times n$ with $n \le m$. $A$ can be expressed as \cite{forsythe1967computer}:
             \begin{align}
                 A&=l\sqrt{\Sigma} \sqrt{\Sigma} r' \\
-                A&=L R'
+                A&=L R' \space where L=
             \end{align}
             Where $L, R$ are real valued, orthonormal matrices. The columns of $L$ consist of the $n$ largest eigenvectors of $AA'$ and the columns $R$ consist of the eigenvectors of $A'A$. $\Sigma$ is a diagonal matrix whose entries are the square root of the positive eigenvalues of $A'A$ in decreasing order.
 

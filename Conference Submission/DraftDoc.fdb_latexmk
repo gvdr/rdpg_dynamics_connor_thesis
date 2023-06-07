@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber DraftDoc"] 1686011818 "DraftDoc.bcf" "DraftDoc.bbl" "DraftDoc" 1686022101 0
+["biber DraftDoc"] 1686102324 "DraftDoc.bcf" "DraftDoc.bbl" "DraftDoc" 1686102741 0
   "./bibliography.bib" 1685924999 27984 57ea690f531bb7b8bc68f296ee468f1f ""
-  "DraftDoc.bcf" 1686022101 113373 41c9ebb29a77fefbe1e6c63651f36bbe "pdflatex"
+  "DraftDoc.bcf" 1686102741 113596 66d747a274cb1dbb09899a8d228c7272 "pdflatex"
   (generated)
   "DraftDoc.bbl"
   "DraftDoc.blg"
   (rewritten before read)
-["pdflatex"] 1686022098 "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" "DraftDoc.pdf" "DraftDoc" 1686022101 0
+["pdflatex"] 1686102738 "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" "DraftDoc.pdf" "DraftDoc" 1686102741 0
   "../Code/Plots/Test Only/2communities/2communities 12 small net.png" 1685936551 23759 c78400adaa43c77d22d23dfb3c4a6dd1 ""
   "../Code/Plots/Test Only/2communities/2communities 15 small net.png" 1685936551 23320 f9d9dd1fd6ec7a7dc5dd50d17bc8323d ""
   "../Code/Plots/Test Only/2communities/2communities 3 small net.png" 1685936551 23487 2fad413690e2b704cf25de503dc32273 ""
@@ -22,7 +22,10 @@
   "../Code/Plots/Test Only/longTail/longTail 3 small net.png" 1686008276 25519 80f4fe669c982bbb97bf7572ab91fee8 ""
   "../Code/Plots/Test Only/longTail/longTail 6 small net.png" 1686008276 25812 c1c996cef35d6ab16aebbb6fcf90c761 ""
   "../Code/Plots/Test Only/longTail/longTail 9 small net.png" 1686008276 26145 d6e885f226a4c0f5017ff7935a6844e4 ""
-  "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" 1686022098 64046 a8fe36a5245d54800efb0511503c57da ""
+  "../Code/Plots/examples/plot 1.png" 1686101512 23592 4dc4a42fa0858dcfa61cfea1817f324e ""
+  "../Code/Plots/examples/plot 2.png" 1686101512 22105 db5f9fa7a63d420b254d278e5f343eb0 ""
+  "../Code/Plots/examples/plot 3.png" 1686101512 24345 2dd8fce2e49446d27ff011fa76e6d11c ""
+  "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" 1686102734 67933 4d7eacfdb2ae8dda9d3f3bfa9fca5945 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1679564905 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1679564905 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1679564905 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -253,11 +256,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1679564905 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1681170582 4491781 539e3b5e308794ddb50e5f94f0e971f4 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1681170535 8204103 5897cd83ba61f535efc2b1d24a4aab57 ""
-  "DraftDoc.aux" 1686022101 25588 21181f7a177b16a7707176576b00e7a1 "pdflatex"
-  "DraftDoc.bbl" 1686011819 78173 78913222052ef884d60f28130c7120b9 "biber DraftDoc"
-  "DraftDoc.out" 1686022101 4479 6b1b086345f760a1289fda13ce1c6ed4 "pdflatex"
-  "DraftDoc.run.xml" 1686022101 2335 747ab13df5b47ce5f580f3ff9ebd6499 "pdflatex"
-  "DraftDoc.tex" 1686022098 64046 a8fe36a5245d54800efb0511503c57da ""
+  "DraftDoc.aux" 1686102741 26725 047a317a8590a1441c38c5e28dbe06db "pdflatex"
+  "DraftDoc.bbl" 1686102325 78173 78913222052ef884d60f28130c7120b9 "biber DraftDoc"
+  "DraftDoc.out" 1686102741 4479 6b1b086345f760a1289fda13ce1c6ed4 "pdflatex"
+  "DraftDoc.run.xml" 1686102741 2335 747ab13df5b47ce5f580f3ff9ebd6499 "pdflatex"
+  "DraftDoc.tex" 1686102734 67933 4d7eacfdb2ae8dda9d3f3bfa9fca5945 ""
   "SynthDataDiagrams/2community1.tex" 1677116532 2451 3b6e3992ca72f96d808ab00edb0a1cf4 ""
   "SynthDataDiagrams/2community2.tex" 1677116582 2416 8a1430a945e8269c22832cc34673513f ""
   "SynthDataDiagrams/2community3.tex" 1677116616 2401 91a7d3fe36ad720d2619a3b404793229 ""

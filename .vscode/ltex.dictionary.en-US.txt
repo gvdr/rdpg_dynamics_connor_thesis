@@ -5,3 +5,7 @@ maximised
 behaviour
 NN
 NNDE
+RDPGs
+UDEs
+NNDEs
+pendula
