@@ -41,7 +41,7 @@ function TemporalNetworkEmbedding(TempNet::AbstractVector{T}, d::Int) where T<:A
 
 
     n = size(TempNet[1])[1]
-    svd_engine(A,d) = Arpack.svds(A,nsv=d, v0=[Float32(i%7) for i in 1:minimum(size(A))])[1]
+    svd_engine(A,d) = Arpack.svds(A,nsv=d, v0=[Float64(i%7) for i in 1:minimum(size(A))])[1]
     
 
     true_dataL = zeros(Float32, n,d, length(TempNet))

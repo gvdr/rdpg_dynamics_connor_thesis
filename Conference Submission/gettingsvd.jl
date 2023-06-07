@@ -1,4 +1,5 @@
-using arpack
+using DotProductGraphs
+A=[
 [
 0 1 1 1 0 0 0 0;
 1 0 1 0 0 0 0 0;
@@ -8,9 +9,9 @@ using arpack
 0 0 0 0 1 0 0 0;
 0 0 0 0 1 0 0 1;
 0 0 0 0 0 0 1 0
-]
-&
-$\begin{bmatrix}
+],
+
+[
 0 1 1 1 0 0 0 0;
 1 0 1 1 0 0 0 0;
 1 1 0 1 1 0 0 0;
@@ -19,11 +20,9 @@ $\begin{bmatrix}
 0 0 0 0 1 0 0 1;
 0 0 0 0 1 0 0 1;
 0 0 0 0 0 1 1 0
-\end{bmatrix}$
-&
-$0s$
-&
-$\begin{bmatrix}
+],
+
+[
 0 1 1 1 0 0 0 0;
 1 0 1 1 0 0 0 0;
 1 1 0 1 0 0 0 0;
@@ -32,4 +31,7 @@ $\begin{bmatrix}
 0 0 0 0 1 0 1 1;
 0 0 0 0 1 1 0 1;
 0 0 0 0 0 1 1 0
-\end{bmatrix}$
+]
+]
+
+TemporalNetworkEmbedding
