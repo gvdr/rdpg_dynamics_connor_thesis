@@ -13,12 +13,12 @@ t = TemporalNetworkEmbedding(A, 2)
 
 using PlotlyJS
 i = 3
-layout = Layout(xaxis=attr(showgrid=false),yaxis=attr(showgrid=false))
+layout = Layout(xaxis=attr(showgrid=false),yaxis=attr(showgrid=false, font_size=30))
 trace = scatter(x=t[i,:AL][:,1], y=t[i,:AL][:,2], mode="markers")
 trace["marker"] = Dict(:size => 12)
 
 plot(trace, layout)
-PlotlyJS.savefig(plot(trace), "./Code/Plots/examples/plot $i.png")
+PlotlyJS.savefig(plot(trace, layout), "./Code/Plots/examples/plot $i.png")
 
 t.AL
 targetNode(t,3).AL
