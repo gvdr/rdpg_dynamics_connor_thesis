@@ -26,7 +26,9 @@ Base.getindex(X::TemporalNetworkEmbedding, t::T, side::Symbol) where {T<:Int} = 
 
 
 Base.getindex(X::TemporalNetworkEmbedding, t::UnitRange{Int64})=TemporalNetworkEmbedding(X.AL[:,:,t],X.AR[:,:,t], X.n, X.d)
+
 Base.lastindex(X::TemporalNetworkEmbedding) = size(X.AL)[3]
+
 not(t::Bool)=!t
 withoutNode(X::TemporalNetworkEmbedding, t::Int) = TemporalNetworkEmbedding(X.AL[not.(in.(1:X.n, [t])),:,:],X.AR[not.(in.(1:X.n, [t])),:,:], X.n-1, X.d)
 
@@ -41,7 +43,7 @@ function TemporalNetworkEmbedding(TempNet::AbstractVector{T}, d::Int) where T<:A
 
 
     n = size(TempNet[1])[1]
-    svd_engine(A,d) = Arpack.svds(A,nsv=d, v0=[Float64(i%7) for i in 1:minimum(size(A))])[1]
+    svd_engine(A,d) = Arpack.svds(A,nsv=d, v0=[Float32(i%7) for i in 1:minimum(size(A))])[1]
     
 
     true_dataL = zeros(Float32, n,d, length(TempNet))

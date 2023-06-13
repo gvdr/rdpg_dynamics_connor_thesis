@@ -7,6 +7,6 @@ function nearestNeighbours(u,t,TempNet, k;side::Symbol=:AL)
   direction_vecs = [subtract_func(m) for m in eachrow(M)]
   
   v = collect(enumerate(direction_vecs))
-  println(v)
+  
   û = [v[1] for v in partialsort(v,1:k, by=x->sum(abs2, x[2]))]
 end
