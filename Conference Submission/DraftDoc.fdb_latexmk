@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber DraftDoc"] 1686706354 "DraftDoc.bcf" "DraftDoc.bbl" "DraftDoc" 1686710717 0
+["biber DraftDoc"] 1686706354 "DraftDoc.bcf" "DraftDoc.bbl" "DraftDoc" 1686711654 0
   "./bibliography.bib" 1686706354 22602 edea2c6e2fafe08356208bd7944f4eb6 ""
-  "DraftDoc.bcf" 1686710717 113813 cbf1dd089022db99763a6a09355d0b08 "pdflatex"
+  "DraftDoc.bcf" 1686711654 113813 cbf1dd089022db99763a6a09355d0b08 "pdflatex"
   (generated)
   "DraftDoc.bbl"
   "DraftDoc.blg"
   (rewritten before read)
-["pdflatex"] 1686710714 "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" "DraftDoc.pdf" "DraftDoc" 1686710717 0
+["pdflatex"] 1686711651 "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" "DraftDoc.pdf" "DraftDoc" 1686711654 0
   "../Code/Plots/Test Only/2communities/2communities 1 illustration.png" 1686630373 17749 e56f56048721694805e6ee45e4baa41b ""
   "../Code/Plots/Test Only/2communities/2communities 21 illustration.png" 1686364419 17253 13c1f7a7e60c8ec52ac8cca8986b39c6 ""
   "../Code/Plots/Test Only/2communities/2communities 40 illustration.png" 1686364419 17363 399f156cc3df3f9e83f075a410b7a05e ""
   "../Code/Plots/examples/plot 1.png" 1686610950 22130 320d730943e9c81b1b1ca0862c615c8e ""
   "../Code/Plots/examples/plot 2.png" 1686610950 20614 9c7413082df239c87f5f5c2b222c5e90 ""
   "../Code/Plots/examples/plot 3.png" 1686610950 22955 c874441b71b62b207e131116a2fbf17c ""
-  "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" 1686710711 76145 9ea2fbdc0453cd98bcac2f4d1d0f52c7 ""
+  "/home/stirling/Documents/thesis/Conference Submission/DraftDoc.tex" 1686711651 76146 f8420ca0f01325dc8291b97cf8f4ef76 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1679564905 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1679564905 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1679564905 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -257,12 +257,12 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1679564905 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1681170582 4491781 539e3b5e308794ddb50e5f94f0e971f4 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1681170535 8204103 5897cd83ba61f535efc2b1d24a4aab57 ""
-  "DraftDoc.aux" 1686710717 34831 04d4a58c54c2480fa5ec3c23f67f6886 "pdflatex"
+  "DraftDoc.aux" 1686711654 34831 04d4a58c54c2480fa5ec3c23f67f6886 "pdflatex"
   "DraftDoc.bbl" 1686706355 78973 3e4c0cebfa39935a4c0f6bac427691fb "biber DraftDoc"
-  "DraftDoc.out" 1686710717 4502 4124c03b22bcb7b2e1d691498aab9621 "pdflatex"
-  "DraftDoc.run.xml" 1686710717 2335 747ab13df5b47ce5f580f3ff9ebd6499 "pdflatex"
-  "DraftDoc.tex" 1686710711 76145 9ea2fbdc0453cd98bcac2f4d1d0f52c7 ""
-  "DraftDoc.toc" 1686710717 2944 ac00b794d2a93d7b5d3e35fa1f4f2930 "pdflatex"
+  "DraftDoc.out" 1686711654 4502 4124c03b22bcb7b2e1d691498aab9621 "pdflatex"
+  "DraftDoc.run.xml" 1686711654 2335 747ab13df5b47ce5f580f3ff9ebd6499 "pdflatex"
+  "DraftDoc.tex" 1686711651 76146 f8420ca0f01325dc8291b97cf8f4ef76 ""
+  "DraftDoc.toc" 1686711654 2944 ac00b794d2a93d7b5d3e35fa1f4f2930 "pdflatex"
   "Plots/Test Only/2communities/2communities 12 small net.png" 1686615117 10178 ca6fe5d64c681a13e37c75e7022edfe7 ""
   "Plots/Test Only/2communities/2communities 15 small net.png" 1686615185 9718 9b8a759a5c111426d5a1084f7fe2651d ""
   "Plots/Test Only/2communities/2communities 3 small net.png" 1686614922 9874 5b8a94fba748224a3c89618450c53f94 ""
