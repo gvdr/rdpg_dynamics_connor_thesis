@@ -45,30 +45,48 @@
       \field{year}{1927}
     \endentry
     \entry{forsythe1967computer}{article}{}
-      \name{author}{2}{}{%
-        {{hash=733a0cf867b0c88800f402785e174955}{%
-           family={Forsythe},
-           familyi={F\bibinitperiod},
-           given={George\bibnamedelima E},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=9996f11ae96f96aacffa11b9af8c1f43}{%
-           family={Moler},
-           familyi={M\bibinitperiod},
-           given={Cleve\bibnamedelima B},
-           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      \name{author}{1}{}{%
+        {{hash=541e10bfbe4843436d416015ab6abc0c}{%
+           family={Johnston},
+           familyi={J\bibinitperiod},
+           given={R.\bibnamedelimi L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
-      \strng{namehash}{ffeadb1148322fea41cdd005b924f38c}
-      \strng{fullhash}{ffeadb1148322fea41cdd005b924f38c}
-      \strng{bibnamehash}{ffeadb1148322fea41cdd005b924f38c}
-      \strng{authorbibnamehash}{ffeadb1148322fea41cdd005b924f38c}
-      \strng{authornamehash}{ffeadb1148322fea41cdd005b924f38c}
-      \strng{authorfullhash}{ffeadb1148322fea41cdd005b924f38c}
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{541e10bfbe4843436d416015ab6abc0c}
+      \strng{fullhash}{541e10bfbe4843436d416015ab6abc0c}
+      \strng{bibnamehash}{541e10bfbe4843436d416015ab6abc0c}
+      \strng{authorbibnamehash}{541e10bfbe4843436d416015ab6abc0c}
+      \strng{authornamehash}{541e10bfbe4843436d416015ab6abc0c}
+      \strng{authorfullhash}{541e10bfbe4843436d416015ab6abc0c}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Computer solution of linear algebraic systems}
-      \field{year}{1967}
+      \field{issn}{0036-1445}
+      \field{journaltitle}{SIAM Rev.}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{Computer Solution of Linear Algebraic Systems (George E. Forsythe and Cleve B. Moler)}
+      \field{volume}{10}
+      \field{year}{1968}
+      \field{pages}{384\bibrangedash 385}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1137/1010075
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/1010075
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/1010075
+      \endverb
     \endentry
     \entry{golub1971singular}{incollection}{}
       \name{author}{2}{}{%
@@ -531,8 +549,12 @@
         {{hash=b80203b0ba1299db35073382e835b485}{%
            family={Xing},
            familyi={X\bibinitperiod},
-           given={Eric\bibnamedelima P},
+           given={Eric\bibnamedelima P.},
            giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Mathematical Statistics}%
+        {Bernoulli Society}%
       }
       \strng{namehash}{5c73dc7a97c46cdd6a595bc69ea8d1e8}
       \strng{fullhash}{5c73dc7a97c46cdd6a595bc69ea8d1e8}
@@ -544,8 +566,22 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronic Journal of Statistics}
+      \field{number}{none}
       \field{title}{Discrete temporal models of social networks}
+      \field{volume}{4}
       \field{year}{2010}
+      \field{pages}{585\bibrangedash 605}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1214/09-EJS548
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/09-EJS548
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/09-EJS548
+      \endverb
     \endentry
     \entry{can2011comparison}{article}{}
       \name{author}{2}{}{%
@@ -658,7 +694,6 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Threshold models try to explain the consequences of social influence like the spread of fads and opinions. Along with models of epidemics, they constitute a major theoretical framework of social spreading processes. In threshold models on static networks, an individual changes her state if a certain fraction of her neighbors has done the same. When there are strong correlations in the temporal aspects of contact patterns, it is useful to represent the system as a temporal network. In such a system, not only contacts but also the time of the contacts are represented explicitly. In many cases, bursty temporal patterns slow down disease spreading. However, as we will see, this is not a universal truth for threshold models. In this work we propose an extension of Watts’s classic threshold model to temporal networks. We do this by assuming that an agent is influenced by contacts which lie a certain time into the past. I.e., the individuals are affected by contacts within a time window. In addition to thresholds in the fraction of contacts, we also investigate the number of contacts within the time window as a basis for influence. To elucidate the model’s behavior, we run the model on real and randomized empirical contact datasets.}
       \field{issn}{0378-4371}
       \field{journaltitle}{Physica A: Statistical Mechanics and its Applications}
       \field{number}{16}
@@ -825,7 +860,7 @@
       \range{pages}{1}
     \endentry
     \entry{athreya2017statistical}{article}{}
-      \name{author}{9}{}{%
+      \name{author}{10}{}{%
         {{hash=d8dabfd2a6effdd8ecba5e09b04bfb1b}{%
            family={Athreya},
            familyi={A\bibinitperiod},
@@ -871,16 +906,21 @@
            familyi={Q\bibinitperiod},
            given={Yichen},
            giveni={Y\bibinitperiod}}}%
+        {{hash=15fdcbaf07090118c415def398fac4a3}{%
+           family={Sussman},
+           familyi={S\bibinitperiod},
+           given={Daniel\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {JMLR. org}%
       }
       \strng{namehash}{789ff769625b921561ea0c2cc54ce065}
-      \strng{fullhash}{30678219bb7d78d9a123bcd8eb3c5302}
-      \strng{bibnamehash}{30678219bb7d78d9a123bcd8eb3c5302}
-      \strng{authorbibnamehash}{30678219bb7d78d9a123bcd8eb3c5302}
+      \strng{fullhash}{48749583aa20aa58abbec1dc13491172}
+      \strng{bibnamehash}{48749583aa20aa58abbec1dc13491172}
+      \strng{authorbibnamehash}{48749583aa20aa58abbec1dc13491172}
       \strng{authornamehash}{789ff769625b921561ea0c2cc54ce065}
-      \strng{authorfullhash}{30678219bb7d78d9a123bcd8eb3c5302}
+      \strng{authorfullhash}{48749583aa20aa58abbec1dc13491172}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -889,7 +929,7 @@
       \field{number}{1}
       \field{title}{Statistical inference on random dot product graphs: a survey}
       \field{volume}{18}
-      \field{year}{2017}
+      \field{year}{2018}
       \field{pages}{8393\bibrangedash 8484}
       \range{pages}{92}
     \endentry
@@ -1072,7 +1112,6 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Since the first recording of what we now call Covid-19 infection in Wuhan, Hubei province, China on Dec 31, 2019 (CHP 2020), the disease has spread worldwide and met with a wide variety of social distancing and quarantine policies. The effectiveness of these responses is notoriously difficult to quantify as individuals travel, violate policies deliberately or inadvertently, and infect others without themselves being detected (Li et al. 2020a; Wu \&amp; Leung 2020; Wang et al. 2020; Chinazzi et al. 2020; Ferguson et al. 2020; Kraemer et al. 2020). Moreover, the publicly available data on infection rates are themselves unreliable due to limited testing and even possibly under-reporting (Li et al. 2020b). In this paper, we attempt to interpret and extrapolate from publicly available data using a mixed first-principles epidemiological equations and data-driven neural network model. Leveraging our neural network augmented model, we focus our analysis on four locales: Wuhan, Italy, South Korea and the United States of America, and compare the role played by the quarantine and isolation measures in each of these countries in controlling the effective reproduction number Rt of the virus. Our results unequivocally indicate that the countries in which rapid government interventions and strict public health measures for quarantine and isolation were implemented were successful in halting the spread of infection and prevent it from exploding exponentially. In the case of Wuhan especially, where the available data were earliest available, we have been able to test the predicting ability of our model by training it from data in the January 24th till March 3rd window, and then matching the predictions up to April 1st. Even for Italy and South Korea, we have a buffer window of one week (25 March - 1 April) to validate the predictions of our model. In the case of the US, our model captures well the current infected curve growth and predicts a halting of infection spread by 20 April 2020. We further demonstrate that relaxing or reversing quarantine measures right now will lead to an exponential explosion in the infected case count, thus nullifying the role played by all measures implemented in the US since mid March 2020.Competing Interest StatementThe authors have declared no competing interest.Funding StatementThis effort was partially funded by the Intelligence Advanced Reseach Projects Activity (IARPA.)Author DeclarationsAll relevant ethical guidelines have been followed; any necessary IRB and/or ethics committee approvals have been obtained and details of the IRB/oversight body are included in the manuscript.YesAll necessary patient/participant consent has been obtained and the appropriate institutional forms have been archived.YesI understand that all clinical trials and any other prospective interventional studies must be registered with an ICMJE-approved registry, such as ClinicalTrials.gov. I confirm that any such study reported in the manuscript has been registered and the trial registration ID is provided (note: if posting a prospective study registered retrospectively, please provide a statement in the trial ID field explaining why the study was not registered in advance).YesI have followed all appropriate research reporting guidelines and uploaded the relevant EQUATOR Network research reporting checklist(s) and other pertinent material as supplementary files, if applicable.YesData for the infected and recovered case count in Wuhan is obtained from the data released by the Chinese National Health Commission. Infected and recovered count data for Italy, South Korea and USA is obtained from the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University.}
       \field{journaltitle}{medRxiv}
       \field{title}{Quantifying the effect of quarantine control in Covid-19 infectious spread using machine learning}
       \field{year}{2020}
@@ -1449,56 +1488,6 @@
       \field{pages}{26548\bibrangedash 26560}
       \range{pages}{13}
     \endentry
-    \entry{lucas2021inferring}{article}{}
-      \name{author}{6}{}{%
-        {{hash=4eb0b5c8bcc49c6a40798e6f8340b026}{%
-           family={Lucas},
-           familyi={L\bibinitperiod},
-           given={Maxime},
-           giveni={M\bibinitperiod}}}%
-        {{hash=07f8a71717e5c315184715a0884709f7}{%
-           family={Morris},
-           familyi={M\bibinitperiod},
-           given={Arthur},
-           giveni={A\bibinitperiod}}}%
-        {{hash=2672cd2ac0954b5eb8527e7e7e29be76}{%
-           family={Townsend-Teague},
-           familyi={T\bibinithyphendelim T\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod}}}%
-        {{hash=02d25ec30318b35c4cd8f7f4c2fc5dd4}{%
-           family={Tichit},
-           familyi={T\bibinitperiod},
-           given={Laurent},
-           giveni={L\bibinitperiod}}}%
-        {{hash=06638db184d6201a8c7d1817b6c0991f}{%
-           family={Habermann},
-           familyi={H\bibinitperiod},
-           given={Bianca},
-           giveni={B\bibinitperiod}}}%
-        {{hash=c068c2d1d3e5f1a31c85e847bede1b17}{%
-           family={Barrat},
-           familyi={B\bibinitperiod},
-           given={Alain},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{517efc4cfaf0ca69024d9b7e6796459b}
-      \strng{fullhash}{390597df22a2fb5e8370cf10ab6eddab}
-      \strng{bibnamehash}{390597df22a2fb5e8370cf10ab6eddab}
-      \strng{authorbibnamehash}{390597df22a2fb5e8370cf10ab6eddab}
-      \strng{authornamehash}{517efc4cfaf0ca69024d9b7e6796459b}
-      \strng{authorfullhash}{390597df22a2fb5e8370cf10ab6eddab}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Cell Reports Methods}
-      \field{title}{Inferring cell cycle phases from a partially temporal network of protein interactions}
-      \field{year}{2021}
-    \endentry
     \entry{mahmoudabadbozchelou2021data}{article}{}
       \name{author}{6}{}{%
         {{hash=e02c6cd1b61255c4781de0c9dcaa98f1}{%
@@ -1552,53 +1541,6 @@
       \field{year}{2021}
       \field{pages}{179\bibrangedash 198}
       \range{pages}{20}
-    \endentry
-    \entry{Runghen2021}{article}{}
-      \name{author}{3}{}{%
-        {{hash=8fce64ac483541e48653b705acb115ce}{%
-           family={Runghen},
-           familyi={R\bibinitperiod},
-           given={Rogini},
-           giveni={R\bibinitperiod}}}%
-        {{hash=665c89761f307c1b05d2d1a9cbcc192e}{%
-           family={Stouffer},
-           familyi={S\bibinitperiod},
-           given={Daniel\bibnamedelima B},
-           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-        {{hash=39500fc8de14e4a03f4e530e52189532}{%
-           family={Dalla\bibnamedelima Riva},
-           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
-           given={Giulio\bibnamedelima V},
-           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cold Spring Harbor Laboratory}%
-      }
-      \strng{namehash}{999ae4ce8fe2624c44cd2b501e7f2217}
-      \strng{fullhash}{999ae4ce8fe2624c44cd2b501e7f2217}
-      \strng{bibnamehash}{999ae4ce8fe2624c44cd2b501e7f2217}
-      \strng{authorbibnamehash}{999ae4ce8fe2624c44cd2b501e7f2217}
-      \strng{authornamehash}{999ae4ce8fe2624c44cd2b501e7f2217}
-      \strng{authorfullhash}{999ae4ce8fe2624c44cd2b501e7f2217}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{bioRxiv}
-      \field{title}{Exploiting node metadata to predict interactions in large networks using graph embedding and neural networks}
-      \field{year}{2021}
-      \verb{doi}
-      \verb 10.1101/2021.06.10.447991
-      \endverb
-      \verb{eprint}
-      \verb https://www.biorxiv.org/content/early/2021/06/11/2021.06.10.447991.full.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.biorxiv.org/content/early/2021/06/11/2021.06.10.447991
-      \endverb
-      \verb{url}
-      \verb https://www.biorxiv.org/content/early/2021/06/11/2021.06.10.447991
-      \endverb
     \endentry
     \entry{sanna2021link}{article}{}
       \name{author}{4}{}{%
@@ -1748,9 +1690,170 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2201.13389}
-      \field{title}{Physics-informed neural networks for non-Newtonian fluid thermo-mechanical problems: an application to rubber calendering process}
+      \field{issn}{0952-1976}
+      \field{journaltitle}{Engineering Applications of Artificial Intelligence}
+      \field{title}{Physics-informed neural networks for non-Newtonian fluid thermo-mechanical problems: An application to rubber calendering process}
+      \field{volume}{114}
       \field{year}{2022}
+      \field{pages}{105176}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.engappai.2022.105176
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0952197622002810
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0952197622002810
+      \endverb
+      \keyw{Physics-informed neural networks,Non-Newtonian fluid,Thermo-mechanical problem}
+    \endentry
+    \entry{Runghen2021}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8fce64ac483541e48653b705acb115ce}{%
+           family={Runghen},
+           familyi={R\bibinitperiod},
+           given={Rogini},
+           giveni={R\bibinitperiod}}}%
+        {{hash=665c89761f307c1b05d2d1a9cbcc192e}{%
+           family={Stouffer},
+           familyi={S\bibinitperiod},
+           given={Daniel\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=39500fc8de14e4a03f4e530e52189532}{%
+           family={Dalla\bibnamedelima Riva},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Giulio\bibnamedelima V.},
+           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{999ae4ce8fe2624c44cd2b501e7f2217}
+      \strng{fullhash}{999ae4ce8fe2624c44cd2b501e7f2217}
+      \strng{bibnamehash}{999ae4ce8fe2624c44cd2b501e7f2217}
+      \strng{authorbibnamehash}{999ae4ce8fe2624c44cd2b501e7f2217}
+      \strng{authornamehash}{999ae4ce8fe2624c44cd2b501e7f2217}
+      \strng{authorfullhash}{999ae4ce8fe2624c44cd2b501e7f2217}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Royal Society Open Science}
+      \field{number}{8}
+      \field{title}{Exploiting node metadata to predict interactions in bipartite networks using graph embedding and neural networks}
+      \field{volume}{9}
+      \field{year}{2022}
+      \field{pages}{220079}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1098/rsos.220079
+      \endverb
+      \verb{eprint}
+      \verb https://royalsocietypublishing.org/doi/pdf/10.1098/rsos.220079
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/abs/10.1098/rsos.220079
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/abs/10.1098/rsos.220079
+      \endverb
+    \endentry
+    \entry{strydomEtAl}{article}{}
+      \name{author}{13}{}{%
+        {{hash=87c3d1d6c92c64e43e0e176b3767a624}{%
+           family={Strydom},
+           familyi={S\bibinitperiod},
+           given={Tanya},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6d29c63630de2f6f7578aceca4a2b41f}{%
+           family={Bouskila},
+           familyi={B\bibinitperiod},
+           given={Salomé},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c32f90ee43080af52aae20336095a1bb}{%
+           family={Banville},
+           familyi={B\bibinitperiod},
+           given={Francis},
+           giveni={F\bibinitperiod}}}%
+        {{hash=7f36ee4819edc6df4a1fffcc8e99a534}{%
+           family={Barros},
+           familyi={B\bibinitperiod},
+           given={Ceres},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d72d9aa2f91c59b976f51e6902f99eca}{%
+           family={Caron},
+           familyi={C\bibinitperiod},
+           given={Dominique},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c4b33cd184f3a85f63d84a28ba5a67ea}{%
+           family={Farrell},
+           familyi={F\bibinitperiod},
+           given={Maxwell\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1ef1a44c6df32bf2220fca367db22726}{%
+           family={Fortin},
+           familyi={F\bibinitperiod},
+           given={Marie-Josée},
+           giveni={M\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=81fb9b1bae7fd23e52f6ee92bffaddaf}{%
+           family={Hemming},
+           familyi={H\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ac9c543e6916bed2c27ab6263a5ba9b5}{%
+           family={Mercier},
+           familyi={M\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ca0c4f8b854d8e65b93eb506a5399056}{%
+           family={Pollock},
+           familyi={P\bibinitperiod},
+           given={Laura\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8fce64ac483541e48653b705acb115ce}{%
+           family={Runghen},
+           familyi={R\bibinitperiod},
+           given={Rogini},
+           giveni={R\bibinitperiod}}}%
+        {{hash=39500fc8de14e4a03f4e530e52189532}{%
+           family={Dalla\bibnamedelima Riva},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Giulio\bibnamedelima V.},
+           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=707f55e341a1c9baf6b1c57fc13a6701}{%
+           family={Poisot},
+           familyi={P\bibinitperiod},
+           given={Timothée},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6a9bcddb3a32ce8d3cbfd9e81935b8f}
+      \strng{fullhash}{b7def15e9dce85073b35c44c83f98505}
+      \strng{bibnamehash}{b7def15e9dce85073b35c44c83f98505}
+      \strng{authorbibnamehash}{b7def15e9dce85073b35c44c83f98505}
+      \strng{authornamehash}{d6a9bcddb3a32ce8d3cbfd9e81935b8f}
+      \strng{authorfullhash}{b7def15e9dce85073b35c44c83f98505}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Methods in Ecology and Evolution}
+      \field{number}{12}
+      \field{title}{Food web reconstruction through phylogenetic transfer of low-rank network representation}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{2838\bibrangedash 2849}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1111/2041-210X.13835
+      \endverb
+      \verb{eprint}
+      \verb https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.13835
+      \endverb
+      \verb{urlraw}
+      \verb https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13835
+      \endverb
+      \verb{url}
+      \verb https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13835
+      \endverb
+      \keyw{ancestral character estimation,biogeography,ecological networks,network embedding,transfer learning}
     \endentry
     \entry{DotProductGraphs}{misc}{}
       \name{author}{1}{}{%
@@ -1802,6 +1905,58 @@
       \field{howpublished}{\url{https://github.com/roonil-wazlib/tikz_diagrams}}
       \field{journaltitle}{GitHub repository}
       \field{title}{Tikz Diagrams}
+      \field{year}{2023}
+    \endentry
+    \entry{lucas2021inferring}{article}{}
+      \name{author}{6}{}{%
+        {{hash=4eb0b5c8bcc49c6a40798e6f8340b026}{%
+           family={Lucas},
+           familyi={L\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=07f8a71717e5c315184715a0884709f7}{%
+           family={Morris},
+           familyi={M\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2672cd2ac0954b5eb8527e7e7e29be76}{%
+           family={Townsend-Teague},
+           familyi={T\bibinithyphendelim T\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=02d25ec30318b35c4cd8f7f4c2fc5dd4}{%
+           family={Tichit},
+           familyi={T\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=06638db184d6201a8c7d1817b6c0991f}{%
+           family={Habermann},
+           familyi={H\bibinitperiod},
+           given={Bianca},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c068c2d1d3e5f1a31c85e847bede1b17}{%
+           family={Barrat},
+           familyi={B\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{517efc4cfaf0ca69024d9b7e6796459b}
+      \strng{fullhash}{390597df22a2fb5e8370cf10ab6eddab}
+      \strng{bibnamehash}{390597df22a2fb5e8370cf10ab6eddab}
+      \strng{authorbibnamehash}{390597df22a2fb5e8370cf10ab6eddab}
+      \strng{authornamehash}{517efc4cfaf0ca69024d9b7e6796459b}
+      \strng{authorfullhash}{390597df22a2fb5e8370cf10ab6eddab}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cell Reports Methods}
+      \field{number}{2}
+      \field{title}{Inferring cell cycle phases from a partially temporal network of protein interactions}
+      \field{volume}{3}
       \field{year}{2023}
     \endentry
   \enddatalist

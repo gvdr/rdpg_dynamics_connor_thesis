@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'DraftDoc.blg'
-[53] biber:340> INFO - === Mon Jun 12, 2023, 09:09:15
-[65] Biber.pm:419> INFO - Reading 'DraftDoc.bcf'
-[117] Biber.pm:979> INFO - Found 42 citekeys in bib section 0
-[126] Biber.pm:4419> INFO - Processing section 0
-[133] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[135] bibtex.pm:1713> INFO - LaTeX decoding ...
-[179] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[463] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[463] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[463] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[463] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[504] bbl.pm:660> INFO - Writing 'DraftDoc.bbl' with encoding 'UTF-8'
-[528] bbl.pm:763> INFO - Output to DraftDoc.bbl
-[528] Biber.pm:131> WARN - Duplicate entry key: 'kidger2022neural' in file 'bibliography.bib', skipping ...
-[528] Biber.pm:133> INFO - WARNINGS: 1
+[51] biber:340> INFO - === Wed Jun 14, 2023, 13:32:34
+[62] Biber.pm:419> INFO - Reading 'DraftDoc.bcf'
+[115] Biber.pm:979> INFO - Found 43 citekeys in bib section 0
+[124] Biber.pm:4419> INFO - Processing section 0
+[132] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[134] bibtex.pm:1713> INFO - LaTeX decoding ...
+[178] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[481] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[481] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[481] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[481] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[523] bbl.pm:660> INFO - Writing 'DraftDoc.bbl' with encoding 'UTF-8'
+[555] bbl.pm:763> INFO - Output to DraftDoc.bbl
+[555] Biber.pm:131> WARN - legacy month field 'jul' in entry 'forsythe1967computer' is not an integer - this will probably not sort properly.
+[555] Biber.pm:133> INFO - WARNINGS: 1

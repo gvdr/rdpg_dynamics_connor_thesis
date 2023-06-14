@@ -9,3 +9,5 @@ RDPGs
 UDEs
 NNDEs
 pendula
+utilises
+hypothesised

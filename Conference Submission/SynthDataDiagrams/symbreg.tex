@@ -1,6 +1,7 @@
 \documentclass{standalone}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{tikz}
+
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{arrows,automata}
 \usetikzlibrary{positioning}
@@ -32,7 +33,7 @@
         inner sep=0pt,
         minimum size=5pt,
         font=\small},
-    myarrow/.style={->},
+    myarrow/.style={->, -{Latex[length=3mm, width=2mm]}},
     dottedarrow/.style={-,dashed},
     thicccarrow/.style={->,line width=5pt},
     node distance=1.2cm and 1.5cm
@@ -45,9 +46,9 @@
 
         \node[draw,text width=4cm] (b) at (0,-4) {Simplifies and optimises any parameters in the candidate equations};
 
-        \node[draw,text width=4cm] (c) at (5.5,-6.5) {Creates a tournament to test the fitness of each equation. The most fit equation is selected to go be rerandomised with a probability $p$, the next most fit is selected with probability $p(1-p)$};
+        \node[draw,text width=4cm] (c) at (5.5,-6.5) {Creates a tournament to test the fitness of each equation. The most fit equation is selected to go be re-randomised with a probability $p$, the next most fit is selected with probability $p(1-p)$};
 
-        \node[draw,text width=4cm] (d) at (5.5,-0.5) {Rerandomises the selected equation to generate a new set of candidate equations};
+        \node[draw,text width=4cm] (d) at (5.5,-0.5) {Re-randomises the selected equation to generate a new set of candidate equations};
 
         \node[draw,text width=4cm] (e) at (0,-9) {The fittest equation at each complexity is stored and returned};
     \end{scope}
