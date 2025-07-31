@@ -8,7 +8,10 @@ function create_forecast(MODEL_PATH, u0)
     tspan = (0.0f0, 29.0f0)
     tsteps = range(tspan[1], tspan[2]; length = datasize)
 
-    dudt2 = Chain(x -> x, Dense(10, 100, tanh), Dense(100, 50, tanh), Dense(50, 10))
+
+    rng = Xoshiro(0)
+
+    dudt2 = Chain(x -> x, Dense(10, 100, tanh), Dense(100, 50, tanh), Dense(50,50), Dense(50, 10))
     p, st = Lux.setup(rng, dudt2)
     prob_neuralode = NeuralODE(dudt2, tspan, Tsit5(); saveat = tsteps)
 
