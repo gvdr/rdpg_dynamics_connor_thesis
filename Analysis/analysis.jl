@@ -1,5 +1,9 @@
 using Serialization
 using JSON
+using ComponentArrays
+
+using ComponentArrays, Lux, DiffEqFlux, OrdinaryDiffEq, Optimization, OptimizationOptimJL,
+      OptimizationOptimisers, Random, Plots
 
 include("create_forecast.jl")
 
@@ -17,20 +21,18 @@ L_preds, L_data, tsteps = get_preds("L_series", "data/1_community_oscillation.js
 R_preds, R_data, tsteps = get_preds("R_series", "data/1_community_oscillation.json", "models/1_community_oscillation/25-07-2025-R.jls")
 
 
+
 for i in 1:30
-    loss_matrix = L_preds[i]*R_preds[i]'.-L_data[i]*R_data[i]'
-    println(round.(abs.(loss_matrix[1,:]).+abs.(loss_matrix[:,1]),sigdigits=2))
+    loss_matrix = L_preds[i]*(L_preds[i]*[1 0; 0 -1])'.-L_data[i]*(L_data[i]*[1 0; 0 -1])'
+    # println(round.(abs.(loss_matrix[1,:]),sigdigits=2))
+    println(loss_matrix)
     println("")
 end
 
-L_trace_d = [d[1,2] for d in L_data]
-L_trace_p = [p[1,2] for p in L_preds]
-plt = scatter(tsteps, L_trace_d; label = "data")
-scatter!(plt, tsteps, L_trace_p'; label = "prediction")
-display(plot(plt))
+gr()
 
-R_trace_d = [d[1,2] for d in R_data]
-R_trace_p = [p[1,2] for p in R_preds]
-plt = scatter(tsteps, R_trace_d; label = "data")
-scatter!(plt, tsteps, R_trace_p'; label = "prediction")
+L_trace_d = hcat([d[1,:] for d in L_data]...)
+L_trace_p = hcat([p[1,:] for p in L_preds]...)
+plt = plot(1:tsteps, L_trace_d[1,:], L_trace_d[2,:]; label = "data")
+plot!(plt, 1:tsteps, L_trace_p[1,:], L_trace_p[2,:]; label = "prediction")
 display(plot(plt))
