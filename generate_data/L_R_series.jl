@@ -4,6 +4,7 @@ function L_R_series(d, tsteps)
 
     function svd_decompose(A,d)
         L,Σ,R = svds(A; nsv=d, v0=[Float64(i%7) for i in 1:minimum(size(A))])[1]
+        println(Σ)
         L̂ = L * diagm(.√Σ)
         R̂ = R * diagm(.√Σ)
         return (L̂ = L̂, R̂ = R̂)
