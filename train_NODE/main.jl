@@ -1,18 +1,29 @@
-using ComponentArrays, Lux, DiffEqFlux, OrdinaryDiffEq, Optimization, OptimizationOptimJL,
-      OptimizationOptimisers, Random, Plots
-
+using Lux
+using Optimization
+using OptimizationOptimisers
+using OptimizationOptimJL
+using Zygote
+using OrdinaryDiffEq
+using Plots
+using SciMLSensitivity
+using Random
+using ComponentArrays
+import DiffEqFlux: NeuralODE
 using JSON
+
+
+
 data = JSON.parsefile("./data/1_community_oscillation.json")
 
 data["L_series"][1]
 L_data = [[L[1] L[2]] for L in data["L_series"]] 
 
-u = hcat([reshape(L[:, :]', 10,1) for L in L_data]...)
+u = Float32.(hcat([reshape(L[:, :]', 10,1) for L in L_data]...))
 
 
 
 rng = Xoshiro(0)
-u0 = u[:,1]
+u0 = u[:,1] 
 datasize = 15
 tspan = (0.0f0, 14.0f0)
 tsteps = range(tspan[1], tspan[2]; length = datasize)
@@ -21,17 +32,51 @@ ode_data = Array(u[:,1:15])
 
 dudt2 = Chain(x -> x, Dense(10, 100, tanh), Dense(100, 50, tanh), Dense(50, 50, tanh), Dense(50, 10))
 p, st = Lux.setup(rng, dudt2)
+
 prob_neuralode = NeuralODE(dudt2, tspan, Tsit5(); saveat = tsteps)
 
 function predict_neuralode(p)
     Array(prob_neuralode(u0, p, st)[1])
 end
 
+function pred_to_array(pred)
+    pred*(pred*[1 0; 0 -1])'
+end
+
+function lower_than_zero_loss(array)
+    loss = 0
+    for m in 1:size(array, 1)
+        for n in 1:size(array, 2)
+            if array[m,n] < 0
+                loss-=array[m,n]
+            end
+        end
+    end
+    return loss
+end
+
+function greater_than_one_loss(array)
+    loss = 0
+    for m in 1:size(array, 1)
+        for n in 1:size(array, 2)
+            if array[m,n] > 1
+                loss+=array[m,n]-1 # Only loss for the distance over 1
+            end
+        end
+    end
+    return loss
+end
+
 function loss_neuralode(p)
     pred = predict_neuralode(p)
     loss = sum(abs2, ode_data .- pred)
+    pred_arrays = pred_to_array.(pred)
+    less_than_zero_loss = sum(lower_than_zero_loss.(pred_arrays))
+    more_than_one_loss = sum(greater_than_one_loss.(pred_arrays))
     return loss
 end
+
+
 
 # Do not plot by default for the documentation
 # Users should change doplot=true to see the plots callbacks
