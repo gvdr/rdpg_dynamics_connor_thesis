@@ -1,7 +1,7 @@
 using Serialization
 
 
-function create_forecast(MODEL_PATH, u0)
+function create_forecast(MODEL_PATH, u0, n, d)
     
     u = deserialize(MODEL_PATH)
     datasize = 30
@@ -11,7 +11,7 @@ function create_forecast(MODEL_PATH, u0)
 
     rng = Xoshiro(0)
 
-    dudt2 = Chain(x -> x, Dense(10, 100, tanh), Dense(100, 50, tanh), Dense(50,50), Dense(50, 10))
+    dudt2 = Chain(x -> x, Dense(n*d, 256, celu), Dense(256, 128, celu), Dense(128, 128, celu), Dense(128, n*d))
     p, st = Lux.setup(rng, dudt2)
     prob_neuralode = NeuralODE(dudt2, tspan, Tsit5(); saveat = tsteps)
 
