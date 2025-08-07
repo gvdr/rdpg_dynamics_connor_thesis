@@ -14,6 +14,9 @@ What will be a good way of showing the results?
 
 - not sure why L = R[1 0; 0 -1]
 
+- Use big NN models
+- 
+
 ## Outline
 ### Intro
  - motivation for modeling temporal networks
@@ -24,4 +27,12 @@ What will be a good way of showing the results?
  - Symbolic Regression?
 
 ### Methodology
+ - How latent spaces are formed with SVD
+ - How SciML solves the ODEs (ie they use RK? methods)
+ - How SciML trains to make a NODE that matches data
+ - How symbolic regression is used to make an interpretable ODE
 
+### Results?
+
+
+### Conclusion
