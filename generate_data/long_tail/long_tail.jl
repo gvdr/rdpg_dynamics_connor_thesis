@@ -1,8 +1,5 @@
 using LinearAlgebra
 using BlockDiagonals
-
-using LinearAlgebra
-using BlockDiagonals
 using Arpack
 using DotProductGraphs
 using Distances
@@ -34,19 +31,4 @@ data_dict = Dict("graph_series"=>series, "L_series"=>L_series, "R_series"=>R_ser
 
 open("long_tail.json","w") do f
     JSON.print(f, data_dict)
-end
-
-
-
-n=50
-k=10
-
-
-
-series[1]
-
-using DelimitedFiles
-
-for i in 1:length(series)
-    writedlm(string("/home/connor/Thesis/Code/Graph Series/longTailDirectional/step", i, ".csv"), series[i], ",")
 end
