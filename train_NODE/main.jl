@@ -1,9 +1,13 @@
 using ComponentArrays, Lux, DiffEqFlux, OrdinaryDiffEq, Optimization, OptimizationOptimJL, OptimizationOptimisers, Random, Plots
 using JSON
+using MLUtils
+using Lux, Optimization, OptimizationOptimisers, OrdinaryDiffEq, SciMLSensitivity, MLUtils,
+      Random, ComponentArrays
+using Optim
 
-data = JSON.parsefile("./data/1_community_oscillation.json")
+data = JSON.parsefile("./data/2_communities_joining.json")
 
-n = 5 # Total Number of Nodes in network
+n = 11 # Total Number of Nodes in network
 d = 2 # Number of singular values taken, for this paper will leave at 2
 
 
@@ -29,20 +33,32 @@ u = Float32.(hcat([reshape(L', n*d,1) for L in L_data]...))
 
 rng = Xoshiro(1254)
 u0 = u[:,1] 
-datasize = 10
-tspan = (0.0f0, 9.0f0)
+datasize = 15
+tspan = (0.0f0, 14.0f0)
 tsteps = range(tspan[1], tspan[2]; length = datasize)
 
-ode_data = Array(u[:,1:datasize])
+
+
+ode_data = collect(Array.(eachcol(Array(u[:,1:datasize]))))
 data_translation = L_R_translation[1:datasize]
 
-dudt2 = Chain(x -> x, Dense(n*d, 256, celu), Dense(256, 128, celu), Dense(128, 128, celu), Dense(128, n*d))
-p, st = Lux.setup(rng, dudt2)
 
-prob_neuralode = NeuralODE(dudt2, tspan, Tsit5(); saveat = tsteps)
 
-function predict_neuralode(p)
-    Array(prob_neuralode(u0, p, st)[1])
+chain = Chain(x -> x, Dense(n*d, 128, celu), Dense(128, 128, celu), Dense(128, 64, celu), Dense(64, n*d))
+p, st = Lux.setup(rng, chain)
+ps_ca = ComponentArray(p)
+
+function dudt_(u, p, t)
+    c = chain(u, p, st)[1]
+    return c
+end
+
+# prob_neuralode = NeuralODE(dudt2, tspan, Tsit5(); saveat = tsteps)
+prob_neuralode = ODEProblem{false}(dudt_, u0, tspan, ps_ca)
+
+function predict_neuralode(fullp, time_batch)
+    A = Array(solve(prob_neuralode, Tsit5(), p = fullp, saveat = time_batch[2]))
+    return A
 end
 
 function pred_to_array(pred, translation)
@@ -79,55 +95,67 @@ function greater_than_one_loss(array)
     return loss
 end
 
-function loss_neuralode(p)
-    pred = predict_neuralode(p)
-    loss = sum(abs2, ode_data .- pred)
+function loss_neuralode(p, data)
+    batch, time_batch = data
+    pred = predict_neuralode(p, time_batch)
+    loss = sum(abs2, hcat(time_batch[1]...) .- pred)
     reshaped_preds = [reshape(col, n, d) for col in eachcol(pred)]
-    pred_arrays = pred_to_array.(reshaped_preds, data_translation)
+    pred_arrays = pred_to_array.(reshaped_preds, data_translation[Int.(collect(time_batch[2])).+1])
     less_than_zero_loss = sum(lower_than_zero_loss.(pred_arrays))
     more_than_one_loss = sum(greater_than_one_loss.(pred_arrays))
     return loss + less_than_zero_loss + more_than_one_loss
 end
 
+function predict_adjoint(fullp, time_batch)
+    Array(solve(prob, Tsit5(), p = fullp, saveat = time_batch))
+end
 
+function loss_adjoint(fullp, data)
+    batch, time_batch = data
+    pred = predict_adjoint(fullp, time_batch)
+    sum(abs2, batch .- pred)
+end
 
 # Do not plot by default for the documentation
 # Users should change doplot=true to see the plots callbacks
 function callback(state, l; doplot = false)
     println(l)
     # plot current prediction against data
-    if doplot
-        pred = predict_neuralode(state.u)
-        plt = scatter(tsteps, ode_data[2, :]; label = "data")
-        scatter!(plt, tsteps, pred[2, :]; label = "prediction")
-        display(plot(plt))
-    end
+    # if doplot
+    #     pred = predict_neuralode(state.u)
+    #     plt = scatter(tsteps, ode_data[2, :]; label = "data")
+    #     scatter!(plt, tsteps, pred[2, :]; label = "prediction")
+    #     display(plot(plt))
+    # end
     return false
 end
 
+
+train_loader = MLUtils.DataLoader((ode_data, tsteps), batchsize = 3)
+
+
+
 pinit = ComponentArray(p)
-callback((; u = pinit), loss_neuralode(pinit); doplot = true)
 
 # use Optimization.jl to solve the problem
 adtype = Optimization.AutoZygote()
 
-optf = Optimization.OptimizationFunction((x, p) -> loss_neuralode(x), adtype)
-optprob = Optimization.OptimizationProblem(optf, pinit)
+optf = Optimization.OptimizationFunction(loss_neuralode, adtype)
+optprob = Optimization.OptimizationProblem(optf, pinit, train_loader)
+using IterTools: ncycle
 
 result_neuralode = Optimization.solve(
-    optprob, OptimizationOptimisers.Adam(0.01); callback = callback, maxiters = 300)
+    optprob, OptimizationOptimisers.Adam(0.01); callback = callback, epochs = 500, maxiters = 1000)
 
-optprob2 = remake(optprob; u0 = result_neuralode.u)
+optprob2 = Optimization.OptimizationProblem(optf, result_neuralode.u, train_loader)
 
-# result_neuralode2 = Optimization.solve(
-#     optprob2, Optim.BFGS(; initial_stepnorm = 0.025); callback, allow_f_increases = false, maxiters = 100)
+result_neuralode2 = Optimization.solve(
+    optprob2, OptimizationOptimisers.Lion(0.00005, (0.9, 0.999)); callback, epochs = 300, maxiters = 1000)
 
 # optprob = remake(optprob2; u0 = result_neuralode2.u)
 
 
-callback((; u = result_neuralode.u), loss_neuralode(result_neuralode.u); doplot = true)
-
 
 using Serialization
-serialize("./models/1_community_oscillation/big-NN-07-08-2025-L.jls", result_neuralode.u)
+serialize("./models/2_communities_joining/batching-14-08-2025-L.jls", result_neuralode.u)
 
