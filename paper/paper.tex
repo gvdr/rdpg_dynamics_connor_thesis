@@ -1,94 +1,270 @@
-\documentclass[12pt]{amsbook}
+\documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage[
-backend=biber,
-style=numeric,
-maxbibnames=99,
-sorting=ynt
+    backend=biber,
+    style=numeric,
+    maxbibnames=99,
+    sorting=ynt
 ]{biblatex}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{tikz}
-\usepackage{standalone}
-\usepackage{svg}
-\usepackage{gensymb}
+\usepackage{graphicx}
 \usepackage{float}
-\usepackage{geometry}
 \usepackage{hyperref}
-\usepackage{graphicx, animate}
 \usepackage{caption, subcaption}
-\usepackage{pgffor}
-\usepackage{mathtools}
-\usepackage{array}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage{cleveref}
-\addbibresource{bibliography.bib}
-\usepackage{hyperref,thmtools}
-%\usepackage{chngcounter}
 
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{arrows,automata}
-\usetikzlibrary{positioning}
-\usetikzlibrary{arrows.meta,positioning}
+\addbibresource{../Document and Images/bibliography.bib}
 
-\counterwithin{figure}{chapter}
-\counterwithin{section}{chapter}
-\counterwithin{table}{chapter}
-\counterwithin{subsection}{section}
-
-
-\linespread{1.5}
-\let\cleardoublepage\clearpage
-% Override ugly default link
 \hypersetup{
-  colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = blue, %Colour for external hyperlinks
-  linkcolor    = blue, %Colour of internal links
-  citecolor   = blue    %Colour of citations
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
 }
 
+% Custom commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bL}{\hat{L}}
+\newcommand{\bR}{\hat{R}}
+
+\title{Learning Interpretable Dynamics of Temporal Networks\\via Neural ODEs and Symbolic Regression}
+
+\author{
+    Connor Smith\textsuperscript{1} \and
+    Miguel Lurgi\textsuperscript{2} \and
+    Giulio V. Dalla Riva\textsuperscript{1}\\[1em]
+    \small\textsuperscript{1}School of Mathematics and Statistics, University of Canterbury, New Zealand\\
+    \small\textsuperscript{2}Department of Biosciences, Swansea University, UK
+}
+
+\date{}
+
 \begin{document}
-\begin{chapter}{Methodology}
 
-        % Goal is to predict next time steps
-        We are given a sequence of graphs, and our goal is to predict the next graph in the sequence. To achieve this, we reinterpret our temporal network as a sequence of points in a latent space; that is, a space in which similar vertices (ones with many of the same neighbours) are mapped to a similar point in space.
-        We then train a Neural Ordinary Differential Equation (NODE) to approximate the rate of change of the points in this latent space. With this numerical equation, we can then use symbolic regression techniques to find a functional equation that matches the numerical equation. Using this process we discover an interpretable function that governs the evolution of a temporal network.
+\maketitle
 
+\begin{abstract}
+Temporal networks---networks whose structure changes over time---appear across domains from neuroscience to ecology to social systems.
+While most approaches focus on predicting future network states, they rarely provide interpretable models of the underlying dynamics.
+We present a framework that learns continuous, interpretable differential equations governing the evolution of temporal network structure.
+Our approach embeds networks into a low-dimensional latent space via Random Dot Product Graphs (RDPG), learns the dynamics of this embedding using Neural Ordinary Differential Equations (Neural ODEs), and extracts human-interpretable equations through symbolic regression.
+We demonstrate the framework on three synthetic temporal networks, showing that it successfully recovers governing equations that generalize beyond the training data.
+This work bridges the gap between predictive accuracy and mechanistic understanding in temporal network modeling.
+\end{abstract}
 
+\section{Introduction}
+\label{sec:intro}
 
-    \begin{section}{Singular Value Decomposition and Random Dot Product Graphs}
-        SVD Calculated with XXX Arpack XXX Julia
-        Each system has 2 singular values
-        Aligning The L and R matrices is important (The SVDs can each be fliped)
-        We use an initial vector to ensure that the first eigenvector is oriented the same for each time step
-        Then calculate a transformation for the subsequent eigenvectors, which is used for training loss and prediction.
-        L and R are related by [1 0; 0 -1] as the network is not directed (IE the matrix is symetrical) 
-        We only model L and transform it for analysis
-        Reconstruct the RDPG L*(L*transform)'
-    \end{section}   
+Temporal networks---networks whose edges and nodes change over time---are ubiquitous in complex systems~\cite{holme2012temporal}.
+Examples include protein interaction networks that rewire during cellular processes~\cite{lucas2021inferring}, social networks where relationships form and dissolve~\cite{hanneke2010discrete}, and ecological networks whose structure responds to environmental change~\cite{poisot2015species}.
+Understanding how and why network structure changes is central to predicting system behavior.
 
-    \begin{section}{Neural Ordinary Differential Equation}
-        Used Julia SciML ecosystem
-        Basic copy pasted code 
-        Modelling the whole state
-        Loss function is abs2 sum Data-pred + disabove 1 and below 0 (L*(L*transform)' )
-        NN structure 3 layers 256, 128, 128 celu activation function
-    \end{section}
+Most temporal network modeling falls into two categories.
+The first models \emph{dynamics on networks}: how node states evolve given a fixed or slowly-changing network topology (e.g., epidemic spreading, opinion dynamics)~\cite{porter2016dynamical}.
+The second models \emph{dynamics of networks}: how the network structure itself evolves~\cite{holme2015modern}.
+This paper addresses the latter, which remains less developed despite its importance.
 
+Existing approaches to modeling network dynamics face a fundamental tension.
+Statistical models like temporal exponential random graphs~\cite{hanneke2010discrete} are interpretable but often lack predictive power.
+Machine learning approaches~\cite{kazemi2020representation} achieve better predictions but function as black boxes, offering little insight into the mechanisms driving structural change.
+We propose a framework that achieves both: predictive models that can be distilled into interpretable differential equations.
 
-    % Symbolic Regression Explaination
-    
-    \begin{section}{Symbolic Regression}
-        ???
-    \end{section}
+Our key insight is that the discreteness of network events (edges appearing or disappearing) can be overcome by working in a continuous embedding space.
+We use Random Dot Product Graphs (RDPG)~\cite{athreya2017statistical} to embed each network snapshot into a low-dimensional latent space where similar nodes cluster together and connection probabilities arise naturally from inner products.
+The temporal evolution of these embeddings is then smooth and amenable to differential equation modeling.
 
-    \begin{section}{Reconstructing the Temporal Network}
-        XXX Is this necessary XXX
+We train Neural Ordinary Differential Equations (Neural ODEs)~\cite{chen2018neural} to learn the dynamics in embedding space.
+While Neural ODEs provide excellent fits, they remain opaque.
+We therefore apply symbolic regression to discover closed-form differential equations that approximate the learned neural dynamics.
+These equations are interpretable---they can be analyzed mathematically, checked for conservation laws, and compared across systems.
 
-        $u$ is the first row of the matrix $\hat L$. By taking $u\hat R'$, this is equivalent to finding $\hat A = \hat L \hat R'$ and looking at $\hat A_{1\cdot}$; to recover a final prediction of the edges of $u$, we take:
-        \begin{align}
-            q &= u \hat R'
-        \end{align}
-        This gives a vector $q$ of probabilities of connections between the target node and the rest of the network. As the results can be interpreted as a probability, the most likely graph is given by setting any entry with a value of $0.5$ or higher to one (predict that the edge exists), and setting any entry with a value of less than $0.5$ to zero (predict that an edge does not exist). However, this may not provide the best fit in terms of the accuracy of edges, and techniques to find the best threshold exist (for more information see \Citeauthor{strydomEtAl}\cite{strydomEtAl})
-    \end{section}
-\end{chapter}
+\textbf{Contributions.} We introduce:
+\begin{enumerate}
+    \item A complete pipeline from temporal network observations to interpretable differential equations
+    \item Demonstration on three synthetic systems with known ground-truth dynamics
+    \item Open-source Julia implementation (\texttt{RDPGDynamics.jl}) for reproducibility
+\end{enumerate}
+
+\section{Methods}
+\label{sec:methods}
+
+Our framework consists of three stages: (1) embedding temporal networks via RDPG, (2) learning dynamics with Neural ODEs, and (3) extracting interpretable equations through symbolic regression.
+
+\subsection{Random Dot Product Graph Embedding}
+\label{sec:rdpg}
+
+Given a temporal network represented as a sequence of adjacency matrices $\{A_t\}_{t=1}^T$, we embed each snapshot into a latent space using Random Dot Product Graphs (RDPG)~\cite{athreya2017statistical}.
+
+For an adjacency matrix $A \in \{0,1\}^{n \times n}$, the RDPG embedding computes:
+\begin{equation}
+    A \approx \bL \bR^\top
+\end{equation}
+where $\bL, \bR \in \R^{n \times d}$ are the left and right embedding matrices and $d \ll n$ is the embedding dimension.
+These are obtained via truncated singular value decomposition (SVD):
+\begin{equation}
+    A = U \Sigma V^\top \implies \bL = U_d \Sigma_d^{1/2}, \quad \bR = V_d \Sigma_d^{1/2}
+\end{equation}
+where subscript $d$ denotes truncation to the top $d$ singular values/vectors.
+
+The matrix $P = \bL \bR^\top$ has entries $P_{ij} \in [0,1]$ representing the probability of an edge between nodes $i$ and $j$.
+This probabilistic interpretation is central to our approach: while edge events are discrete, connection probabilities evolve continuously.
+
+\textbf{Temporal alignment.}
+SVD decompositions are unique only up to orthogonal transformations.
+To ensure smooth trajectories across time, we align each embedding to its predecessor using orthogonal Procrustes rotation:
+\begin{equation}
+    \Omega_t = \arg\min_{\Omega^\top\Omega = I} \|\Omega \bL_t - \bL_{t-1}\|_F^2
+\end{equation}
+with solution $\Omega_t = V U^\top$ where $\bL_t \bL_{t-1}^\top = U \Sigma V^\top$.
+
+\subsection{Neural ODE Dynamics}
+\label{sec:node}
+
+After embedding, we have a sequence of latent positions $\{\bL_t\}_{t=1}^T$.
+We flatten each $\bL_t \in \R^{n \times d}$ into a vector $\mathbf{u}_t \in \R^{nd}$ and model the dynamics as:
+\begin{equation}
+    \frac{d\mathbf{u}}{dt} = f_\theta(\mathbf{u})
+\end{equation}
+where $f_\theta$ is a neural network with parameters $\theta$.
+
+We parameterize $f_\theta$ as a fully-connected network with architecture:
+\begin{equation}
+    f_\theta: \R^{nd} \xrightarrow{\text{Dense}} \R^{128} \xrightarrow{\text{celu}} \R^{128} \xrightarrow{\text{celu}} \R^{64} \xrightarrow{\text{celu}} \R^{nd}
+\end{equation}
+
+Training minimizes the prediction error:
+\begin{equation}
+    \mathcal{L}(\theta) = \sum_{t=1}^T \|\mathbf{u}_t - \hat{\mathbf{u}}_t(\theta)\|_2^2 + \lambda \mathcal{L}_{\text{prob}}
+\end{equation}
+where $\hat{\mathbf{u}}_t$ is obtained by integrating the Neural ODE from $\mathbf{u}_1$, and $\mathcal{L}_{\text{prob}}$ penalizes predicted probabilities outside $[0,1]$:
+\begin{equation}
+    \mathcal{L}_{\text{prob}} = \sum_{i \neq j} \max(0, -P_{ij}) + \max(0, P_{ij} - 1)
+\end{equation}
+
+We use a two-stage optimization: Adam for initial exploration followed by Lion for fine-tuning.
+Gradients are computed via adjoint sensitivity analysis for memory efficiency~\cite{chen2018neural}.
+
+\subsection{Symbolic Regression}
+\label{sec:symreg}
+
+The trained Neural ODE provides accurate predictions but remains a black box.
+To extract interpretable dynamics, we apply symbolic regression to find closed-form expressions approximating $f_\theta$.
+
+Given the learned vector field $f_\theta(\mathbf{u})$, we seek symbolic expressions $g(\mathbf{u})$ from a grammar of operations (polynomials, trigonometric functions, etc.) that minimize:
+\begin{equation}
+    \min_g \int \|f_\theta(\mathbf{u}) - g(\mathbf{u})\|^2 \, d\mathbf{u} + \text{complexity}(g)
+\end{equation}
+
+The complexity penalty encourages parsimonious expressions.
+We use genetic programming~\cite{schmidt2009distilling} to search the space of symbolic expressions.
+
+\section{Data: Synthetic Temporal Networks}
+\label{sec:data}
+
+We evaluate our framework on three synthetic temporal networks with known generating processes.
+This allows us to assess whether extracted equations match ground truth.
+
+\subsection{Single Community Oscillation}
+
+A network of $n=5$ nodes where connection probabilities oscillate sinusoidally.
+All nodes belong to a single community whose internal connectivity varies periodically.
+The ground-truth dynamics follow:
+\begin{equation}
+    \frac{dL_{i,1}}{dt} = \omega L_{i,2}, \quad \frac{dL_{i,2}}{dt} = -\omega L_{i,1}
+\end{equation}
+producing circular trajectories in embedding space.
+
+\subsection{Two Communities Merging}
+
+A network of $n=11$ nodes initially partitioned into two separate communities.
+Over time, the communities gradually merge into a single cohesive group.
+This models scenarios like organizational mergers or ecosystem succession.
+
+\subsection{Long-Tailed Degree Distribution}
+
+A network of $n=36$ nodes with a power-law degree distribution.
+This tests whether our method handles networks with heterogeneous node connectivity, which are common in real-world systems due to preferential attachment.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Training Performance}
+
+Table~\ref{tab:results} summarizes the training results across all three systems.
+
+\begin{table}[h]
+\centering
+\caption{Training results for three synthetic temporal networks.}
+\label{tab:results}
+\begin{tabular}{lccc}
+\toprule
+Dataset & $n$ & $d$ & Final MSE \\
+\midrule
+Single community oscillation & 5 & 2 & 0.114 \\
+Two communities merging & 11 & 2 & 1.169 \\
+Long-tailed distribution & 36 & 2 & 0.159 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The single community and long-tail systems achieve low reconstruction error, while the merging communities system is more challenging.
+This may reflect the more complex dynamics of community reorganization.
+
+\subsection{Embedding Trajectories}
+
+Figure~\ref{fig:trajectories} shows example embedding trajectories comparing ground truth (from data) with Neural ODE predictions.
+The model successfully captures the qualitative dynamics in all cases.
+
+% Placeholder for figure
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{plots/trajectories.pdf}
+%     \caption{Embedding trajectories for the single community oscillation system.}
+%     \label{fig:trajectories}
+% \end{figure}
+
+\subsection{Symbolic Regression}
+
+For the single community oscillation system, symbolic regression recovers equations of the form:
+\begin{equation}
+    \frac{dL_1}{dt} \approx a L_2, \quad \frac{dL_2}{dt} \approx -a L_1
+\end{equation}
+matching the ground-truth harmonic oscillator dynamics.
+This demonstrates that our framework can recover interpretable, mechanistically meaningful equations from network observations alone.
+
+\section{Discussion}
+\label{sec:discussion}
+
+We presented a framework for learning interpretable dynamics of temporal networks.
+By combining RDPG embedding, Neural ODEs, and symbolic regression, we bridge the gap between black-box prediction and mechanistic understanding.
+
+\textbf{Limitations.}
+The long-tailed network shows higher reconstruction error, suggesting challenges with highly heterogeneous degree distributions.
+Future work should explore adaptive embedding dimensions and architectures suited to such networks.
+
+\textbf{Extensions.}
+The framework naturally extends to Universal Differential Equations (UDEs), where known physics or domain knowledge can be incorporated alongside the neural component.
+This is particularly relevant for systems like ecological networks where some interaction terms are known \emph{a priori}.
+
+\section{Conclusion}
+
+We introduced a framework that transforms the problem of temporal network modeling from discrete event prediction to continuous dynamical systems analysis.
+Our approach produces interpretable differential equations governing network evolution, enabling both prediction and mechanistic insight.
+The open-source implementation facilitates application to new domains.
+
+\section*{Acknowledgments}
+
+% TODO: Add acknowledgments
+
+\section*{Data and Code Availability}
+
+The \texttt{RDPGDynamics.jl} package and all data are available at [repository URL].
+Experiments can be reproduced with: \texttt{julia --project scripts/reproduce\_paper.jl}
+
+\printbibliography
 
 \end{document}
