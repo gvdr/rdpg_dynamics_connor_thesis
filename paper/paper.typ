@@ -17,6 +17,8 @@
 
 #set heading(numbering: "1.1")
 
+#set math.equation(numbering: "(1)")
+
 // Custom Commands
 #let RR = $bb(R)$
 #let so = $frak("so")$
@@ -78,6 +80,10 @@
   _Proof._ #body #h(1fr) $square$
 ]
 
+#let remark(body) = block(width: 100%, inset: 8pt, stroke: (left: 2pt + luma(180)), fill: luma(250))[
+  _Remark._ #body
+]
+
 // Title Block
 #align(center)[
   #text(size: 17pt, weight: "bold")[
@@ -104,11 +110,15 @@
     *Abstract* \
     Temporal networks---networks whose structure changes over time---appear across domains from neuroscience to ecology to social systems.
     While most approaches focus on predicting future network states, they rarely provide interpretable models of the underlying dynamics.
-    We present a framework that learns continuous, interpretable differential equations governing the evolution of temporal network structure.
-    Our approach embeds networks into a low-dimensional latent space via Random Dot Product Graphs (RDPG), learns the dynamics of this embedding using Neural Ordinary Differential Equations (Neural ODEs), and extracts human-interpretable equations through symbolic regression.
-    We develop a gauge-theoretic analysis showing that RDPG embeddings have rotational ambiguity, and derive a gauge-consistent architecture $dot(X) = N(P)X$ with symmetric $N$ that eliminates this ambiguity while achieving dramatic parameter reduction (from $approx$10,000 to as few as 2 parameters).
-    We demonstrate the framework on synthetic temporal networks, showing that it successfully recovers governing equations and dynamical parameters.
-    This work bridges the gap between predictive accuracy and mechanistic understanding in temporal network modeling.
+    We present a framework for learning continuous, interpretable differential equations governing the evolution of temporal network structure.
+    Our approach embeds networks into a low-dimensional latent space via Random Dot Product Graphs (RDPG) and aims to learn the dynamics of this embedding using Neural Ordinary Differential Equations (Neural ODEs).
+    We develop a gauge-theoretic analysis showing that RDPG embeddings have rotational ambiguity ($O(d)$ gauge freedom) and characterize which dynamics are observable versus invisible under this symmetry.
+    A critical challenge is that adjacency spectral embedding (ASE) introduces arbitrary gauge transformations at each time step---random rotations from SVD sign ambiguity---that are unrelated to the dynamics and make trajectory learning ill-posed.
+    Existing joint embedding methods (e.g., UASE) assume generative models incompatible with ODE dynamics on latent positions.
+    We propose *structure-constrained alignment*: joint optimization over gauges and dynamics where symmetry constraints on the dynamics family identify and remove the random ASE gauge artifacts.
+    We prove that symmetric dynamics cannot fit the skew-symmetric contamination from wrong gauges, enabling recovery of the true trajectory.
+    This yields gauge-consistent architectures $dot(X) = N(P)X$ with symmetric $N$, achieving dramatic parameter reduction.
+    We present mathematical foundations, algorithms with identifiability guarantees, and honest assessment of remaining challenges.
   ]
 ]
 
@@ -139,12 +149,22 @@ While Neural ODEs provide excellent fits, they remain opaque.
 We therefore apply symbolic regression to discover closed-form differential equations that approximate the learned neural dynamics.
 These equations are interpretable---they can be analyzed mathematically, checked for conservation laws, and compared across systems.
 
-*Contributions.* We introduce:
-+ A complete pipeline from temporal network observations to interpretable differential equations
-+ A gauge-theoretic analysis of RDPG dynamics, identifying what can and cannot be learned from embedding trajectories
-+ Parsimonious architectures ($dot(X) = N(P)X$ with symmetric $N$) that are gauge-consistent by construction and can recover exact dynamical parameters
-+ Demonstration on synthetic systems with known ground-truth dynamics
-+ Open-source Julia implementation (`RDPGDynamics.jl`) for reproducibility
+*Contributions.* We make contributions in three areas:
+
+_Theoretical foundations:_
++ A gauge-theoretic analysis of RDPG dynamics, characterizing observable vs. invisible dynamics and deriving gauge-invariant parameterizations ($dot(X) = N(P)X$ with $N$ symmetric)
++ The horizontal lift framework: fiber bundle geometry for understanding what "gauge-free trajectory" means, connecting to Procrustes alignment
++ Identifiability results: conditions under which dynamics parameters can be recovered from observed probability matrices
+
+_Critical analysis:_
++ Demonstration that existing joint embedding methods (UASE, Omnibus) assume generative models incompatible with ODE dynamics on latent positions
++ Honest assessment of gauge alignment as a hard open problem for general dynamics
++ Clarification of what spectral methods can and cannot provide
+
+_Proposed approach:_
++ *Structure-constrained alignment*: joint optimization over gauges and dynamics, using structural assumptions (symmetry, sparsity) as regularization
++ Alternating algorithm for linear horizontal dynamics, with identifiability guarantees under generic conditions
++ Discussion of extensions to polynomial and message-passing dynamics
 
 = Methods <sec:methods>
 
@@ -201,7 +221,221 @@ This nonidentifiability is fundamental to the RDPG model @athreya2017statistical
 We align consecutive embeddings using the *orthogonal Procrustes* solution:
 $ Q_t = arg min_(Q^top Q = I) ||hat(X)_t Q - hat(X)_(t-1)||_F $
 which has closed form $Q_t = V U^top$ where $hat(X)_t^top hat(X)_(t-1) = U Sigma V^top$.
-This produces a smooth trajectory ${hat(X)_t}$ in latent space.
+
+=== The alignment problem for learning dynamics <sec:alignment-problem>
+
+While pairwise Procrustes alignment produces reasonable discrete approximations, it is fundamentally inadequate for learning continuous dynamics.
+The problem is more severe than simple "drift"---the gauge can jump discontinuously even for arbitrarily small time steps.
+
+*The discrete gauge ambiguity.*
+At each time $t$, ASE computes the eigendecomposition $P(t) approx U(t) Lambda(t) U(t)^top$ and returns $hat(X)(t) = U(t) Lambda(t)^(1\/2)$.
+But eigenvectors are determined only up to sign: if $u$ is an eigenvector, so is $-u$.
+For embedding dimension $d$, this gives $2^d$ possible gauge choices at each time, and the SVD algorithm picks arbitrarily based on numerical details.
+
+*Consequence: gauge jumps are $O(1)$ even for infinitesimal $delta t$.*
+Suppose $P(t)$ and $P(t + delta t)$ differ by $O(delta t)$.
+The eigenvalues vary continuously, but the eigenvector signs can flip between consecutive times.
+When this happens, $hat(X)(t + delta t)$ and $hat(X)(t)$ differ by a reflection---an $O(1)$ change---even though the true dynamics moved by $O(delta t)$.
+
+This means we cannot estimate velocities by finite differences:
+$ (hat(X)(t + delta t) - hat(X)(t)) / (delta t) $
+is not approximating any smooth velocity.
+It's dominated by the gauge jump, which contributes $O(1\/delta t) -> infinity$ as $delta t -> 0$.
+
+*Pairwise Procrustes doesn't solve this.*
+Aligning $hat(X)(t+1)$ to $hat(X)(t)$ via Procrustes finds the best orthogonal transformation _between those two frames_.
+But:
+- Each pairwise alignment $Q_(t,t+1)$ can be a large rotation (reflecting sign flips)
+- The composition $Q_(0,1) Q_(1,2) dots.c Q_(T-1,T)$ accumulates these rotations
+- The resulting trajectory, while locally aligned, can wander far from horizontal
+
+In short: *we don't have a scrambled trajectory---we don't have a trajectory at all*.
+We have a sequence of snapshots, each in an arbitrary gauge unrelated to its neighbors.
+
+=== Why existing joint embedding methods don't solve this <sec:why-not-uase>
+
+A natural question is whether existing multi-graph embedding methods resolve the gauge alignment problem.
+The most prominent is *Unfolded Adjacency Spectral Embedding* (UASE) @gallagher2021spectral, which embeds all time points jointly via a single SVD.
+
+#definition(title: "UASE")[
+  Given adjacency matrices $A^((1)), ..., A^((T)) in {0,1}^(n times n)$:
+  + Form the unfolded matrix $bold(A) = (A^((1)) | dots.c | A^((T))) in RR^(n times n T)$
+  + Compute the rank-$d$ SVD: $bold(A) approx hat(X) hat(Y)^top$ where $hat(X) in RR^(n times d)$, $hat(Y) in RR^(n T times d)$
+  + Partition $hat(Y) = (hat(Y)^((1)); dots.c ; hat(Y)^((T)))$ into $T$ blocks
+]
+
+UASE produces gauge-consistent embeddings---all $hat(Y)^((t))$ share a common basis---and satisfies important stability properties @gallagher2021spectral.
+However, *UASE assumes a different generative model than ours*.
+
+*The model mismatch.*
+UASE is designed for the _Multilayer RDPG_ where:
+$ P^((t))_(i j) = X_i Lambda^((t)) Y^((t) top)_j $
+with $X$ *constant* across time and only $Y^((t))$ varying.
+This factored structure is appropriate when nodes have a stable "identity" component and time-varying "activity" patterns.
+
+Our dynamics model is different:
+$ P^((t))_(i j) = x_i (t)^top x_j (t) $
+where the *same* evolving position $x_i (t)$ determines both sending and receiving, and the positions themselves follow ODE dynamics.
+There is no factorization through a shared constant component.
+
+*Consequence: UASE distorts the dynamics.*
+When applied to data from $P^((t)) = X(t) X(t)^top$ with genuinely evolving $X(t)$, UASE finds a compromise:
+- $hat(X)$ captures some "average" structure across time
+- $hat(Y)^((t))$ absorbs temporal variation, but in a way that doesn't correspond to true position evolution
+
+In practice, UASE can produce trajectories that fail to capture the actual dynamics.
+The joint SVD enforces a low-rank factored structure that the true model doesn't satisfy.
+
+#remark[
+  Similar limitations apply to Omnibus embedding @levin2017central, which builds a block matrix of averaged adjacencies, and to COSIE @arroyo2021inference.
+  All assume some shared structure across time that our ODE-driven dynamics model lacks.
+]
+
+*What we need:* A global gauge-fixing procedure that:
+1. Works with independent ASE at each time (respecting our generative model)
+2. Finds gauges $Q_t in O(d)$ for all times simultaneously
+3. Produces a genuinely smooth trajectory $tilde(X)(t) = hat(X)(t) Q_t$
+4. Approximates the horizontal lift (minimal gauge motion)
+
+=== Fiber bundle geometry and horizontal lifts <sec:horizontal>
+
+To understand what "smooth" means for gauge-ambiguous data, we formalize the geometry.
+The embedding space forms a *principal fiber bundle* with structure group $O(d)$.
+
+#definition(title: "Latent Position Bundle")[
+  Let $cal(M) = {X in RR^(n times d) : "rank"(X) = d}$ be the space of full-rank latent position matrices.
+  The *projection* $pi: cal(M) -> cal(P)$ maps $X |-> P = X X^top$ to the space of rank-$d$ positive semidefinite matrices.
+  The *fiber* over $P$ is $pi^(-1)(P) = {X Q : Q in O(d)}$---the gauge orbit.
+]
+
+A path $P(t)$ in the base space (observable dynamics) can be lifted to many paths $X(t)$ in the total space.
+These lifts differ by time-dependent gauge transformations $Q(t) in O(d)$.
+The key question: among all lifts, which is the "natural" one?
+
+#definition(title: "Vertical and Horizontal Subspaces")[
+  At each $X in cal(M)$, the tangent space decomposes as $T_X cal(M) = cal(V)_X plus.o cal(H)_X$ where:
+  - *Vertical subspace* (gauge directions): $cal(V)_X = {X A : A in so(d)}$
+  - *Horizontal subspace* (observable directions): $cal(H)_X = cal(V)_X^perp$
+
+  A tangent vector $dot(X)$ is *horizontal* if $dot(X) in cal(H)_X$, i.e., it has no gauge component.
+]
+
+#proposition(title: "Horizontal Characterization")[
+  A velocity $dot(X)$ is horizontal if and only if $X^top dot(X)$ is symmetric.
+  Equivalently, $dot(X)^top X = X^top dot(X)$.
+] <prop:horizontal-char>
+
+#proof[
+  Decompose $dot(X) = X A + W$ where $A = (X^top X)^(-1) X^top dot(X)$ and $W perp "col"(X)$.
+  The vertical component is $X A_("skew")$ where $A_("skew") = (A - A^top)/2$.
+  Thus $dot(X) in cal(H)_X$ iff $A_("skew") = 0$ iff $A = A^top$ iff $X^top dot(X)$ is symmetric.
+]
+
+#definition(title: "Horizontal Lift")[
+  Given a path $P(t)$ in the base space and initial condition $X(0)$ with $X(0)X(0)^top = P(0)$, the *horizontal lift* is the unique path $X(t)$ satisfying:
+  1. $X(t) X(t)^top = P(t)$ for all $t$ (projects to $P$)
+  2. $dot(X)(t) in cal(H)_(X(t))$ for all $t$ (velocity is horizontal)
+]
+
+The horizontal lift is the "smoothest" lift in a precise sense: it has no superfluous gauge motion.
+This is exactly what we want for learning dynamics.
+
+#theorem(title: "Horizontal Lift Existence and Uniqueness")[
+  Let $P(t)$ be a smooth path of rank-$d$ positive semidefinite matrices.
+  For any initial $X_0$ with $X_0 X_0^top = P(0)$, there exists a unique horizontal lift $X(t)$ with $X(0) = X_0$.
+] <thm:horizontal-lift>
+
+#proof[
+  Differentiating $P = X X^top$ gives $dot(P) = dot(X) X^top + X dot(X)^top$.
+  For $dot(X)$ horizontal, we require $X^top dot(X) = S$ symmetric.
+  Substituting $dot(X) = X (X^top X)^(-1) S + W$ with $X^top W = 0$:
+  $ dot(P) = X (X^top X)^(-1) S X^top + X S (X^top X)^(-1) X^top + W X^top + X W^top $
+
+  Given $dot(P)$ and requiring $W X^top + X W^top$ to match the residual, this is a system of linear equations for $(S, W)$.
+  For full-rank $X$, standard ODE existence/uniqueness theory applies.
+]
+
+=== Global gauge synchronization <sec:gauge-sync>
+
+The horizontal lift theorem tells us what we want; now we need a practical method to approximate it from discrete, gauge-scrambled embeddings.
+
+*The synchronization problem.*
+Given embeddings ${hat(X)_0, hat(X)_1, ..., hat(X)_T}$ with arbitrary gauges, find gauge corrections ${Q_0, Q_1, ..., Q_T} subset O(d)$ such that the corrected trajectory $tilde(X)_t = hat(X)_t Q_t$ is as smooth as possible.
+
+This is an instance of *synchronization over groups*, a well-studied problem in computer vision and signal processing.
+
+#definition(title: "Gauge Synchronization Objective")[
+  The *smoothness energy* of a gauge assignment ${Q_t}$ is:
+  $ cal(E)({Q_t}) = sum_(t=0)^(T-1) ||hat(X)_(t+1) Q_(t+1) - hat(X)_t Q_t||_F^2 $
+  The *synchronized gauges* minimize $cal(E)$ over $(O(d))^(T+1)$.
+]
+
+Minimizing $cal(E)$ directly is nonconvex, but good algorithms exist.
+A key observation simplifies the problem: only relative gauges $R_t = Q_t^top Q_(t+1)$ matter for smoothness.
+
+#proposition(title: "Relative Gauge Formulation")[
+  Define $R_t = Q_t^top Q_(t+1)$ (relative gauge from $t$ to $t+1$).
+  Then:
+  $ cal(E) = sum_(t=0)^(T-1) ||hat(X)_(t+1) R_t^top dots.c R_0^top Q_0 - hat(X)_t R_(t-1)^top dots.c R_0^top Q_0||_F^2 $
+  The optimal $Q_0$ is arbitrary (global gauge freedom); only the $R_t$ affect smoothness.
+]
+
+*Connection to Procrustes.*
+The pairwise Procrustes solution $R_t^("pair") = arg min_(R in O(d)) ||hat(X)_(t+1) R - hat(X)_t||_F$ provides an initial estimate.
+But these local solutions may be inconsistent: $R_0^("pair") R_1^("pair") dots.c R_(T-1)^("pair")$ may not equal $I$ even if the path is closed.
+
+*Spectral relaxation.*
+A practical algorithm relaxes $O(d)$ to the Stiefel manifold and solves via eigendecomposition.
+Define the *connection Laplacian*:
+$ L_(t,t') = cases(
+  I & "if" t = t',
+  -hat(X)_t^top hat(X)_(t+1) (hat(X)_(t+1)^top hat(X)_(t+1))^(-1) & "if" |t - t'| = 1,
+  0 & "otherwise"
+) $
+The synchronized gauges correspond to the bottom eigenvectors of $L$.
+
+*Practical algorithm.*
+1. Compute pairwise Procrustes: $R_t^("init") = "Procrustes"(hat(X)_t, hat(X)_(t+1))$
+2. Chain to get initial gauges: $Q_t^("init") = R_0^("init") R_1^("init") dots.c R_(t-1)^("init")$
+3. Refine via gradient descent on $cal(E)$ over $(O(d))^(T+1)$, using Riemannian optimization
+4. Output $tilde(X)_t = hat(X)_t Q_t$
+
+=== The Procrustes flow (continuous limit) <sec:procrustes-flow>
+
+The synchronization procedure above works for discrete data.
+In the limit of continuous observations, it converges to the *Procrustes flow*---the horizontal lift.
+
+#theorem(title: "Procrustes Flow as Horizontal Lift")[
+  Let ${hat(X)_t}_(t in [0,T])$ be a continuous path of embeddings satisfying $hat(X)_t hat(X)_t^top = P_t$ for some smooth $P_t$.
+  Suppose $hat(X)_t = X_t R_t$ where $X_t$ is horizontal and $R_t in O(d)$ is the (unknown) gauge error.
+
+  Define the *gauge velocity* $Omega_t = R_t^(-1) dot(R)_t in so(d)$.
+  The Procrustes flow removes this gauge motion: if we set
+  $ dot(Q) = -Q dot (hat(X)^top hat(X))^(-1) dot "skew"(hat(X)^top dot(hat(X))) $
+  where $"skew"(M) = (M - M^top)/2$, then $tilde(X)_t = hat(X)_t Q_t$ is horizontal.
+] <thm:procrustes-flow>
+
+#proof[
+  The corrected trajectory is $tilde(X) = hat(X) Q = X R Q$.
+  Its velocity is $dot(tilde(X)) = dot(X) R Q + X dot(R) Q + X R dot(Q)$.
+  For $tilde(X)$ to be horizontal, we need $tilde(X)^top dot(tilde(X))$ symmetric.
+
+  The skew-symmetric part of $hat(X)^top dot(hat(X))$ measures the gauge velocity in the raw embeddings.
+  The flow $dot(Q) = -Q (hat(X)^top hat(X))^(-1) "skew"(hat(X)^top dot(hat(X)))$ exactly cancels this, leaving only the horizontal component.
+]
+
+#remark[
+  In practice, we cannot use the Procrustes flow directly because:
+  (1) we have discrete samples, not continuous paths, and
+  (2) the gauge jumps between samples are discontinuous, so $dot(hat(X))$ doesn't exist.
+  The flow equation describes the *idealized* continuous-time limit; the synchronization algorithm (@sec:gauge-sync) provides the practical discrete-time implementation.
+]
+
+#remark[
+  The horizontal condition $X^top dot(X)$ symmetric connects directly to our invisible dynamics theorem (@thm:invisible).
+  Invisible dynamics $dot(X) = X A$ with $A in so(d)$ have $X^top dot(X) = (X^top X) A$ skew-symmetric.
+  The Procrustes flow/synchronization removes exactly this invisible component, leaving only observable dynamics.
+]
 
 #remark[
   When the adjacency matrix $A$ has negative eigenvalues (e.g., due to heterophilic "opposites attract" connectivity), the standard RDPG with $P = X X^top >= 0$ is inadequate.
@@ -209,6 +443,564 @@ This produces a smooth trajectory ${hat(X)_t}$ in latent space.
   The gauge group then becomes the indefinite orthogonal group $O(p,q)$.
   Our gauge-theoretic analysis extends naturally to this setting, though we focus on the positive-definite case for clarity.
 ]
+
+=== The alignment problem: an honest assessment <sec:alignment-honest>
+
+We must be candid: *gauge alignment from spectral embeddings alone is a hard open problem* for learning continuous dynamics.
+The methods described above---global synchronization, horizontal lifts, Procrustes flow---provide a theoretical framework and idealized algorithms, but face fundamental challenges in practice.
+
+The core difficulty is not gauge drift from dynamics (which may be zero for horizontal dynamics).
+The problem is that *ASE introduces arbitrary gauge transformations at each time step*:
+$ hat(X)^((t)) = X^((t)) R^((t)) $
+where the $R^((t)) in O(d)$ are essentially random---determined by SVD sign conventions, not by physics.
+Even perfectly smooth true dynamics produce jagged, discontinuous embedding trajectories.
+
+Specific challenges:
+1. *Discontinuous gauge jumps*: The $R^((t))$ can change arbitrarily between consecutive time steps, making finite differences meaningless.
+
+2. *No direct observability*: We never observe $R^((t)}$ or $X^((t)}$ separately---only their product $hat(X)^((t))$.
+
+3. *Statistical noise*: ASE estimates have $O(1\/sqrt(n))$ errors that compound with alignment errors.
+
+Existing joint embedding methods like UASE solve a different problem (the multilayer RDPG) and, as discussed in @sec:why-not-uase, assume a generative model incompatible with the ODE dynamics we aim to learn.
+
+This motivates a different approach: rather than aligning first and learning dynamics second, we propose *joint optimization* where structural assumptions about dynamics help identify and remove the random ASE gauge artifacts.
+
+=== Structure-constrained gauge alignment <sec:structure-constrained>
+
+The core problem is not gauge drift from dynamics---horizontal dynamics produce no such drift.
+The problem is that *ASE introduces arbitrary gauge transformations at each time step*, unrelated to the dynamics.
+
+*The ASE gauge artifact.*
+At each time $t$, ASE computes the eigendecomposition of $A^((t))$ (or $hat(P)^((t))$).
+The eigenvectors are determined only up to sign (and rotation within repeated eigenspaces).
+This means:
+$ hat(X)^((t)) = X^((t)) R^((t)) + E^((t)) $
+where $R^((t)) in O(d)$ is essentially *random*---determined by numerical details of the SVD algorithm, not by the dynamics.
+Even if the true positions $X^((t))$ evolve smoothly, the estimates $hat(X)^((t))$ jump erratically due to these arbitrary gauge choices.
+
+*The alignment goal.*
+We seek gauge corrections $Q_t in O(d)$ such that:
+$ tilde(X)^((t)) := hat(X)^((t)) Q_t approx X^((t)) Q^* $
+for some fixed (unknown) global gauge $Q^*$.
+That is, we want to "undo" the random ASE gauges $R^((t))$, recovering a trajectory that follows the true dynamics up to an overall rotation.
+
+*Why structure helps.*
+Without additional information, the problem is underdetermined: any smooth interpolation through the $hat(X)^((t)}$ could be "correct."
+But if we know (or assume) the dynamics belong to a restricted family $cal(F)$, this provides a constraint.
+The corrected trajectory $tilde(X)^((t))$ should be *explainable* by some $f in cal(F)$.
+Random ASE gauges produce trajectories that require dynamics outside $cal(F)$; correct gauges produce learnable trajectories.
+
+#definition(title: "Joint Alignment-Learning Problem")[
+  Given ASE embeddings ${hat(X)^((t))}_(t=0)^T$ and dynamics family $cal(F)$, find gauge corrections ${Q_t in O(d)}$ and $f in cal(F)$ minimizing:
+  $ cal(L)({Q_t}, f) = sum_(t=0)^(T-1) ||hat(X)^((t+1)) Q_(t+1) - hat(X)^((t)) Q_t - delta t dot f(hat(X)^((t)) Q_t)||_F^2 $
+]
+
+The dynamics family $cal(F)$ acts as regularization: it couples gauge choices across time by requiring the corrected trajectory to be *learnable* within $cal(F)$.
+
+*The tradeoff:*
+- $cal(F)$ too restrictive: true dynamics may not fit, alignment fails
+- $cal(F)$ too expressive (e.g., unconstrained neural network): can fit any trajectory, no constraint on gauges
+
+We now work out the mathematics for a concrete, tractable case.
+
+==== Linear horizontal dynamics <sec:linear-horizontal>
+
+Consider the family of linear dynamics with symmetric coefficient:
+$ cal(F)_("lin") = {dot(X) = N X : N in RR^(n times n), N = N^top} $
+
+The symmetry constraint $N = N^top$ ensures dynamics are *horizontal*---purely observable, with no invisible gauge component (connecting to @thm:invisible and @prop:horizontal-char).
+
+*Discrete-time formulation.*
+For small time step $delta t$, the dynamics $dot(X) = N X$ discretize to:
+$ X^((t+1)) approx (I + delta t dot N) X^((t)) = M X^((t)) $
+where $M = I + delta t dot N$ inherits symmetry from $N$.
+
+*The observation model.*
+True positions evolve as $X^((t+1)) = M X^((t))$ for some fixed symmetric $M$.
+Note: because $M$ is symmetric, the true dynamics are *horizontal*---there is no gauge drift from the dynamics themselves.
+
+ASE gives us $hat(X)^((t)) = X^((t)) R^((t))$ where $R^((t)) in O(d)$ are arbitrary (from SVD sign choices).
+These $R^((t))$ are unrelated across time---they are numerical artifacts, not dynamical.
+
+*The alignment goal.*
+Find $Q_t approx (R^((t)))^(-1)$ (up to a global constant) so that:
+$ tilde(X)^((t)) = hat(X)^((t)) Q_t approx X^((t)) $
+In other words, undo the random ASE gauges to recover the true smooth trajectory.
+
+*The optimization problem.*
+Find gauges ${Q_t}$ and symmetric $M$ minimizing:
+$ cal(L) = sum_(t=0)^(T-1) ||hat(X)^((t+1)) Q_(t+1) - M hat(X)^((t)) Q_t||_F^2 $ <eq:linear-objective>
+
+#proposition(title: "Relative Gauge Reduction")[
+  Define relative gauges $R_t = Q_t^top Q_(t+1)$. The objective @eq:linear-objective depends on ${Q_t}$ only through ${R_t}$ and a global gauge $Q_0$:
+  $ cal(L) = sum_(t=0)^(T-1) ||hat(X)^((t+1)) R_t^top - M hat(X)^((t))||_F^2 $
+  The global gauge $Q_0$ is unidentifiable (reflecting the inherent $O(d)$ freedom); only relative gauges affect the loss.
+]
+
+#proof[
+  $hat(X)^((t+1)) Q_(t+1) - M hat(X)^((t)) Q_t = (hat(X)^((t+1)) R_t^top - M hat(X)^((t))) Q_t$.
+  Since $Q_t$ is orthogonal, $||A Q_t||_F = ||A||_F$.
+]
+
+*Alternating optimization algorithm.*
+
+The non-convex problem decomposes into tractable subproblems:
+
+*Step 1: Fix ${R_t}$, solve for $M$.*
+
+This is least squares with a symmetry constraint:
+$ min_(M = M^top) sum_t ||hat(X)^((t+1)) R_t^top - M hat(X)^((t))||_F^2 $
+
+Stack the data: let $Y = [hat(X)^((1)) R_0^top | dots.c | hat(X)^((T)) R_(T-1)^top]$ and $Z = [hat(X)^((0)) | dots.c | hat(X)^((T-1))]$.
+
+The unconstrained minimizer is $M^* = Y Z^top (Z Z^top)^(-1)$ (assuming $Z Z^top$ is invertible).
+
+Project onto symmetric matrices:
+$ M = (M^* + (M^*)^top) / 2 $
+
+*Step 2: Fix $M$, solve for ${R_t}$.*
+
+For each $t$ independently, solve the orthogonal Procrustes problem:
+$ min_(R_t in O(d)) ||hat(X)^((t+1)) R_t^top - M hat(X)^((t))||_F^2 $
+
+#proposition(title: "Procrustes Solution for Relative Gauges")[
+  Let $A_t = hat(X)^((t))^top M^top hat(X)^((t+1))$ with SVD $A_t = U_t Sigma_t V_t^top$. Then:
+  $ R_t = V_t U_t^top $
+]
+
+#proof[
+  The objective $||hat(X)^((t+1)) R_t^top - M hat(X)^((t))||_F^2$ expands to a constant minus $2 "tr"(R_t A_t^top)$.
+  Maximizing $"tr"(R_t A_t^top)$ over $O(d)$ is the orthogonal Procrustes problem, solved by $R_t = V_t U_t^top$.
+]
+
+*The complete algorithm:*
+
+#figure(
+  kind: "algorithm",
+  supplement: [Algorithm],
+  caption: [Structure-constrained gauge alignment (linear dynamics)],
+  block(width: 100%, inset: 1em, stroke: 0.5pt)[
+    *Input:* Embeddings ${hat(X)^((t))}_(t=0)^T$, tolerance $epsilon$\
+    *Output:* Aligned embeddings ${tilde(X)^((t))}$, dynamics matrix $M$
+
+    1. *Initialize:* $R_t^((0)) <- "Procrustes"(hat(X)^((t)), hat(X)^((t+1)))$ for all $t$
+
+    2. *Repeat until convergence:*
+       - *M-step:* $Y <- [hat(X)^((1)) (R_0^((k)))^top | dots.c ]$, $Z <- [hat(X)^((0)) | dots.c ]$
+       - $M^((k+1)) <- (Y Z^top (Z Z^top)^(-1) + (Y Z^top (Z Z^top)^(-1))^top) / 2$
+       - *R-step:* For each $t$: compute SVD of $hat(X)^((t))^top M^((k+1)) hat(X)^((t+1)) = U Sigma V^top$
+       - $R_t^((k+1)) <- V U^top$
+
+    3. *Recover absolute gauges:* $Q_0 <- I$, $Q_(t+1) <- Q_t R_t$ for $t = 0, ..., T-1$
+
+    4. *Return:* $tilde(X)^((t)) <- hat(X)^((t)) Q_t$, $M$
+  ]
+) <alg:structure-constrained>
+
+==== Why the symmetry constraint helps <sec:why-symmetry-helps>
+
+Without requiring $M = M^top$, the problem decouples: each $R_t$ could be chosen via pairwise Procrustes independently, and we'd simply fit the best (possibly asymmetric) $M$ afterward.
+This recovers the naive approach that fails---it aligns consecutive frames but doesn't use the global structure to identify the random ASE gauge artifacts.
+
+The symmetry constraint *couples gauge choices globally* and forces recovery of the true gauges.
+The key insight: random ASE gauge errors $R^((t))$ introduce apparent "gauge velocity" that is skew-symmetric, while true horizontal dynamics are symmetric.
+The constraint that dynamics fit symmetric $N$ implicitly enforces $Q_t approx (R^((t)))^(-1)$.
+We now make this precise.
+
+#theorem(title: "Gauge Velocity Contamination")[
+  Let $X(t)$ follow true dynamics $dot(X) = N X$ with $N = N^top$.
+  Let $tilde(X) = X S$ for some time-varying gauge error $S(t) in O(d)$.
+  Then the apparent dynamics in the $tilde(X)$ frame are:
+  $ dot(tilde(X)) = N tilde(X) + tilde(X) Omega $
+  where $Omega = S^(-1) dot(S) in frak(s o)(d)$ is skew-symmetric.
+
+  Moreover, this can be written as $dot(tilde(X)) = tilde(N) tilde(X)$ for some symmetric $tilde(N)$ if and only if $Omega = 0$.
+] <thm:gauge-contamination>
+
+#proof[
+  By the product rule:
+  $ dot(tilde(X)) = dot(X) S + X dot(S) = N X S + X dot(S) $
+
+  Since $S in O(d)$, we have $S S^top = I$, so $X = tilde(X) S^(-1)$. Substituting:
+  $ dot(tilde(X)) = N tilde(X) S^(-1) S + tilde(X) S^(-1) dot(S) = N tilde(X) + tilde(X) Omega $
+
+  where $Omega = S^(-1) dot(S)$. Since $S S^top = I$, differentiating gives $dot(S) S^top + S dot(S)^top = 0$, so $dot(S) S^top = -S dot(S)^top$. Thus:
+  $ Omega^top = (S^(-1) dot(S))^top = dot(S)^top (S^(-1))^top = dot(S)^top S = -(dot(S) S^top)^top S = -S^top dot(S) S^top S = -S^top dot(S) $
+
+  And $Omega = S^top dot(S) = -Omega^top$, confirming $Omega in frak(s o)(d)$.
+
+  For the second claim, suppose $dot(tilde(X)) = tilde(N) tilde(X)$ with $tilde(N) = tilde(N)^top$.
+  Then $tilde(X)^top dot(tilde(X)) = tilde(X)^top tilde(N) tilde(X)$ is symmetric (as $tilde(N)$ is symmetric and $tilde(X)^top tilde(N) tilde(X)$ is a congruence).
+
+  But from our expression:
+  $ tilde(X)^top dot(tilde(X)) = tilde(X)^top N tilde(X) + tilde(X)^top tilde(X) Omega $
+
+  The first term $tilde(X)^top N tilde(X)$ is symmetric (since $N$ is).
+  The second term $(tilde(X)^top tilde(X)) Omega$ is the product of a symmetric positive-definite matrix and a skew-symmetric matrix.
+
+  If $B$ is symmetric positive-definite and $Omega$ is skew-symmetric, then $(B Omega)^top = Omega^top B = -Omega B$.
+  For $B Omega$ to be symmetric, we need $B Omega = -Omega B$, i.e., $B Omega + Omega B = 0$.
+  Since $B$ is positive-definite, this holds only if $Omega = 0$.
+
+  Thus $tilde(X)^top dot(tilde(X))$ symmetric implies $Omega = 0$, i.e., $S$ is constant (no gauge drift).
+]
+
+#corollary[
+  The constraint that learned dynamics have the form $dot(X) = N X$ with $N$ symmetric automatically enforces horizontal alignment (no gauge velocity contamination).
+]
+
+This theorem explains the mechanism: random ASE gauge artifacts $R^((t))$ introduce skew-symmetric contamination $tilde(X) Omega$ that cannot be absorbed into symmetric $N$. The joint optimization, by requiring symmetric dynamics, implicitly selects $Q_t approx (R^((t)))^(-1)$---exactly the gauges that remove the ASE artifacts.
+
+==== Extension to gauge-invariant dynamics <sec:gauge-invariant-dynamics>
+
+The analysis extends beyond linear dynamics. Consider any dynamics of the form:
+$ dot(X) = N(P) X quad "where" N(P) = N(P)^top $
+with $N$ depending on $P = X X^top$ (which is gauge-invariant: $tilde(P) = tilde(X) tilde(X)^top = X S S^top X^top = X X^top = P$).
+
+#proposition[
+  For dynamics $dot(X) = N(P) X$ with $N(P)$ symmetric, the gauge velocity contamination analysis applies unchanged: wrong gauges produce apparent dynamics $dot(tilde(X)) = N(P) tilde(X) + tilde(X) Omega$ with skew $Omega$, which cannot be fit by symmetric dynamics.
+]
+
+*Examples of gauge-invariant symmetric dynamics:*
+
+1. *Polynomial:* $N(P) = sum_(k=0)^K alpha_k P^k$ (symmetric since $P$ is)
+
+2. *Spectral:* $N(P) = sum_(i=1)^n phi(lambda_i) Pi_i$ where $P = sum_i lambda_i Pi_i$ is the spectral decomposition
+
+3. *Heat kernel:* $N(P) = e^(beta P) - I$ (matrix exponential of symmetric is symmetric)
+
+4. *Graph Laplacian:* $N(P) = D - P$ where $D = "diag"(P bold(1))$ is the degree matrix
+
+All of these automatically enforce horizontal alignment when used as the dynamics family $cal(F)$.
+
+#proposition(title: "Identifiability under Generic Dynamics")[
+  Suppose the true dynamics $M^*$ has distinct eigenvalues and the true trajectory ${X^((t))}$ spans $RR^n$ (i.e., $[X^((0)) | dots.c | X^((T-1))]$ has full row rank).
+  Then the gauges ${Q_t}$ are identifiable up to a global $O(d)$ transformation: any minimizer of @eq:linear-objective satisfies $Q_t = Q^* R_t^*$ for some fixed $Q^* in O(d)$.
+]
+
+#proof[
+  (Sketch) If $M$ is symmetric with distinct eigenvalues, its eigenspaces are one-dimensional.
+  The constraint $hat(X)^((t+1)) R_t^top = M hat(X)^((t))$ for all $t$, combined with the trajectory spanning $RR^n$, determines $M$ uniquely.
+  Given $M$, each $R_t$ is determined by the Procrustes problem (unique for generic data).
+  The only remaining freedom is the choice of $Q_0$, which propagates as a global transformation.
+]
+
+==== Extensions and limitations <sec:extensions-limitations>
+
+*Polynomial dynamics.*
+The linear case extends to polynomial dynamics $dot(X) = N(P) X$ where $N(P) = sum_(k=0)^K alpha_k P^k$.
+Since $P = P^top$, we have $N(P) = N(P)^top$, ensuring horizontal dynamics.
+
+The discrete formulation becomes:
+$ X^((t+1)) approx M(P^((t))) X^((t)), quad M(P) = I + delta t sum_(k=0)^K alpha_k P^k $
+
+The key observation is that $P^((t)) = hat(X)^((t)) Q_t Q_t^top hat(X)^((t) top) = hat(X)^((t)) hat(X)^((t) top)$ is *gauge-invariant*.
+Thus we can compute $P^((t))$ directly from the (unaligned) embeddings.
+
+The optimization becomes:
+$ min_({R_t}, {alpha_k}) sum_(t=0)^(T-1) ||hat(X)^((t+1)) R_t^top - M(P^((t))) hat(X)^((t))||_F^2 $
+
+*Alternating optimization for polynomial case:*
+- *$alpha$-step (fix ${R_t}$):* Linear regression. With $Y_t = hat(X)^((t+1)) R_t^top - hat(X)^((t))$ and features $Phi_t^((k)) = (P^((t)))^k hat(X)^((t))$, solve:
+  $ min_({alpha_k}) sum_t ||Y_t - delta t sum_k alpha_k Phi_t^((k))||_F^2 $
+  This is ordinary least squares in the coefficients ${alpha_k}$.
+
+  *Closed-form solution:* Define Gram matrix $G in RR^((K+1) times (K+1))$ and target vector $b in RR^(K+1)$:
+  $ G_(k j) = sum_t chevron.l Phi_t^((k)), Phi_t^((j)) chevron.r_F, quad b_k = sum_t chevron.l Phi_t^((k)), Y_t chevron.r_F $
+  Then $alpha = G^(-1) b \/ delta t$.
+
+- *$R$-step (fix ${alpha_k}$):* Same Procrustes subproblems as the linear case.
+  For each $t$: compute $M(P^((t))) = I + delta t sum_k alpha_k (P^((t)))^k$, then SVD of $hat(X)^((t) top) M(P^((t)))^top hat(X)^((t+1)) = U Sigma V^top$, and set $R_t = V U^top$.
+
+#figure(
+  kind: "algorithm",
+  supplement: [Algorithm],
+  caption: [Structure-constrained alignment for polynomial dynamics],
+  block(width: 100%, inset: 1em, stroke: 0.5pt)[
+    *Input:* Embeddings ${hat(X)^((t))}_(t=0)^T$, polynomial degree $K$, tolerance $epsilon$\
+    *Output:* Aligned embeddings ${tilde(X)^((t))}$, coefficients ${alpha_k}_(k=0)^K$
+
+    1. *Precompute:* $P^((t)) <- hat(X)^((t)) hat(X)^((t) top)$ for all $t$ (gauge-invariant!)
+
+    2. *Initialize:* $R_t^((0)) <- "Procrustes"(hat(X)^((t)), hat(X)^((t+1)))$ for all $t$
+
+    3. *Repeat until $|cal(L)^((k)) - cal(L)^((k-1))| < epsilon$:*
+       - *$alpha$-step:*
+         - $Y_t <- hat(X)^((t+1)) (R_t^((k)))^top - hat(X)^((t))$ for all $t$
+         - $Phi_t^((j)) <- (P^((t)))^j hat(X)^((t))$ for all $t, j$
+         - $G_(k j) <- sum_t "tr"(Phi_t^((k) top) Phi_t^((j)))$; $b_k <- sum_t "tr"(Phi_t^((k) top) Y_t)$
+         - $alpha^((k+1)) <- G^(-1) b \/ delta t$
+       - *$R$-step:* For each $t$:
+         - $M <- I + delta t sum_j alpha_j^((k+1)) (P^((t)))^j$
+         - SVD: $hat(X)^((t) top) M^top hat(X)^((t+1)) = U Sigma V^top$
+         - $R_t^((k+1)) <- V U^top$
+
+    4. *Recover absolute gauges:* $Q_0 <- I$, $Q_(t+1) <- Q_t R_t$ for $t = 0, ..., T-1$
+
+    5. *Return:* $tilde(X)^((t)) <- hat(X)^((t)) Q_t$, ${alpha_k}$
+  ]
+) <alg:polynomial>
+
+*Identifiability analysis for polynomial dynamics.*
+A critical question: does the polynomial constraint actually identify the correct gauges, or might there be spurious solutions?
+
+Since $P^((t))$ is gauge-invariant, choosing ${alpha_k}$ completely determines $M(P^((t))) = I + delta t sum_k alpha_k (P^((t)))^k$ for each $t$.
+The $R$-step then asks: does there exist $R_t in O(d)$ such that $hat(X)^((t+1)) R_t^top = M(P^((t))) hat(X)^((t))$?
+
+For the *true* coefficients ${alpha_k^*}$, this equation holds exactly (with $R_t$ undoing the ASE gauge jumps).
+For *wrong* coefficients, $M(P^((t))) hat(X)^((t))$ is generically *not* a rotation of $hat(X)^((t+1)}$ in the $d$-dimensional column space, so Procrustes yields nonzero residual.
+
+*Why the constraint helps:*
+The requirement that the *same* ${alpha_k}$ must work for *all* time steps is restrictive when $P^((t))$ varies.
+Different $P^((t))$ produce different $M(P^((t)})$, each imposing constraints on the coefficients.
+
+#proposition(title: "Coefficient Identifiability from Varying P")[
+  Suppose the matrices ${(P^((0)))^k, (P^((1)))^k, ..., (P^((T-1)))^k}_(k=0)^K$ are such that the system of equations
+  $ sum_(k=0)^K alpha_k (P^((t)))^k hat(X)^((t)) = hat(X)^((t+1)) R_t^top quad "for" t = 0, ..., T-1 $
+  is overdetermined in ${alpha_k}$ when the ${R_t}$ are fixed.
+  Then for generic data, the coefficients ${alpha_k}$ are determined (given correct gauges), and wrong gauges produce coefficient estimates inconsistent across time.
+]
+
+*Failure modes:*
+
+1. *Slowly varying $P^((t))$:* If $P^((t)) approx P$ for all $t$, the matrices $(P^((t)))^k$ are approximately constant.
+   Different polynomial coefficients give similar $M(P)$, and the system becomes underdetermined.
+   _Remedy:_ Use longer time series with larger spacing, or use trajectories with significant $P$ variation.
+
+2. *Short time series:* With $T <= K + 1$ time transitions, the polynomial coefficients are underdetermined even with varying $P$.
+   _Remedy:_ Require $T >> K + 1$.
+
+3. *Low embedding dimension:* For $d = 1$, gauges are signs ($plus.minus 1$), giving $2^T$ discrete possibilities.
+   The polynomial constraint may not distinguish all sign sequences.
+   _Remedy:_ Use higher-order constraints or cross-validation.
+
+4. *Degenerate configurations:* If the trajectory $hat(X)^((t))$ lies in a low-dimensional subspace, Procrustes may have non-unique solutions.
+   _Remedy:_ Verify rank conditions; use regularization.
+
+*The core mechanism (restated):*
+ASE introduces gauge errors $R^((t)) in O(d)$ that are essentially "random" (determined by eigendecomposition conventions, not dynamics).
+The true trajectory $X^((t))$ satisfies $X^((t+1)) = M^*(P^((t))) X^((t))$.
+In scrambled coordinates: $hat(X)^((t+1)) = M^*(P^((t))) hat(X)^((t)) S^((t))$ where $S^((t)) = R^((t)) (R^((t+1)))^(-1)$.
+
+The joint optimization seeks ${R_t}$ undoing the $S^((t))$ and ${alpha_k}$ matching the true $M^*$.
+For wrong ${alpha_k}$, the Procrustes residuals are generically nonzero.
+The alternating algorithm descends toward solutions with small residual, which (under the conditions above) correspond to correct gauges and coefficients.
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    align: (left, center, left),
+    stroke: none,
+    table.hline(),
+    table.header([*Condition*], [*Risk*], [*Mitigation*]),
+    table.hline(stroke: 0.5pt),
+    [$P^((t))$ nearly constant], [High], [Larger $delta t$; longer $T$],
+    [$T <= K + 1$], [High], [Use lower-degree polynomial or more data],
+    [$d = 1$], [Medium], [Cross-validate; multiple restarts],
+    [Noise $>> $ signal], [Medium], [Larger $n$; regularization],
+    [Local minima], [Medium], [Good initialization; multiple restarts],
+    table.hline()
+  ),
+  caption: [Identifiability risks and mitigations for polynomial dynamics.]
+) <tab:poly-identifiability>
+
+*Message-passing dynamics.*
+Message-passing dynamics have the form:
+$ dot(x)_i = sum_j P_(i j) g(x_i, x_j) $
+where $g: RR^d times RR^d -> RR^d$ specifies how node $j$ influences node $i$.
+This is a strong structural constraint: node $i$'s velocity depends only on local information $(x_i, {x_j : P_(i j) > 0})$.
+
+*Important special cases that yield horizontal dynamics:*
+
+1. *Neighbor attraction:* $g(x_i, x_j) = x_j$
+   $ dot(x)_i = sum_j P_(i j) x_j = (P X)_i $
+   In matrix form: $dot(X) = P X$, which is $N = P$ (symmetric since $P = P^top$). ✓
+
+2. *Laplacian diffusion:* $g(x_i, x_j) = x_j - x_i$
+   $ dot(x)_i = sum_j P_(i j) (x_j - x_i) = (P X)_i - d_i x_i $
+   where $d_i = sum_j P_(i j)$. In matrix form: $dot(X) = (P - D) X = -L X$ where $L = D - P$ is the graph Laplacian. Since $L = L^top$, this is horizontal. ✓
+
+3. *Heat kernel:* $g(x_i, x_j) = (e^(beta P) - I)_(i j) x_j \/ P_(i j)$ (when $P_(i j) > 0$)
+   Gives $dot(X) = (e^(beta P) - I) X$, symmetric for $beta in RR$. ✓
+
+*General linear message-passing.*
+Consider $g(x_i, x_j) = W x_j$ for some $W in RR^(d times d)$:
+$ dot(X) = P X W $
+
+This mixes rows (via $P$) and columns (via $W$). For this to be horizontal, we need the induced $N$ to be symmetric.
+
+If $W = w I$ for scalar $w$, then $dot(X) = w P X$, which is $N = w P$ (symmetric). ✓
+
+For general $W$, the dynamics $dot(X) = P X W$ are *not* of the form $dot(X) = N X$ with $N$ acting on rows only.
+However, if we vectorize: $"vec"(dot(X)) = (W^top times.o P) "vec"(X)$, and $(W^top times.o P)$ is symmetric iff both $W$ and $P$ are symmetric.
+
+*The structural constraint for gauge identification.*
+Message-passing enforces that velocity at node $i$ is determined by *local* information.
+Random ASE gauge errors $R^((t))$ introduce *global* correlations that violate this structure.
+
+#proposition(title: "Gauge Contamination in Message-Passing")[
+  Let $X(t)$ follow message-passing dynamics $dot(x)_i = sum_j P_(i j) g(x_i, x_j)$.
+  Let $tilde(X) = X S$ for time-varying gauge $S(t) in O(d)$.
+  Then the apparent dynamics in the $tilde(X)$ frame are:
+  $ dot(tilde(x))_i = sum_j P_(i j) g(tilde(x)_i S^(-1), tilde(x)_j S^(-1)) S + tilde(x)_i Omega $
+  where $Omega = S^(-1) dot(S) in frak(s o)(d)$.
+
+  The second term $tilde(x)_i Omega$ is a *global* contribution (same $Omega$ for all nodes) that does not factor through the message-passing structure.
+]
+
+This means: with wrong gauges, the "apparent velocities" include a global skew-symmetric component that cannot be explained by any local message-passing rule.
+
+*Joint optimization for parameterized message-passing.*
+When $g = g_theta$ is parameterized (e.g., a small neural network), we optimize:
+$ min_({Q_t}, theta) sum_(t=0)^(T-1) sum_(i=1)^n ||tilde(x)_i^((t+1)) - tilde(x)_i^((t)) - delta t sum_j P_(i j)^((t)) g_theta(tilde(x)_i^((t)), tilde(x)_j^((t)))||^2 $
+where $tilde(x)_i^((t)) = (hat(X)^((t)) Q_t)_(i dot)$.
+
+*Algorithm for message-passing dynamics:*
+
+Unlike the polynomial case, there's no closed-form solution for the $theta$-step. We use gradient-based optimization:
+
+#figure(
+  kind: "algorithm",
+  supplement: [Algorithm],
+  caption: [Structure-constrained alignment for message-passing dynamics],
+  block(width: 100%, inset: 1em, stroke: 0.5pt)[
+    *Input:* Embeddings ${hat(X)^((t))}_(t=0)^T$, message-passing architecture $g_theta$\
+    *Output:* Aligned embeddings ${tilde(X)^((t))}$, learned parameters $theta$
+
+    1. *Initialize:* $Q_t^((0)) <- product_(s=0)^(t-1) "Procrustes"(hat(X)^((s)), hat(X)^((s+1)))$ (chained pairwise)
+       $theta^((0)) <-$ random initialization
+
+    2. *Repeat until convergence:*
+       - *$theta$-step:* Gradient descent on $theta$ with ${Q_t}$ fixed:
+         $ theta^((k+1)) <- theta^((k)) - eta nabla_theta cal(L)({Q_t^((k))}, theta^((k))) $
+       - *$Q$-step:* For each $t$, optimize $Q_t$ on $O(d)$ manifold:
+         $ Q_t^((k+1)) <- arg min_(Q in O(d)) cal(L)_t(Q; theta^((k+1)), {Q_(s != t)^((k))}) $
+         (via Riemannian gradient descent or Procrustes-like update)
+
+    3. *Return:* $tilde(X)^((t)) <- hat(X)^((t)) Q_t$, $theta$
+  ]
+) <alg:message-passing>
+
+*Why message-passing constrains gauges (intuition):*
+
+Consider two scenarios:
+- *Correct gauges:* $tilde(X)^((t)) approx X^((t))$. The velocity $tilde(x)_i^((t+1)) - tilde(x)_i^((t))$ truly depends only on local neighbors. The message-passing model fits well.
+- *Wrong gauges:* The gauge error $S^((t)) = R^((t)} Q_t$ varies with $t$. The apparent velocity includes $tilde(x)_i Omega^((t))$ which is the *same* for all nodes (given their current position). This global coherence cannot be captured by local message-passing.
+
+The message-passing loss will be higher for wrong gauges because it cannot fit the global gauge-velocity component.
+
+*Horizontal message-passing as a special case.*
+When $g(x_i, x_j) = g(x_j, x_i)$ (symmetric interaction) and the aggregation is linear:
+$ dot(x)_i = sum_j P_(i j) h(x_j) $
+for some $h: RR^d -> RR^d$, we can write $dot(X) = P H(X)$ where $H(X)$ applies $h$ row-wise.
+
+For $h(x) = W x$ with $W = W^top$, we get $dot(X) = P X W$, and if additionally $W = I$, this reduces to $dot(X) = P X$---the polynomial case with $alpha_0 = 0, alpha_1 = 1$.
+
+#remark[
+  The polynomial case $N(P) = sum_k alpha_k P^k$ is a *subset* of message-passing dynamics.
+  Specifically, $(P^k X)_i = sum_j (P^k)_(i j) x_j$ sums over $k$-hop neighbors.
+  Message-passing with general $g_theta$ can capture *nonlinear* local interactions that polynomials cannot.
+]
+
+==== Summary: Three dynamics families <sec:dynamics-families-summary>
+
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    align: (left, left, left, left),
+    stroke: none,
+    table.hline(),
+    table.header([*Family*], [*Form*], [*Parameters*], [*Algorithm*]),
+    table.hline(stroke: 0.5pt),
+    [Linear],
+    [$dot(X) = N X$, $N = N^top$],
+    [$n(n+1)/2$ entries of $N$],
+    [Closed-form alternating (@alg:structure-constrained)],
+
+    [Polynomial],
+    [$dot(X) = (sum_k alpha_k P^k) X$],
+    [$K + 1$ coefficients],
+    [Closed-form alternating (@alg:polynomial)],
+
+    [Message-passing],
+    [$dot(x)_i = sum_j P_(i j) g_theta(x_i, x_j)$],
+    [$|theta|$ (neural net)],
+    [Gradient-based (@alg:message-passing)],
+    table.hline()
+  ),
+  caption: [Comparison of dynamics families for structure-constrained alignment.]
+) <tab:dynamics-families>
+
+*Key tradeoffs:*
+
+- *Linear:* Most general symmetric dynamics, but $O(n^2)$ parameters. Best when dynamics don't factor through $P$.
+
+- *Polynomial:* Parsimonious ($K + 1$ parameters), closed-form updates, gauge-invariant features. Best when dynamics depend on network structure through powers of $P$.
+
+- *Message-passing:* Most expressive (nonlinear local interactions), but requires gradient-based optimization and risks overfitting. Best for complex local dynamics.
+
+*Gauge identification strength:*
+
+All three families enforce *symmetric* or *local* structure that random ASE gauges violate.
+- Linear/polynomial: Wrong gauges produce asymmetric $N$ or inconsistent $alpha_k$ across time.
+- Message-passing: Wrong gauges produce global velocity correlations that local $g$ cannot fit.
+
+The polynomial family offers the best balance: parsimonious, closed-form, and leverages the gauge-invariance of $P$ to separate the alignment problem from coefficient estimation.
+
+*Convergence.*
+The alternating optimization decreases the objective at each step (both subproblems have closed-form solutions that achieve the global optimum given the other variables fixed).
+Thus the algorithm converges to a stationary point.
+However, the overall problem is non-convex, so we cannot guarantee convergence to the global optimum.
+
+#proposition(title: "Monotonic Decrease")[
+  Let $cal(L)^((k))$ denote the objective value after iteration $k$ of @alg:structure-constrained.
+  Then $cal(L)^((k+1)) <= cal(L)^((k))$, with equality if and only if $(M^((k)), {R_t^((k))})$ is a stationary point.
+]
+
+Good initialization is crucial.
+Starting from pairwise Procrustes alignments (ignoring the symmetry constraint) provides a reasonable warm start.
+Multiple random restarts can help escape poor local minima.
+
+*Limitations.*
+1. *Model mismatch:* If true dynamics lie outside $cal(F)$, the method may find spurious alignments or fail to converge.
+2. *Local minima:* The alternating optimization is non-convex; good initialization (e.g., from pairwise Procrustes) is important.
+3. *Sample complexity:* With few time points or high noise, the constraint may be insufficient to determine gauges.
+4. *Computational cost:* Each iteration requires $T$ SVDs of $d times d$ matrices (cheap) and one $n times n$ linear solve (more expensive for large $n$).
+
+#remark[
+  This approach inverts the usual pipeline: rather than "align then learn," we "learn to align."
+  The dynamics model provides the inductive bias needed to resolve gauge ambiguity.
+  This is philosophically similar to how physical constraints (symmetries, conservation laws) help identify coordinates in physics.
+]
+
+==== Effect of noise <sec:noise-analysis>
+
+In practice, we observe adjacency matrices $A^((t))$ from which we estimate $hat(X)^((t))$ via ASE.
+These estimates have error: $hat(X)^((t)) = X^((t)) R^((t)) + E^((t))$ where $R^((t)) in O(d)$ is the gauge ambiguity and $E^((t))$ is statistical noise.
+
+Under standard RDPG asymptotics @athreya2017statistical, the rows of $E^((t))$ satisfy:
+$ ||E^((t))_(i dot)|| = O_p(1\/sqrt(n)) $
+with the noise being approximately Gaussian for large $n$.
+
+*Impact on structure-constrained alignment:*
+
+The objective becomes:
+$ cal(L) = sum_t ||(X^((t+1)) R^((t+1)) + E^((t+1))) Q_(t+1) - M (X^((t)) R^((t)) + E^((t))) Q_t||_F^2 $
+
+At the true solution ($Q_t = (R^((t)))^(-1)$ and $M = M^*$), the residual is:
+$ cal(L)^* = sum_t ||E^((t+1)) (R^((t+1)))^(-1) - M^* E^((t)) (R^((t)))^(-1)||_F^2 = O_p(n \/ n) = O_p(1) $
+
+The noise contributes $O(1\/sqrt(n))$ per entry, summed over $n$ nodes, giving $O(1)$ total.
+
+*Key insight:* The structure constraint helps *even with noise* because:
+1. Noise is isotropic (no preferred gauge direction)
+2. The symmetry constraint on $M$ averages over many node pairs
+3. Wrong gauges produce *systematic* asymmetry in $M$, distinguishable from random noise
+
+However, for small $n$ or large noise, the signal (symmetry violation from wrong gauge) may be overwhelmed by noise.
+A rough requirement is that the gauge-induced asymmetry exceeds noise:
+$ ||M^* - M^("wrong")||_F >> ||E||_F \/ ||X||_F approx 1\/sqrt(n) $
 
 == Dynamics in Latent Space and Gauge Freedom <sec:gauge>
 
@@ -364,6 +1156,17 @@ A natural question arises: given that some dynamics are invisible, can we still 
   Given $dot(P)$ and $X$, the vector field $f(X)$ is uniquely determined up to gauge:
   $ f(X) = F + X A $
   where $F$ is any solution to $dot(P) = F X^top + X F^top$ and $A in so(d)$ is arbitrary.
+] <thm:identifiability>
+
+#proof[
+  Consider the linear map $cal(L): RR^(n times d) -> RR^(n times n)$ defined by $cal(L)(F) = F X^top + X F^top$.
+  The equation $dot(P) = cal(L)(f(X))$ determines $f(X)$ up to elements of $ker(cal(L))$.
+
+  By @thm:invisible, $F in ker(cal(L))$ if and only if $F = X A$ for some skew-symmetric $A in so(d)$.
+  Thus if $F_1$ and $F_2$ both satisfy $dot(P) = F_i X^top + X F_i^top$, then $F_1 - F_2 in ker(cal(L))$, so $F_1 = F_2 + X A$ for some $A in so(d)$.
+
+  To show existence: the image of $cal(L)$ consists of symmetric matrices in the row/column space of $X$.
+  Since $dot(P) = dot(X) X^top + X dot(X)^top$ is symmetric and $dot(X)$ lies in this space (being a velocity of positions), $dot(P) in "im"(cal(L))$.
 ]
 
 #theorem(title: "Gauge Equivalence")[
@@ -448,10 +1251,10 @@ For RDPG dynamics, gauge theory (@sec:gauge) suggests a particularly elegant for
 
 #proof[
   Define $N(X) := f(X) X^dagger$ where $X^dagger = (X^top X)^(-1)X^top$ is the Moore-Penrose pseudoinverse.
-
+  
   For equivariance, we require $f(X Q) = f(X)Q$ for all $Q in O(d)$. Then:
   $ N(X Q) = f(X Q)(X Q)^dagger = f(X)Q (Q^top X^dagger) = f(X) X^dagger = N(X) $
-
+  
   So $N$ is constant on $O(d)$-orbits. Since orbits are indexed by $P = X X^top$ (two matrices $X, tilde(X)$ lie on the same orbit iff $X X^top = tilde(X) tilde(X)^top$), we have $N = N(P)$.
 ]
 
@@ -465,13 +1268,13 @@ The key question is: how should we constrain $N$ to eliminate gauge freedom?
 
 #proof[
   For $X = I_d$ (taking $n = d$), we have $N = A$, which is skew-symmetric.
-
+  
   For general $X$ with thin SVD $X = U Sigma V^top$, we get:
   $ N = X A X^dagger = U Sigma V^top A V Sigma^(-1) U^top = U B U^top $
   where $B = Sigma(V^top A V)Sigma^(-1)$.
-
+  
   Since $V^top A V$ is skew-symmetric (as $A$ is) and $Sigma$ generically has distinct singular values, the conjugation by $Sigma$ and $Sigma^(-1)$ breaks the skew-symmetry: $B != B^top$ unless $A = 0$.
-
+  
   Thus $N = U B U^top$ is neither symmetric nor skew-symmetric for generic $X$ and nonzero $A$.
 ]
 
@@ -769,12 +1572,25 @@ _What can we learn?_ All dynamics except uniform rotation around the origin (@th
 _What architecture respects the structure?_ The form $dot(X) = N(P)X$ with symmetric $N$ (@thm:symmetric).
 These results inform both architecture design and interpretation of learned models.
 
+*The gauge alignment challenge.*
+We must be candid about a central difficulty: ASE introduces arbitrary gauge transformations at each time step---random $R^((t)) in O(d)$ from SVD sign ambiguity---that are unrelated to the dynamics.
+Even if true dynamics are perfectly smooth, the embedding trajectory $hat(X)^((t))$ jumps erratically.
+Existing joint embedding methods like UASE (@sec:why-not-uase) assume generative models incompatible with ODE dynamics on latent positions---they model time-varying "activity" against fixed "identity," not evolving positions.
+
+*Structure-constrained alignment as a path forward.*
+Our proposed solution (@sec:structure-constrained) uses dynamics structure to identify and remove the random ASE gauge artifacts.
+The key insight: random gauge errors introduce skew-symmetric "contamination" that cannot be fit by symmetric dynamics (@thm:gauge-contamination).
+By jointly optimizing over gauges and dynamics with symmetry constraints, we implicitly find $Q_t approx (R^((t)))^(-1)$---the corrections that undo ASE artifacts.
+For linear horizontal dynamics ($dot(X) = N X$ with $N$ symmetric), we derive an alternating algorithm with closed-form steps and identifiability guarantees under generic conditions.
+
+This is philosophically similar to how physical constraints help identify coordinates: we don't try to solve the alignment problem in isolation, but let the dynamics model guide the choice of gauge.
+
 *Practical obstructions.*
 Beyond the theoretical gauge freedom, practical challenges include:
 (i) estimation error in $hat(X)$ from SVD ($approx$35% position error, though $hat(P)$ has only $approx$5% error);
-(ii) Procrustes alignment artifacts that can introduce spurious motion or remove real motion resembling global rotation;
+(ii) finite-sample gauge jumps that make $dot(hat(X))$ undefined;
 (iii) discrete, noisy observations rather than continuous $P(t)$.
-These factors may explain why some dynamics (e.g., circulation) are harder to learn than others (e.g., attraction/repulsion).
+The structure-constrained approach addresses (ii) by construction, but (i) and (iii) remain fundamental limitations of spectral methods.
 
 *Evaluation in $P$-space.*
 The gauge freedom implies that $X$-based metrics (e.g., position RMSE) are coordinate-dependent and potentially misleading.
@@ -797,6 +1613,13 @@ The polynomial $N(P)X$ form, while parsimonious, may be too restrictive for dyna
 For such cases, the kernel or general symmetric architectures provide a middle ground.
 Additionally, all methods rely on accurate RDPG embedding, which introduces estimation error ($approx$35% in positions, though only $approx$5% in probabilities).
 
+*Open problems.*
+Several important questions remain:
+1. *Sample complexity:* How many time points $T$ and nodes $n$ are needed for reliable structure-constrained alignment?
+2. *Model selection:* How to choose the dynamics family $cal(F)$ when the true form is unknown? Cross-validation on held-out time points may help.
+3. *Beyond linear:* Can the alternating optimization approach extend efficiently to nonlinear dynamics families?
+4. *Theoretical guarantees:* Under what conditions does the alternating algorithm converge to the global optimum?
+
 *Extensions.*
 The UDE framework (@sec:ude) enables incorporating domain knowledge.
 For ecological networks, one might encode known trophic interactions in $N_("known")$ while learning corrections.
@@ -805,14 +1628,25 @@ The theory extends to directed graphs (@app:directed), where $P = L R^top$ with 
 
 = Conclusion
 
-We introduced a framework that transforms the problem of temporal network modeling from discrete event prediction to continuous dynamical systems analysis.
-The gauge-theoretic analysis reveals that RDPG embeddings have inherent rotational ambiguity, but we identify a broad class of observable dynamics and derive architectures that are gauge-consistent by construction.
+We introduced a framework for learning interpretable dynamics of temporal networks, grounded in gauge-theoretic analysis of Random Dot Product Graphs.
 
-The parsimonious $dot(X) = N(P)X$ form with symmetric $N$ achieves two goals simultaneously: it eliminates ambiguity about what the model can learn, and it reduces parameters by orders of magnitude while maintaining or improving accuracy.
-When the true dynamics have this form, the polynomial parameterization can recover exact coefficients---a level of interpretability that post-hoc symbolic regression cannot match.
+*What we established:*
+The RDPG embedding has inherent $O(d)$ rotational ambiguity (gauge freedom).
+We characterized which dynamics are observable versus invisible under this symmetry: uniform rotations leave the probability matrix $P = X X^top$ unchanged and cannot be detected.
+The architecture $dot(X) = N(P)X$ with symmetric $N$ is gauge-consistent by construction---it cannot produce invisible dynamics---and enables dramatic parameter reduction compared to generic neural networks.
 
-Our approach produces interpretable differential equations governing network evolution, enabling both prediction and mechanistic insight.
-The open-source implementation facilitates application to new domains.
+*What remains challenging:*
+Aligning spectral embeddings across time to learn continuous dynamics is a hard open problem.
+Existing joint embedding methods (UASE, Omnibus) assume generative models incompatible with ODE dynamics on latent positions.
+We proposed structure-constrained alignment---joint optimization over gauges and dynamics using structural assumptions as regularization---and derived algorithms with identifiability guarantees for restricted dynamics families.
+This transforms the underdetermined problem into a tractable one, but practical effectiveness depends on having appropriate inductive bias and sufficient data.
+
+*The path forward:*
+Learning continuous dynamics from discrete network snapshots requires either (a) working directly in gauge-invariant spaces (e.g., on $P$ rather than $X$), or (b) using dynamics structure to regularize gauge choice.
+We developed the mathematical foundations for approach (b) and showed it can work for linear horizontal dynamics.
+Extension to more expressive dynamics families, characterization of sample complexity, and empirical validation on real temporal networks remain important directions.
+
+Our approach produces interpretable differential equations governing network evolution, enabling both prediction and mechanistic insight---provided the gauge alignment challenge is adequately addressed for the dynamics class of interest.
 
 = Acknowledgments
 
