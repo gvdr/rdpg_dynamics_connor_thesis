@@ -342,25 +342,23 @@ We recall this geometry here, adapting it to the RDPG setting where the connecti
 
 === Why fiber bundles?
 
-A useful analogy is the relationship between the Earth's surface and its coordinates.
-Every point on the globe has a definite physical location, but many different coordinate systems (map projections) can describe it.
-Choosing coordinates is necessary for computation, but the choice is arbitrary and unreleated to the dynamic: it's a "gauge" choice.
-Different observers using different maps will describe the same journey differently, and must reconcile their descriptions when they meet.
+In a dynamic RDPG setting we have a latent structure $X$ that evolves in time following a certain regime. Yet, we do observe only a function of $X$ which leaks information: we sample graphs from the probability of interaction matrix $P(t) = X(t) X(t)^top$, which we know it's invariant under $O(d)$ rotations.
 
-The RDPG situation is similar.
-The observable quantity $P = X X^top$ is like the physical location: it's what we can measure.
-The latent configuration $X$ is like a choice of coordinates: useful for computation, but determined only up to an $O(d)$ rotation.
-Replacing $X$ by $X Q$ is like switching from one map projection to another.
+We are in a similar situation to when we try to observe the aerial evolutions of birds: we can easily see the birds' horizontal movements, but it's hard to infer their vertical displacement from the ground (at least by eye). In this case, the observable is the position of the birds in the sky represented as a flat surface, while the latent configuration is the actual 3D position of the birds. Many different trajectories in the 3D sky can be projected onto the same 2D trajectory.
 
-A *fiber bundle* formalizes this structure.
-Think of the space of all possible observables $P$ as the "ground level": this is the *base space* $cal(B)$.
+The observables, the matrices $P = X X^top$ and the horizontal locations, are what we can measure.
+The latent configuration $X$ and the vertival displacement can not be directly measured, but they contain useful information, for example to compute velocities and accelerations.
+Replacing $X$ by a rotated version $X Q$ is like a column of hot air pushing a bird up vertically.
+
+A *fiber bundle* formalizes this structure and allows us to study the relationship between the base space and the total (latent) space.
+We call the space of all possible observables, e.g. $P(t)$, the *base space* $cal(B)$.
 Above each observable $P$, there is a "fiber" of equivalent latent configurations ${X Q : Q in O(d)}$, all producing the same $P$.
-The full space of latent configurations $X$ forms the *total space* $cal(E)$, with a projection $pi: X |-> X X^top$ dropping from total space to base space.
+We call the full space of latent configurations $X$ the *total space* $cal(E)$. We are endowed with a projection $pi(X) = X X^top$ dropping from the total space to the base space.
 
-The key concept is *lifting*: given a path $P(t)$ of evolving observables in the base space, we want to "lift" it to a path $X(t)$ in the total space.
-But there are infinitely many lifts, differing by time-varying gauge choices $Q(t)$.
-The connection and curvature of the bundle tell us which lifts are "natural" (no spurious rotation) and whether consistent lifting is possible at all.
-When it isn't, that is, when the bundle is curved, we get *holonomy*: gauge drift that accumulates even along the most careful trajectory.
+In a fiber bundle we can consider *lifts* that take trajectories from the base to the total space: given a path $P(t)$ of evolving observables in the base space, we "project it back" to a path $X(t)$ in the total space.
+Alas!, there are infinitely many possible choices of what $X(t)$ to pick for any $P(t)$, differing by time-varying gauge choices $Q(t)$.
+The _connection_ and _curvature_ of the bundle tell us which lifts are "natural" (no spurious rotation) and whether consistent lifting is possible at all.
+When it isn't, that is, when the bundle is inherently curved, we get *holonomy*: gauge drift that accumulates even along the most careful trajectory.
 
 We now make this precise.
 
@@ -426,7 +424,7 @@ The *horizontal subspace* $cal(H)_X$ consists of directions transverse to the fi
 $ cal(H)_X = {Z in T_X cal(E) : X^top Z in "Sym"(d)} $
 
 Every tangent vector decomposes uniquely into vertical and horizontal parts:
-$ T_X cal(E) = cal(V)_X plus.circle cal(H)_X $
+$ T_X cal(E) = cal(V)_X plus.o cal(H)_X $
 
 #proposition(title: "Horizontal Characterization")[
   A tangent vector $dot(X) in T_X cal(E)$ is horizontal if and only if $X^top dot(X)$ is symmetric.
@@ -954,7 +952,7 @@ The vertical component thus vanishes if and only if $X^top [M_1, M_2] X = 0$ (th
 This is weaker than $[M_1, M_2] = 0$: the full $n times n$ commutator may be nonzero while its projection through $X$ vanishes.
 However, for generic trajectories with $n >> d$, if $[M_1, M_2] != 0$ then $X^top [M_1, M_2] X != 0$ as well, since the "blind spot" $"col"(X)^perp$ is a high-codimension subspace.
 
-Remembering @prop:curv-spectral-gap, by O'Neill's formula @oneill1966fundamental the sectional curvature of the 2-plane spanned by the projections of $overline(xi)_1, overline(xi)_2$ in $cal(B)$ is: $K(xi_1, xi_2) = 3/4 ||[overline(xi)_1, overline(xi)_2]^cal(V)||^2 slash (||overline(xi)_1||^2 ||overline(xi)_2||^2 - angle.l overline(xi)_1, overline(xi)_2 angle.r^2)$.
+Remembering @prop:curv-spectral-gap, by O'Neill's formula @oneill1966fundamental the sectional curvature of the 2-plane spanned by the projections of $overline(xi)_1, overline(xi)_2$ in $cal(B)$ is: $K(xi_1, xi_2) = 3/4 ||[overline(xi)_1, overline(xi)_2]^cal(V)||^2 slash (||overline(xi)_1||^2 ||overline(xi)_2||^2 - chevron.l overline(xi)_1, overline(xi)_2 chevron.r^2)$.
 The $1 \/ (lambda_iota + lambda_gamma)$ factors in $Omega^*$ connect the curvature directly to the connection coefficients of the fiber bundle: the same denominators that amplify gauge sensitivity also amplify the vertical bracket.
 
 Since $RR_*^(n times d)$ is flat (it is an open subset of Euclidean space), the base curvature arises *entirely* from the vertical bracket.
