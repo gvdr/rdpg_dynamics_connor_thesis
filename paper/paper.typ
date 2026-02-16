@@ -1182,7 +1182,7 @@ For $dot(X) = alpha_0 X$ (single parameter), the eigenvalue dynamics are $dot(la
 The sensitivity is $partial lambda_iota \/ partial alpha_0 = 2 t lambda_iota (t)$, and therefore:
 $ (partial P_(i j))/(partial alpha_0) = 2 t sum_iota U_(i iota) lambda_iota (t) U_(j iota) = 2 t P_(i j)(t) $
 The Fisher information at a single snapshot $t$ is:
-$ cal(I)_t (alpha_0) = 4 t^2 sum_(i < j) P_(i j)(t)^2 / (P_(i j)(t)(1 - P_(i j)(t))) = 4 t^2 sum_(i < j) (P_(i j)(t)) / (1 - P_(i j)(t)) $
+$ cal(I)_t (alpha_0) = 4 t^2 sum_(i < j) (P_(i j)(t)^2) / (P_(i j)(t)(1 - P_(i j)(t))) = 4 t^2 sum_(i < j) (P_(i j)(t)) / (1 - P_(i j)(t)) $
 Summing over $T$ equally-spaced snapshots gives $cal(I)(alpha_0) = 4 sum_(t=1)^T t^2 sum_(i<j) P_(i j)(t) \/ (1 - P_(i j)(t))$, which scales as $O(T^3 dot n^2)$ when the edge probabilities are bounded away from 0 and 1.
 
 *Higher-degree terms and the spectral gap.*
