@@ -1,0 +1,9 @@
+Init params (a, b, gamma) from initial gauges:
+[0.04714438639332468, 0.010192868338211038, -0.0023745026685238683]
+Iter 1 | mean R change = 0.0
+Iter 1 | mean residual = 0.000214
+Iter 2 | mean R change = 0.0
+Converged at iter 2, mean residual=0.00021358965842896177
+Final params (a, b, gamma) after fitting:
+[0.04714438639332388, 0.01019286833821096, -0.0023745026685238336]
+Saved: results/alg4/linear_alignment_results_procrustes_chain.jls

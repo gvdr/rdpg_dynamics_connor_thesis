@@ -1,0 +1,11 @@
+# Windows Zone.Identifier metadata files (WSL downloads)
+*:Zone.Identifier
+
+# Julia
+Manifest.toml
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/build.log
+docs/build/
+

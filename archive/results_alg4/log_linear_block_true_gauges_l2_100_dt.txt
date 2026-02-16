@@ -1,0 +1,11 @@
+Init params (a, b, gamma) from initial gauges:
+[-4.183685687578351, -0.03319615985242037, 1.970733372418263]
+Iter 1 | mean R change = 1.317437
+Iter 1 | mean residual = 4.124012
+Iter 2 | mean R change = 0.002227
+Iter 3 | mean R change = 0.0
+Iter 4 | mean R change = 0.0
+Converged at iter 4, mean residual=0.348391481066603
+Final params (a, b, gamma) after fitting:
+[0.07181153588591403, 0.020190153086619596, 0.5087126891421764]
+Saved: results/alg4/linear_alignment_results_true_gauges.jls

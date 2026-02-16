@@ -1,0 +1,7 @@
+Init beta (from initial gauges):
+[0.3490271133255321, -0.10297114911228683]
+Iter 1 | mean residual = 0.9601
+Converged at iter 4, mean residual=0.3085774974418472
+Final beta (after fitting):
+[0.22713812064766323, 0.01395763633974436]
+Saved: results/alg4/message_passing_alignment_results_dpg_procrustes.jls

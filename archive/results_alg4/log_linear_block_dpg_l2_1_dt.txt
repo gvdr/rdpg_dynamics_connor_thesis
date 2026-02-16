@@ -1,0 +1,7 @@
+Init params (a, b, gamma) from initial gauges:
+[1.0721997147058557, 0.020417797805082263, 15.518802709534777]
+Iter 1 | mean residual = 0.334306
+Converged at iter 3, mean residual=0.33182740614224787
+Final params (a, b, gamma) after fitting:
+[1.0724918594586226, 0.020066890469632, 15.51524297822654]
+Saved: results/alg4/linear_alignment_results_dpg_procrustes.jls
