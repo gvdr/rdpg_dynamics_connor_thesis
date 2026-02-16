@@ -1182,7 +1182,7 @@ For $dot(X) = alpha_0 X$ (single parameter), the eigenvalue dynamics are $dot(la
 The sensitivity is $partial lambda_iota \/ partial alpha_0 = 2 t lambda_iota (t)$, and therefore:
 $ (partial P_(i j))/(partial alpha_0) = 2 t sum_iota U_(i iota) lambda_iota (t) U_(j iota) = 2 t P_(i j)(t) $
 The Fisher information at a single snapshot $t$ is:
-$ cal(I)_t (alpha_0) = 4 t^2 sum_(i < j) P_(i j)(t)^2 / (P_(i j)(t)(1 - P_(i j)(t))) = 4 t^2 sum_(i < j) P_(i j)(t) / (1 - P_(i j)(t)) $
+$ cal(I)_t (alpha_0) = 4 t^2 sum_(i < j) P_(i j)(t)^2 / (P_(i j)(t)(1 - P_(i j)(t))) = 4 t^2 sum_(i < j) (P_(i j)(t)) / (1 - P_(i j)(t)) $
 Summing over $T$ equally-spaced snapshots gives $cal(I)(alpha_0) = 4 sum_(t=1)^T t^2 sum_(i<j) P_(i j)(t) \/ (1 - P_(i j)(t))$, which scales as $O(T^3 dot n^2)$ when the edge probabilities are bounded away from 0 and 1.
 
 *Higher-degree terms and the spectral gap.*
@@ -1251,7 +1251,7 @@ For linear dynamics (single scalar parameter $alpha_0$), the Fisher information 
 
 #corollary(title: "Linear Dynamics: Explicit Fisher Information")[
   For linear dynamics $dot(X) = alpha_0 X$ with $T$ snapshots at times $t_1, ..., t_T$, the Fisher information is:
-  $ cal(I)(alpha_0) = 4 sum_(t=1)^T t^2 sum_(i < j) P_(i j)(t) / (1 - P_(i j)(t)) $
+  $ cal(I)(alpha_0) = 4 sum_(t=1)^T t^2 sum_(i < j) (P_(i j)(t)) / (1 - P_(i j)(t)) $
   This scales as $Theta(T^3 dot n^2)$ when edge probabilities remain bounded away from 0 and 1 throughout the trajectory, giving a Cramér-Rao lower bound of $Omega(1\/(T^3 n^2))$.
 ] <cor:linear-fisher>
 
@@ -1717,7 +1717,7 @@ $ mu(cal(M)_cal(F)) <= (L_* mu)(L(cal(M)_cal(F))) = 0$. $square$
 For linear dynamics $dot(X) = alpha_0 X$, the solution is $X(t) = e^(alpha_0 t) X(0)$, giving $P(t) = e^(2 alpha_0 t) P(0)$.
 The sensitivity is $partial P_(i j)(t) \/ partial alpha_0 = 2t e^(2 alpha_0 t) P_(i j)(0) = 2t P_(i j)(t)$.
 Since there is a single scalar parameter, the Fisher information is:
-$ cal(I)(alpha_0) = sum_(t=1)^T sum_(i < j) ((partial P_(i j)(t)) / (partial alpha_0))^2 dot 1 / (P_(i j)(t)(1 - P_(i j)(t))) = 4 sum_(t=1)^T t^2 sum_(i < j) P_(i j)(t) / (1 - P_(i j)(t)) $
+$ cal(I)(alpha_0) = sum_(t=1)^T sum_(i < j) ((partial P_(i j)(t)) / (partial alpha_0))^2 dot 1 / (P_(i j)(t)(1 - P_(i j)(t))) = 4 sum_(t=1)^T t^2 sum_(i < j) (P_(i j)(t)) / (1 - P_(i j)(t)) $
 For the scaling claim: when $P_(i j)(t) in [epsilon, 1 - epsilon]$ for some $epsilon > 0$, the inner sum $sum_(i < j) P_(i j) \/ (1 - P_(i j))$ is $Theta(n^2)$ (there are $binom(n, 2)$ terms, each bounded away from zero and infinity).
 The outer sum $sum_(t=1)^T t^2 = T(T+1)(2T+1)\/6 = Theta(T^3)$.
 Therefore $cal(I)(alpha_0) = Theta(T^3 dot n^2)$, giving a Cramér-Rao lower bound $"Var"(hat(alpha)_0) >= cal(I)^(-1) = Omega(1\/(T^3 n^2))$. $square$
