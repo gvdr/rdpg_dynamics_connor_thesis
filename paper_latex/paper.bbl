@@ -1,148 +1,414 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{28}
+% BibTex style file: imsart-nameyear.bst, 2017-11-03
+% Default style options (sort=1,type=nameyear).
+% Used options (sort=1,type=nameyear).
 
-\bibitem{poisot2015species}
-T.~Poisot, D.~B. Stouffer, and D.~Gravel, ``Beyond species: why ecological
-  interaction networks vary through space and time,'' {\em Oikos}, vol.~124,
-  no.~3, pp.~243--251, 2015.
+\bibitem[\protect\citeauthoryear{Absil, Mahony and
+  Sepulchre}{2008}]{absil2008optimization}
+\begin{bbook}[author]
+\bauthor{\bsnm{Absil},~\bfnm{P-A}\binits{P.-A.}},
+  \bauthor{\bsnm{Mahony},~\bfnm{Robert}\binits{R.}} \AND
+  \bauthor{\bsnm{Sepulchre},~\bfnm{Rodolphe}\binits{R.}}
+(\byear{2008}).
+\btitle{Optimization Algorithms on Matrix Manifolds}.
+\bpublisher{Princeton University Press}.
+\bdoi{10.1515/9781400830244}
+\end{bbook}
+\endbibitem
 
-\bibitem{dallariva2016exploring}
-G.~V. Dalla~Riva and D.~B. Stouffer, ``Exploring the evolutionary signature of
-  food webs' backbones using functional traits,'' {\em Oikos}, vol.~125, no.~4,
-  pp.~446--456, 2016.
+\bibitem[\protect\citeauthoryear{Agterberg, Yan and
+  Levin}{2023}]{agterberg2023minimax}
+\begin{barticle}[author]
+\bauthor{\bsnm{Agterberg},~\bfnm{Joshua}\binits{J.}},
+  \bauthor{\bsnm{Yan},~\bfnm{Qiaosheng}\binits{Q.}} \AND
+  \bauthor{\bsnm{Levin},~\bfnm{Keith}\binits{K.}}
+(\byear{2023}).
+\btitle{Minimax rates for latent position estimation in the generalized random
+  dot product graph}.
+\bjournal{arXiv preprint arXiv:2307.01942}.
+\end{barticle}
+\endbibitem
 
-\bibitem{strydom2022food}
-T.~Strydom, S.~Bouskila, F.~Banville, C.~Barros, D.~Caron, M.~J. Farrell, M.-J.
-  Fortin, V.~Hemming, B.~Mercier, L.~J. Pollock, R.~Runghen, G.~V. Dalla~Riva,
-  and T.~Poisot, ``Food web reconstruction through phylogenetic transfer of
-  low-rank network representation,'' {\em Methods in Ecology and Evolution},
-  vol.~13, no.~12, pp.~2838--2849, 2022.
+\bibitem[\protect\citeauthoryear{Arroyo et~al.}{2021}]{arroyo2021inference}
+\begin{barticle}[author]
+\bauthor{\bsnm{Arroyo},~\bfnm{Jes{\'u}s}\binits{J.}},
+  \bauthor{\bsnm{Athreya},~\bfnm{Avanti}\binits{A.}},
+  \bauthor{\bsnm{Cape},~\bfnm{Joshua}\binits{J.}},
+  \bauthor{\bsnm{Chen},~\bfnm{Guodong}\binits{G.}},
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}} \AND
+  \bauthor{\bsnm{Vogelstein},~\bfnm{Joshua~T}\binits{J.~T.}}
+(\byear{2021}).
+\btitle{Inference for multiple heterogeneous networks with a common invariant
+  subspace}.
+\bjournal{Journal of Machine Learning Research}
+\bvolume{22}
+\bpages{1--49}.
+\end{barticle}
+\endbibitem
 
-\bibitem{athreya2017statistical}
-A.~Athreya, D.~E. Fishkind, M.~Tang, C.~E. Priebe, Y.~Park, J.~T. Vogelstein,
-  K.~Levin, V.~Lyzinski, Y.~Qin, and D.~L. Sussman, ``Statistical inference on
-  random dot product graphs: a survey,'' {\em The Journal of Machine Learning
-  Research}, vol.~18, no.~1, pp.~8393--8484, 2018.
+\bibitem[\protect\citeauthoryear{Athreya et~al.}{2016}]{athreya2016limit}
+\begin{barticle}[author]
+\bauthor{\bsnm{Athreya},~\bfnm{Avanti}\binits{A.}},
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}},
+  \bauthor{\bsnm{Tang},~\bfnm{Minh}\binits{M.}},
+  \bauthor{\bsnm{Lyzinski},~\bfnm{Vince}\binits{V.}},
+  \bauthor{\bsnm{Marchette},~\bfnm{David~J}\binits{D.~J.}} \AND
+  \bauthor{\bsnm{Sussman},~\bfnm{Daniel~L}\binits{D.~L.}}
+(\byear{2016}).
+\btitle{A limit theorem for scaled eigenvectors of random dot product graphs}.
+\bjournal{Sankhya A}
+\bvolume{78}
+\bpages{1--18}.
+\end{barticle}
+\endbibitem
 
-\bibitem{young2007random}
-S.~J. Young and E.~R. Scheinerman, ``Random dot product graph models for social
-  networks,'' in {\em Algorithms and Models for the Web-Graph: 5th
-  International Workshop, WAW 2007}, pp.~138--149, Springer, 2007.
+\bibitem[\protect\citeauthoryear{Athreya et~al.}{2018}]{athreya2017statistical}
+\begin{barticle}[author]
+\bauthor{\bsnm{Athreya},~\bfnm{Avanti}\binits{A.}},
+  \bauthor{\bsnm{Fishkind},~\bfnm{Donniell~E}\binits{D.~E.}},
+  \bauthor{\bsnm{Tang},~\bfnm{Minh}\binits{M.}},
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}},
+  \bauthor{\bsnm{Park},~\bfnm{Youngser}\binits{Y.}},
+  \bauthor{\bsnm{Vogelstein},~\bfnm{Joshua~T}\binits{J.~T.}},
+  \bauthor{\bsnm{Levin},~\bfnm{Keith}\binits{K.}},
+  \bauthor{\bsnm{Lyzinski},~\bfnm{Vince}\binits{V.}},
+  \bauthor{\bsnm{Qin},~\bfnm{Yichen}\binits{Y.}} \AND
+  \bauthor{\bsnm{Sussman},~\bfnm{Daniel~L}\binits{D.~L.}}
+(\byear{2018}).
+\btitle{Statistical inference on random dot product graphs: a survey}.
+\bjournal{The Journal of Machine Learning Research}
+\bvolume{18}
+\bpages{8393--8484}.
+\end{barticle}
+\endbibitem
 
-\bibitem{gallagher2021spectral}
-I.~Gallagher, A.~Jones, and P.~Rubin-Delanchy, ``Spectral embedding for dynamic
-  networks with stability guarantees,'' in {\em Advances in Neural Information
-  Processing Systems}, vol.~34, pp.~10158--10170, 2021.
+\bibitem[\protect\citeauthoryear{Athreya et~al.}{2025}]{athreya2024euclidean}
+\begin{barticle}[author]
+\bauthor{\bsnm{Athreya},~\bfnm{Avanti}\binits{A.}},
+  \bauthor{\bsnm{Lubberts},~\bfnm{Zachary}\binits{Z.}},
+  \bauthor{\bsnm{Park},~\bfnm{Youngser}\binits{Y.}} \AND
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E.}\binits{C.~E.}}
+(\byear{2025}).
+\btitle{Euclidean Mirrors and Dynamics in Network Time Series}.
+\bjournal{Journal of the American Statistical Association}
+\bvolume{120}
+\bpages{1025--1036}.
+\bdoi{10.1080/01621459.2024.2392912}
+\end{barticle}
+\endbibitem
 
-\bibitem{levin2017central}
-K.~Levin, A.~Athreya, M.~Tang, V.~Lyzinski, Y.~Park, and C.~E. Priebe, ``A
-  central limit theorem for an omnibus embedding of multiple random graphs and
-  implications for multiscale network inference,'' {\em arXiv preprint
-  arXiv:1705.09355}, 2017.
+\bibitem[\protect\citeauthoryear{Cape, Tang and Priebe}{2019}]{cape2019two}
+\begin{barticle}[author]
+\bauthor{\bsnm{Cape},~\bfnm{Joshua}\binits{J.}},
+  \bauthor{\bsnm{Tang},~\bfnm{Minh}\binits{M.}} \AND
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}}
+(\byear{2019}).
+\btitle{The two-to-infinity norm and singular subspace geometry with
+  applications to high-dimensional statistics}.
+\bjournal{The Annals of Statistics}
+\bvolume{47}
+\bpages{2405--2439}.
+\end{barticle}
+\endbibitem
 
-\bibitem{loyal2025}
-J.~D. Loyal, ``Bayesian inference for generalized random dot product graphs
-  with scaled mixtures of normals,'' {\em arXiv preprint arXiv:2509.19748},
-  2025.
+\bibitem[\protect\citeauthoryear{Cranmer}{2023}]{symbolicregression}
+\begin{bmisc}[author]
+\bauthor{\bsnm{Cranmer},~\bfnm{Miles}\binits{M.}}
+(\byear{2023}).
+\btitle{{SymbolicRegression.jl}: Distributed High-Performance Symbolic
+  Regression in Julia}.
+\bhowpublished{\url{https://astroautomata.com/SymbolicRegression.jl/dev/}}.
+\end{bmisc}
+\endbibitem
 
-\bibitem{athreya2024euclidean}
-A.~Athreya, Z.~Lubberts, Y.~Park, and C.~E. Priebe, ``Euclidean mirrors and
-  dynamics in network time series,'' {\em Journal of the American Statistical
-  Association}, vol.~120, no.~550, pp.~1025--1036, 2025.
+\bibitem[\protect\citeauthoryear{Dalla~Riva and
+  Stouffer}{2016}]{dallariva2016exploring}
+\begin{barticle}[author]
+\bauthor{\bsnm{Dalla~Riva},~\bfnm{Giulio~V}\binits{G.~V.}} \AND
+  \bauthor{\bsnm{Stouffer},~\bfnm{Daniel~B}\binits{D.~B.}}
+(\byear{2016}).
+\btitle{Exploring the evolutionary signature of food webs' backbones using
+  functional traits}.
+\bjournal{Oikos}
+\bvolume{125}
+\bpages{446--456}.
+\bdoi{10.1111/oik.02305}
+\end{barticle}
+\endbibitem
 
-\bibitem{athreya2016limit}
-A.~Athreya, C.~E. Priebe, M.~Tang, V.~Lyzinski, D.~J. Marchette, and D.~L.
-  Sussman, ``A limit theorem for scaled eigenvectors of random dot product
-  graphs,'' {\em Sankhya A}, vol.~78, no.~1, pp.~1--18, 2016.
+\bibitem[\protect\citeauthoryear{Freidlin and
+  Wentzell}{1998}]{freidlin1998random}
+\begin{barticle}[author]
+\bauthor{\bsnm{Freidlin},~\bfnm{Mark~I}\binits{M.~I.}} \AND
+  \bauthor{\bsnm{Wentzell},~\bfnm{Alexander~D}\binits{A.~D.}}
+(\byear{1998}).
+\btitle{Random perturbations of dynamical systems}.
+\bjournal{Grundlehren der mathematischen Wissenschaften}
+\bvolume{260}.
+\end{barticle}
+\endbibitem
 
-\bibitem{rubindelanchy2022statistical}
-P.~Rubin-Delanchy, J.~Cape, M.~Tang, and C.~E. Priebe, ``A statistical
-  interpretation of spectral embedding: the generalised random dot product
-  graph,'' {\em Journal of the Royal Statistical Society: Series B}, vol.~84,
-  no.~4, pp.~1446--1473, 2022.
+\bibitem[\protect\citeauthoryear{Gallagher, Jones and
+  Rubin-Delanchy}{2021}]{gallagher2021spectral}
+\begin{binproceedings}[author]
+\bauthor{\bsnm{Gallagher},~\bfnm{Ian}\binits{I.}},
+  \bauthor{\bsnm{Jones},~\bfnm{Andrew}\binits{A.}} \AND
+  \bauthor{\bsnm{Rubin-Delanchy},~\bfnm{Patrick}\binits{P.}}
+(\byear{2021}).
+\btitle{Spectral embedding for dynamic networks with stability guarantees}.
+In \bbooktitle{Advances in Neural Information Processing Systems}
+\bvolume{34}
+\bpages{10158--10170}.
+\end{binproceedings}
+\endbibitem
 
-\bibitem{cape2019two}
-J.~Cape, M.~Tang, and C.~E. Priebe, ``The two-to-infinity norm and singular
-  subspace geometry with applications to high-dimensional statistics,'' {\em
-  The Annals of Statistics}, vol.~47, no.~5, pp.~2405--2439, 2019.
+\bibitem[\protect\citeauthoryear{Heinonen et~al.}{2018}]{heinonen2018learning}
+\begin{barticle}[author]
+\bauthor{\bsnm{Heinonen},~\bfnm{Markus}\binits{M.}},
+  \bauthor{\bsnm{Yildiz},~\bfnm{Cagatay}\binits{C.}},
+  \bauthor{\bsnm{Mannerstr{\"o}m},~\bfnm{Henrik}\binits{H.}},
+  \bauthor{\bsnm{Intosalmi},~\bfnm{Jukka}\binits{J.}} \AND
+  \bauthor{\bsnm{L{\"a}hdesm{\"a}ki},~\bfnm{Harri}\binits{H.}}
+(\byear{2018}).
+\btitle{Learning unknown ODE models with Gaussian processes}.
+\bjournal{International Conference on Machine Learning}
+\bpages{1959--1968}.
+\end{barticle}
+\endbibitem
 
-\bibitem{xie2021efficient}
-F.~Xie and Y.~Xu, ``Efficient estimation for random dot product graphs via a
-  one-step procedure,'' {\em Journal of the American Statistical Association},
-  vol.~118, no.~541, pp.~651--664, 2023.
+\bibitem[\protect\citeauthoryear{Journ{\'e}e et~al.}{2010}]{journee2010low}
+\begin{barticle}[author]
+\bauthor{\bsnm{Journ{\'e}e},~\bfnm{Michel}\binits{M.}},
+  \bauthor{\bsnm{Bach},~\bfnm{Francis}\binits{F.}},
+  \bauthor{\bsnm{Absil},~\bfnm{P-A}\binits{P.-A.}} \AND
+  \bauthor{\bsnm{Sepulchre},~\bfnm{Rodolphe}\binits{R.}}
+(\byear{2010}).
+\btitle{Low-rank optimization on the cone of positive semidefinite matrices}.
+\bjournal{SIAM Journal on Optimization}
+\bvolume{20}
+\bpages{2327--2351}.
+\bdoi{10.1137/080731359}
+\end{barticle}
+\endbibitem
 
-\bibitem{tang2022efficient}
-M.~Tang, J.~Cape, and C.~E. Priebe, ``Asymptotically efficient estimators for
-  stochastic blockmodels: the naive {MLE}, the rank-constrained {MLE}, and the
-  spectral estimator,'' {\em Bernoulli}, vol.~28, no.~2, pp.~1049--1073, 2022.
+\bibitem[\protect\citeauthoryear{Kobayashi and
+  Nomizu}{1963}]{kobayashi1963foundations}
+\begin{bbook}[author]
+\bauthor{\bsnm{Kobayashi},~\bfnm{Shoshichi}\binits{S.}} \AND
+  \bauthor{\bsnm{Nomizu},~\bfnm{Katsumi}\binits{K.}}
+(\byear{1963}).
+\btitle{Foundations of Differential Geometry}
+\bvolume{1}.
+\bpublisher{Wiley}.
+\end{bbook}
+\endbibitem
 
-\bibitem{tang2018eigenvalues}
-M.~Tang, J.~Cape, and C.~E. Priebe, ``The eigenvalues of stochastic blockmodel
-  graphs,'' {\em arXiv preprint arXiv:1803.11551}, 2018.
+\bibitem[\protect\citeauthoryear{Levin et~al.}{2017}]{levin2017central}
+\begin{barticle}[author]
+\bauthor{\bsnm{Levin},~\bfnm{Keith}\binits{K.}},
+  \bauthor{\bsnm{Athreya},~\bfnm{Avanti}\binits{A.}},
+  \bauthor{\bsnm{Tang},~\bfnm{Minh}\binits{M.}},
+  \bauthor{\bsnm{Lyzinski},~\bfnm{Vince}\binits{V.}},
+  \bauthor{\bsnm{Park},~\bfnm{Youngser}\binits{Y.}} \AND
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}}
+(\byear{2017}).
+\btitle{A central limit theorem for an omnibus embedding of multiple random
+  graphs and implications for multiscale network inference}.
+\bjournal{arXiv preprint arXiv:1705.09355}.
+\end{barticle}
+\endbibitem
 
-\bibitem{absil2008optimization}
-P.-A. Absil, R.~Mahony, and R.~Sepulchre, {\em Optimization Algorithms on
-  Matrix Manifolds}.
-\newblock Princeton University Press, 2008.
+\bibitem[\protect\citeauthoryear{Loyal}{2025}]{loyal2025}
+\begin{barticle}[author]
+\bauthor{\bsnm{Loyal},~\bfnm{Joshua~Daniel}\binits{J.~D.}}
+(\byear{2025}).
+\btitle{Bayesian Inference for Generalized Random Dot Product Graphs with
+  Scaled Mixtures of Normals}.
+\bjournal{arXiv preprint arXiv:2509.19748}.
+\end{barticle}
+\endbibitem
 
-\bibitem{journee2010low}
-M.~Journ{\'e}e, F.~Bach, P.-A. Absil, and R.~Sepulchre, ``Low-rank optimization
-  on the cone of positive semidefinite matrices,'' vol.~20, pp.~2327--2351,
-  SIAM, 2010.
+\bibitem[\protect\citeauthoryear{Massart and Absil}{2020}]{massart2020quotient}
+\begin{barticle}[author]
+\bauthor{\bsnm{Massart},~\bfnm{Estelle}\binits{E.}} \AND
+  \bauthor{\bsnm{Absil},~\bfnm{P-A}\binits{P.-A.}}
+(\byear{2020}).
+\btitle{Quotient geometry with simple geodesics for the manifold of fixed-rank
+  positive-semidefinite matrices}.
+\bjournal{SIAM Journal on Matrix Analysis and Applications}
+\bvolume{41}
+\bpages{171--198}.
+\bdoi{10.1137/18M1231389}
+\end{barticle}
+\endbibitem
 
-\bibitem{massart2020quotient}
-E.~Massart and P.-A. Absil, ``Quotient geometry with simple geodesics for the
-  manifold of fixed-rank positive-semidefinite matrices,'' {\em SIAM Journal on
-  Matrix Analysis and Applications}, vol.~41, no.~1, pp.~171--198, 2020.
+\bibitem[\protect\citeauthoryear{Massart, Hendrickx and
+  Absil}{2019}]{massart2019curvature}
+\begin{binproceedings}[author]
+\bauthor{\bsnm{Massart},~\bfnm{Estelle}\binits{E.}},
+  \bauthor{\bsnm{Hendrickx},~\bfnm{Julien~M}\binits{J.~M.}} \AND
+  \bauthor{\bsnm{Absil},~\bfnm{P-A}\binits{P.-A.}}
+(\byear{2019}).
+\btitle{Curvature of the manifold of fixed-rank positive-semidefinite matrices
+  endowed with the {Bures--Wasserstein} metric}.
+In \bbooktitle{Geometric Science of Information (GSI 2019)}.
+\bseries{Lecture Notes in Computer Science}
+\bvolume{11712}
+\bpages{739--748}.
+\bpublisher{Springer}.
+\end{binproceedings}
+\endbibitem
 
-\bibitem{massart2019curvature}
-E.~Massart, J.~M. Hendrickx, and P.-A. Absil, ``Curvature of the manifold of
-  fixed-rank positive-semidefinite matrices endowed with the
-  {Bures--Wasserstein} metric,'' in {\em Geometric Science of Information (GSI
-  2019)}, vol.~11712 of {\em Lecture Notes in Computer Science}, pp.~739--748,
-  Springer, 2019.
+\bibitem[\protect\citeauthoryear{O'Neill}{1966}]{oneill1966fundamental}
+\begin{barticle}[author]
+\bauthor{\bsnm{O'Neill},~\bfnm{Barrett}\binits{B.}}
+(\byear{1966}).
+\btitle{The fundamental equations of a submersion}.
+\bjournal{Michigan Mathematical Journal}
+\bvolume{13}
+\bpages{459--469}.
+\bdoi{10.1307/mmj/1028999604}
+\end{barticle}
+\endbibitem
 
-\bibitem{kobayashi1963foundations}
-S.~Kobayashi and K.~Nomizu, {\em Foundations of Differential Geometry}, vol.~1.
-\newblock Wiley, 1963.
+\bibitem[\protect\citeauthoryear{Poisot, Stouffer and
+  Gravel}{2015}]{poisot2015species}
+\begin{barticle}[author]
+\bauthor{\bsnm{Poisot},~\bfnm{Timoth{\'e}e}\binits{T.}},
+  \bauthor{\bsnm{Stouffer},~\bfnm{Daniel~B}\binits{D.~B.}} \AND
+  \bauthor{\bsnm{Gravel},~\bfnm{Dominique}\binits{D.}}
+(\byear{2015}).
+\btitle{Beyond species: why ecological interaction networks vary through space
+  and time}.
+\bjournal{Oikos}
+\bvolume{124}
+\bpages{243--251}.
+\bdoi{10.1111/oik.01719}
+\end{barticle}
+\endbibitem
 
-\bibitem{oneill1966fundamental}
-B.~O'Neill, ``The fundamental equations of a submersion,'' {\em Michigan
-  Mathematical Journal}, vol.~13, no.~4, pp.~459--469, 1966.
+\bibitem[\protect\citeauthoryear{Rackauckas
+  et~al.}{2020}]{rackauckas2020universal}
+\begin{barticle}[author]
+\bauthor{\bsnm{Rackauckas},~\bfnm{Christopher}\binits{C.}},
+  \bauthor{\bsnm{Ma},~\bfnm{Yingbo}\binits{Y.}},
+  \bauthor{\bsnm{Martensen},~\bfnm{Julius}\binits{J.}},
+  \bauthor{\bsnm{Warner},~\bfnm{Collin}\binits{C.}},
+  \bauthor{\bsnm{Zubov},~\bfnm{Kirill}\binits{K.}},
+  \bauthor{\bsnm{Supekar},~\bfnm{Rohit}\binits{R.}},
+  \bauthor{\bsnm{Skinner},~\bfnm{Dominic}\binits{D.}},
+  \bauthor{\bsnm{Ramadhan},~\bfnm{Ali}\binits{A.}} \AND
+  \bauthor{\bsnm{Edelman},~\bfnm{Alan}\binits{A.}}
+(\byear{2020}).
+\btitle{Universal differential equations for scientific machine learning}.
+\bjournal{arXiv preprint arXiv:2001.04385}.
+\end{barticle}
+\endbibitem
 
-\bibitem{arroyo2021inference}
-J.~Arroyo, A.~Athreya, J.~Cape, G.~Chen, C.~E. Priebe, and J.~T. Vogelstein,
-  ``Inference for multiple heterogeneous networks with a common invariant
-  subspace,'' {\em Journal of Machine Learning Research}, vol.~22, no.~142,
-  pp.~1--49, 2021.
+\bibitem[\protect\citeauthoryear{Rubin-Delanchy
+  et~al.}{2022}]{rubindelanchy2022statistical}
+\begin{barticle}[author]
+\bauthor{\bsnm{Rubin-Delanchy},~\bfnm{Patrick}\binits{P.}},
+  \bauthor{\bsnm{Cape},~\bfnm{Joshua}\binits{J.}},
+  \bauthor{\bsnm{Tang},~\bfnm{Minh}\binits{M.}} \AND
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}}
+(\byear{2022}).
+\btitle{A statistical interpretation of spectral embedding: the generalised
+  random dot product graph}.
+\bjournal{Journal of the Royal Statistical Society: Series B}
+\bvolume{84}
+\bpages{1446--1473}.
+\end{barticle}
+\endbibitem
 
-\bibitem{heinonen2018learning}
-M.~Heinonen, C.~Yildiz, H.~Mannerstr{\"o}m, J.~Intosalmi, and
-  H.~L{\"a}hdesm{\"a}ki, ``Learning unknown ode models with gaussian
-  processes,'' {\em International Conference on Machine Learning},
-  pp.~1959--1968, 2018.
+\bibitem[\protect\citeauthoryear{Strydom et~al.}{2022}]{strydom2022food}
+\begin{barticle}[author]
+\bauthor{\bsnm{Strydom},~\bfnm{Tanya}\binits{T.}},
+  \bauthor{\bsnm{Bouskila},~\bfnm{Salom{\'e}}\binits{S.}},
+  \bauthor{\bsnm{Banville},~\bfnm{Francis}\binits{F.}},
+  \bauthor{\bsnm{Barros},~\bfnm{Ceres}\binits{C.}},
+  \bauthor{\bsnm{Caron},~\bfnm{Dominique}\binits{D.}},
+  \bauthor{\bsnm{Farrell},~\bfnm{Maxwell~J}\binits{M.~J.}},
+  \bauthor{\bsnm{Fortin},~\bfnm{Marie-Jos{\'e}e}\binits{M.-J.}},
+  \bauthor{\bsnm{Hemming},~\bfnm{Victoria}\binits{V.}},
+  \bauthor{\bsnm{Mercier},~\bfnm{Benjamin}\binits{B.}},
+  \bauthor{\bsnm{Pollock},~\bfnm{Laura~J}\binits{L.~J.}},
+  \bauthor{\bsnm{Runghen},~\bfnm{Rogini}\binits{R.}},
+  \bauthor{\bsnm{Dalla~Riva},~\bfnm{Giulio~V}\binits{G.~V.}} \AND
+  \bauthor{\bsnm{Poisot},~\bfnm{Timoth{\'e}e}\binits{T.}}
+(\byear{2022}).
+\btitle{Food web reconstruction through phylogenetic transfer of low-rank
+  network representation}.
+\bjournal{Methods in Ecology and Evolution}
+\bvolume{13}
+\bpages{2838--2849}.
+\bdoi{10.1111/2041-210X.13835}
+\end{barticle}
+\endbibitem
 
-\bibitem{freidlin1998random}
-M.~I. Freidlin and A.~D. Wentzell, ``Random perturbations of dynamical
-  systems,'' {\em Grundlehren der mathematischen Wissenschaften}, vol.~260,
-  1998.
+\bibitem[\protect\citeauthoryear{Tang, Cape and
+  Priebe}{2018}]{tang2018eigenvalues}
+\begin{barticle}[author]
+\bauthor{\bsnm{Tang},~\bfnm{Minh}\binits{M.}},
+  \bauthor{\bsnm{Cape},~\bfnm{Joshua}\binits{J.}} \AND
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}}
+(\byear{2018}).
+\btitle{The eigenvalues of stochastic blockmodel graphs}.
+\bjournal{arXiv preprint arXiv:1803.11551}.
+\end{barticle}
+\endbibitem
 
-\bibitem{xie2020optimal}
-F.~Xie and Y.~Xu, ``Optimal {B}ayesian estimation for random dot product
-  graphs,'' {\em Biometrika}, vol.~107, no.~4, pp.~875--889, 2020.
+\bibitem[\protect\citeauthoryear{Tang, Cape and
+  Priebe}{2022}]{tang2022efficient}
+\begin{barticle}[author]
+\bauthor{\bsnm{Tang},~\bfnm{Minh}\binits{M.}},
+  \bauthor{\bsnm{Cape},~\bfnm{Joshua}\binits{J.}} \AND
+  \bauthor{\bsnm{Priebe},~\bfnm{Carey~E}\binits{C.~E.}}
+(\byear{2022}).
+\btitle{Asymptotically efficient estimators for stochastic blockmodels: the
+  naive {MLE}, the rank-constrained {MLE}, and the spectral estimator}.
+\bjournal{Bernoulli}
+\bvolume{28}
+\bpages{1049--1073}.
+\end{barticle}
+\endbibitem
 
-\bibitem{agterberg2023minimax}
-J.~Agterberg, Q.~Yan, and K.~Levin, ``Minimax rates for latent position
-  estimation in the generalized random dot product graph,'' {\em arXiv preprint
-  arXiv:2307.01942}, 2023.
+\bibitem[\protect\citeauthoryear{Xie and Xu}{2020}]{xie2020optimal}
+\begin{barticle}[author]
+\bauthor{\bsnm{Xie},~\bfnm{Fangzheng}\binits{F.}} \AND
+  \bauthor{\bsnm{Xu},~\bfnm{Yanxun}\binits{Y.}}
+(\byear{2020}).
+\btitle{Optimal {B}ayesian estimation for random dot product graphs}.
+\bjournal{Biometrika}
+\bvolume{107}
+\bpages{875--889}.
+\end{barticle}
+\endbibitem
 
-\bibitem{rackauckas2020universal}
-C.~Rackauckas, Y.~Ma, J.~Martensen, C.~Warner, K.~Zubov, R.~Supekar,
-  D.~Skinner, A.~Ramadhan, and A.~Edelman, ``Universal differential equations
-  for scientific machine learning,'' {\em arXiv preprint arXiv:2001.04385},
-  2020.
+\bibitem[\protect\citeauthoryear{Xie and Xu}{2023}]{xie2021efficient}
+\begin{barticle}[author]
+\bauthor{\bsnm{Xie},~\bfnm{Fangzheng}\binits{F.}} \AND
+  \bauthor{\bsnm{Xu},~\bfnm{Yanxun}\binits{Y.}}
+(\byear{2023}).
+\btitle{Efficient estimation for random dot product graphs via a one-step
+  procedure}.
+\bjournal{Journal of the American Statistical Association}
+\bvolume{118}
+\bpages{651--664}.
+\end{barticle}
+\endbibitem
 
-\bibitem{symbolicregression}
-M.~Cranmer, ``{SymbolicRegression.jl}: Distributed high-performance symbolic
-  regression in julia,'' 2023.
+\bibitem[\protect\citeauthoryear{Young and Scheinerman}{2007}]{young2007random}
+\begin{binproceedings}[author]
+\bauthor{\bsnm{Young},~\bfnm{Stephen~J}\binits{S.~J.}} \AND
+  \bauthor{\bsnm{Scheinerman},~\bfnm{Edward~R}\binits{E.~R.}}
+(\byear{2007}).
+\btitle{Random dot product graph models for social networks}.
+In \bbooktitle{Algorithms and Models for the Web-Graph: 5th International
+  Workshop, WAW 2007}
+\bpages{138--149}.
+\bpublisher{Springer}.
+\end{binproceedings}
+\endbibitem
 
 \end{thebibliography}

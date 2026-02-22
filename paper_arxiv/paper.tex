@@ -1,18 +1,18 @@
-\documentclass[ejsv2]{imsart}
+\documentclass{article}
+\usepackage{arxiv}
 
-% natbib (not auto-loaded by imsart for EJS)
-\RequirePackage[authoryear]{natbib}
-
-% Packages not loaded by imsart
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[authoryear]{natbib}
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{enumitem}
-
-% hyperref must load AFTER imsart
-\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage[capitalise,noabbrev]{cleveref}
 
 %%% Custom math commands %%%
@@ -55,21 +55,20 @@
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
-\begin{document}
-
-\begin{frontmatter}
 
 \title{Random Dot Product Graphs as Dynamical Systems: \\
   Limitations and Opportunities}
-\runtitle{RDPG as Dynamical Systems}
 
-\begin{aug}
-\author{\fnms{Giulio Valentino} \snm{Dalla Riva}%
-\ead[label=e1]{me@gvdallariva.net}%
-}
-\runauthor{Dalla Riva}
-\address{Baffelan.com}
-\end{aug}
+\author{Giulio Valentino Dalla Riva \\
+  Baffelan.com \\
+  \texttt{me@gvdallariva.net}}
+
+\renewcommand{\shorttitle}{RDPG as Dynamical Systems}
+\renewcommand{\headeright}{}
+\renewcommand{\undertitle}{}
+
+\begin{document}
+\maketitle
 
 \begin{abstract}
 Across ecology, history, economics, social behavior, cultural dynamics, and more, many phenomena can be described in terms of entities establishing and disestablishing interactions with each other. These scenarios are commonly represented mathematically as temporal networks, and the time evolution of these objects is studied as a time series with the goal of predicting future network states. Here, instead, we take a dynamical systems perspective: when the goal is to understand \emph{why} networks evolve as they do, can we learn the differential equations that govern them?
@@ -78,16 +77,7 @@ We develop a geometric framework based on principal fiber bundles that formalize
 We establish an identifiability principle stating that symmetric dynamics cannot absorb skew-symmetric gauge contamination. Yet, we show that significant practical obstacles remain in finite samples. We frame the gap between identifiability and practical recovery as an open challenge and discuss directions for progress.
 \end{abstract}
 
-\begin{keyword}
-\kwd{random dot product graphs}
-\kwd{spectral embedding}
-\kwd{dynamical systems}
-\kwd{principal fiber bundles}
-\kwd{gauge freedom}
-\end{keyword}
-
-\end{frontmatter}
-
+\keywords{random dot product graphs \and spectral embedding \and dynamical systems \and principal fiber bundles \and gauge freedom}
 \section{Introduction}\label{sec:intro}
 
 Temporal networks are networks whose edges and nodes change over time. They appear throughout science, from ecological food webs that vary across space and time~\citep{poisot2015species} to neural connectomes that rewire during development.
@@ -1854,8 +1844,10 @@ We are extremely grateful to our student Connor Stirling James Smith, who pionee
 \section*{Code Availability}
 Julia code for reproducing the results and data are available at \url{https://github.com/gvdr/RDPG_in_differential_geometry}.
 
-\bibliographystyle{imsart-nameyear}
+\bibliographystyle{plainnat}
 \bibliography{bibliography}
+
+\appendix
 
 \appendix
 

@@ -1,51 +1,58 @@
 This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
-The style file: ieeetr.bst
+The style file: imsart-nameyear.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
-Warning--entry type for "symbolicregression" isn't style-file defined
---line 161 of file bibliography.bib
-Warning--empty booktitle in journee2010low
-Warning--can't use both volume and number fields in journee2010low
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 28 entries,
-            1876 wiz_defined-function locations,
-            649 strings with 9351 characters,
-and the built_in function-call counts, 8686 in all, are:
-= -- 861
-> -- 377
-< -- 0
-+ -- 136
-- -- 108
-* -- 652
-:= -- 1221
-add.period$ -- 30
+            5204 wiz_defined-function locations,
+            1024 strings with 11625 characters,
+and the built_in function-call counts, 169318 in all, are:
+= -- 27167
+> -- 528
+< -- 51
++ -- 8936
+- -- 190
+* -- 10232
+:= -- 26191
+add.period$ -- 85
 call.type$ -- 28
-change.case$ -- 26
-chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 423
-empty$ -- 778
-format.name$ -- 108
-if$ -- 2093
-int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 29
-newline$ -- 89
-num.names$ -- 28
-pop$ -- 80
+change.case$ -- 163
+chr.to.int$ -- 28
+cite$ -- 28
+duplicate$ -- 1099
+empty$ -- 8278
+format.name$ -- 748
+if$ -- 40534
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 307
+num.names$ -- 122
+pop$ -- 755
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 107
 quote$ -- 0
-skip$ -- 308
+skip$ -- 15921
 stack$ -- 0
-substring$ -- 662
-swap$ -- 192
-text.length$ -- 0
+substring$ -- 25396
+swap$ -- 423
+text.length$ -- 252
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 2
-while$ -- 85
-width$ -- 30
-write$ -- 281
-(There were 3 warnings)
+type$ -- 722
+warning$ -- 0
+while$ -- 382
+width$ -- 0
+write$ -- 642
